@@ -6,34 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="097ac888-85a5-42f6-be2e-7b8d536dd9d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-business/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-consumer/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-model/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/bibliotheque-business/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/bibliotheque-business/src/main/java/org/service/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/bibliotheque-business/src/test/java/org/service/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/bibliotheque-consumer/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/bibliotheque-consumer/src/main/java/org/service/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/bibliotheque-consumer/src/test/java/org/service/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/bibliotheque-model/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/bibliotheque-model/src/main/java/org/service/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/bibliotheque-model/src/test/java/org/service/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/bibliotheque-webservice/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/bibliotheque-webservice/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/bibliotheque-webservice/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/pom.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="097ac888-85a5-42f6-be2e-7b8d536dd9d5" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/bibliotheque-webapp/target/" />
@@ -50,7 +23,7 @@
     <session id="1109714794">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.opened" value="2" />
@@ -91,16 +64,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bibliotheque-webapp/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
+            <state relative-caret-position="816">
               <caret line="48" selection-start-line="48" selection-end-line="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bibliotheque-business/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-170">
@@ -205,6 +178,41 @@
               <item name="oc-bibliotheque-webapplication" type="b2602c69:ProjectViewProjectNode" />
               <item name="oc-bibliotheque-webapplication" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="oc-bibliotheque-webapplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oc-bibliotheque-webapplication" type="462c0819:PsiDirectoryNode" />
+              <item name="bibliotheque-webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oc-bibliotheque-webapplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oc-bibliotheque-webapplication" type="462c0819:PsiDirectoryNode" />
+              <item name="bibliotheque-webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oc-bibliotheque-webapplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oc-bibliotheque-webapplication" type="462c0819:PsiDirectoryNode" />
+              <item name="bibliotheque-webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oc-bibliotheque-webapplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oc-bibliotheque-webapplication" type="462c0819:PsiDirectoryNode" />
+              <item name="bibliotheque-webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oc-bibliotheque-webapplication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oc-bibliotheque-webapplication" type="462c0819:PsiDirectoryNode" />
+              <item name="bibliotheque-webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -216,7 +224,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554716851581" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554717396914" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -366,16 +374,15 @@
       <option name="presentableId" value="Default" />
       <updated>1554714086125</updated>
       <workItem from="1554714089511" duration="177000" />
-      <workItem from="1554715260077" duration="1775000" />
+      <workItem from="1554715260077" duration="2233000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1952000" />
+    <option name="totallyTimeSpent" value="2410000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26865673" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -387,7 +394,7 @@
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" visible="true" weight="0.29609543" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" weight="0.29609543" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -444,17 +451,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bibliotheque-webapp/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bibliotheque-business/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-170">
           <caret line="5" selection-start-line="5" selection-end-line="9" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-webapp/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>

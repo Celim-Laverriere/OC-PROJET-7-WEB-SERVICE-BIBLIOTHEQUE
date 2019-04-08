@@ -1,4 +1,4 @@
-package org.batch;
+package org.webapplication;
 
 /**
  * Hello world!

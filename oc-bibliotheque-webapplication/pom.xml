@@ -23,6 +23,7 @@
     <module>bibliotheque-business</module>
     <module>bibliotheque-consumer</module>
     <module>bibliotheque-model</module>
+    <module>bibliotheque-batch</module>
   </modules>
 
   <!-- ===== Informations générales ===== -->

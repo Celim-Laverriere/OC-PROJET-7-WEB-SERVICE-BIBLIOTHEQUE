@@ -1,4 +1,4 @@
-package org.batch;
+package org.webapplication;
 
 import static org.junit.Assert.assertTrue;
 

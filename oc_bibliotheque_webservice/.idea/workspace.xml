@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="97070a60-e2f2-4b05-a4c6-206e5187250a" name="Default Changelist" comment="" />
+    <list default="true" id="97070a60-e2f2-4b05-a4c6-206e5187250a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/bibliotheque-business/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/bibliotheque-business/src/main/java/org/service/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/bibliotheque-business/src/test/java/org/service/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/bibliotheque-consumer/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/bibliotheque-consumer/src/main/java/org/service/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/bibliotheque-consumer/src/test/java/org/service/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/bibliotheque-model/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/bibliotheque-model/src/main/java/org/service/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/bibliotheque-model/src/test/java/org/service/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/bibliotheque-webservice/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/bibliotheque-webservice/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/bibliotheque-webservice/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_systeme_information/pom.xml" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/bibliotheque-webservice/target/" />
     <ignored path="$PROJECT_DIR$/bibliotheque-business/target/" />
@@ -17,8 +40,10 @@
     <session id="-1766491866">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -42,14 +67,24 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-1370261341">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+              <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -75,8 +110,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bibliotheque-consumer/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="35" column="2" lean-forward="true" selection-start-line="35" selection-start-column="2" selection-end-line="37" selection-end-column="76" />
+            <state relative-caret-position="595">
+              <caret line="35" column="2" selection-start-line="35" selection-start-column="2" selection-end-line="37" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -84,7 +119,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bibliotheque-model/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
+            <state relative-caret-position="612">
               <caret line="36" column="76" selection-start-line="36" selection-start-column="76" selection-end-line="36" selection-end-column="76" />
             </state>
           </provider>
@@ -113,6 +148,11 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="E:/Applications/Developpement/Resource/Apache_Maven/apache-maven-3.5.4" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
@@ -131,27 +171,29 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="bibliotheque" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oc_bibliotheque_systeme_information" type="462c0819:PsiDirectoryNode" />
+              <item name="oc_bibliotheque_webservice" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554712757575" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554713828624" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -175,18 +217,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554711025400</updated>
-      <workItem from="1554711028471" duration="1728000" />
+      <workItem from="1554711028471" duration="3056000" />
+      <workItem from="1554714306481" duration="57000" />
+      <workItem from="1554714420856" duration="626000" />
+      <workItem from="1554715222819" duration="21000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1728000" />
+    <option name="totallyTimeSpent" value="3760000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26599148" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2739872" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -226,6 +270,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bibliotheque-webservice/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -242,22 +293,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bibliotheque-consumer/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="35" column="2" lean-forward="true" selection-start-line="35" selection-start-column="2" selection-end-line="37" selection-end-column="76" />
+        <state relative-caret-position="595">
+          <caret line="35" column="2" selection-start-line="35" selection-start-column="2" selection-end-line="37" selection-end-column="76" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bibliotheque-model/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
+        <state relative-caret-position="612">
           <caret line="36" column="76" selection-start-line="36" selection-start-column="76" selection-end-line="36" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="41" lean-forward="true" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
         </state>
       </provider>
     </entry>

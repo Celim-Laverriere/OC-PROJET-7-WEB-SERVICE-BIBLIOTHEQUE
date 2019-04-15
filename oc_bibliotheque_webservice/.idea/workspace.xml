@@ -2,27 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97070a60-e2f2-4b05-a4c6-206e5187250a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/java/org/bibliotheque/config/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/BonjourController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/resources/messages.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/webapp/vues/bonjour.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/webapp/vues/msg.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-model/src/main/java/org/service/model/bean/Compte.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-model/src/main/java/org/service/model/bean/Emprunt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-model/src/main/java/org/service/model/bean/Livre.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-model/src/main/java/org/service/model/bean/Ouvrage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-model/src/main/java/org/service/model/bean/Photo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/contract/ManagerFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/contract/manager/CompteManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/contract/manager/EmpruntManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/contract/manager/LivreManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/contract/manager/OuvrageManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/contract/manager/PhotoManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/impl/AbstractManagerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/impl/ManagerFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/impl/manager/CompteManagerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/impl/manager/EmpruntManagerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/impl/manager/LivreManagerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/impl/manager/OuvrageManagerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/impl/manager/PhotoManagerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-business/src/main/resources/businessContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/Impl/DaoFactoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/Impl/dao/CompteImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/Impl/dao/EmpruntImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/Impl/dao/LivreImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/Impl/dao/OuvrageImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/Impl/dao/PhotoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/Impl/data/AbstractDataImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/contract/DaoFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/contract/dao/CompteDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/contract/dao/EmpruntDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/contract/dao/LivreDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/contract/dao/OuvrageDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/contract/dao/PhotoDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-consumer/src/main/resources/consumerContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-webservice/src/main/java/org/service/webservice/CompteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-webservice/src/main/resources/webservice.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-webservice/src/main/resources/webserviceContext.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibliotheque-model/src/main/java/org/service/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-business/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-business/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-consumer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-webservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-webservice/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webservice/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-webservice/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/bibliotheque-webservice/target/" />
@@ -69,43 +89,64 @@
     <session id="-1370261341">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
-          <entry key="project.open.time.0" value="3" />
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="11" />
-          <entry key="xml" value="1" />
+          <entry key="java" value="73" />
+          <entry key="properties" value="1" />
+          <entry key="xml" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="11" />
-          <entry key="XML" value="1" />
+          <entry key="JAVA" value="73" />
+          <entry key="Properties" value="1" />
+          <entry key="XML" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="457" />
+          <entry key="dummy" value="23" />
+          <entry key="java" value="1027" />
+          <entry key="properties" value="11" />
+          <entry key="xml" value="860" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="457" />
+          <entry key="JAVA" value="1027" />
+          <entry key="PLAIN_TEXT" value="23" />
+          <entry key="Properties" value="11" />
+          <entry key="XML" value="860" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bibliotheque-webservice/src/main/resources/webserviceContext.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
+        <option value="Interface" />
+        <option value="spring-beans.schema" />
         <option value="Class" />
       </list>
     </option>
@@ -116,16 +157,45 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bibliotheque-consumer/pom.xml" />
-        <option value="$PROJECT_DIR$/bibliotheque-webservice/pom.xml" />
-        <option value="$PROJECT_DIR$/bibliotheque-business/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/bibliotheque-model/pom.xml" />
         <option value="$PROJECT_DIR$/bibliotheque-model/src/main/java/org/service/model/bean/Photo.java" />
         <option value="$PROJECT_DIR$/bibliotheque-model/src/main/java/org/service/model/bean/Ouvrage.java" />
         <option value="$PROJECT_DIR$/bibliotheque-model/src/main/java/org/service/model/bean/Livre.java" />
         <option value="$PROJECT_DIR$/bibliotheque-model/src/main/java/org/service/model/bean/Emprunt.java" />
         <option value="$PROJECT_DIR$/bibliotheque-model/src/main/java/org/service/model/bean/Compte.java" />
+        <option value="$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/contract/dao/Impl/dao/PhotoImpl.java" />
+        <option value="$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/contract/DaoFactory.java" />
+        <option value="$PROJECT_DIR$/bibliotheque-business/pom.xml" />
+        <option value="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/contract/manager/PhotoManager.java" />
+        <option value="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/contract/PhotoManager.java" />
+        <option value="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/manager/PhotoManager.java" />
+        <option value="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/ManagerFactory.java" />
+        <option value="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/impl/ManagerFactory.java" />
+        <option value="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/contract/ManagerFactory.java" />
+        <option value="$PROJECT_DIR$/bibliotheque-webservice/src/main/webapp/webserviceContext.xml" />
+        <option value="$PROJECT_DIR$/bibliotheque-webservice/src/main/java/org/service/webservice/Compte.java" />
+        <option value="$PROJECT_DIR$/bibliotheque-webservice/src/main/java/org/service/webservice/CompteService.java" />
+        <option value="$PROJECT_DIR$/bibliotheque-webservice/src/main/resources/webservice.properties" />
+        <option value="$PROJECT_DIR$/bibliotheque-webservice/src/main/resources/webserviceContext.xml" />
+        <option value="$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/Impl/data/AbstractDataImpl.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/Impl/dao/CompteImpl.java" />
+        <option value="$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/Impl/dao/EmpruntImpl.java" />
+        <option value="$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/Impl/dao/LivreImpl.java" />
+        <option value="$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/Impl/dao/OuvrageImpl.java" />
+        <option value="$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/Impl/dao/PhotoImpl.java" />
+        <option value="$PROJECT_DIR$/bibliotheque-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/bibliotheque-webservice/pom.xml" />
+        <option value="$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/Impl/DaoFactoryImpl.java" />
+        <option value="$PROJECT_DIR$/bibliotheque-webservice/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/impl/AbstractManagerImpl.java" />
+        <option value="$PROJECT_DIR$/bibliotheque-consumer/src/main/resources/consumerContext.xml" />
+        <option value="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/impl/manager/EmpruntManagerImpl.java" />
+        <option value="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/impl/manager/LivreManagerImpl.java" />
+        <option value="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/impl/manager/OuvrageManagerImpl.java" />
+        <option value="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/impl/manager/PhotoManagerImpl.java" />
+        <option value="$PROJECT_DIR$/bibliotheque-business/src/main/resources/businessContext.xml" />
+        <option value="$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/impl/manager/CompteManagerImpl.java" />
       </list>
     </option>
   </component>
@@ -161,8 +231,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -173,35 +241,47 @@
             <path>
               <item name="bibliotheque" type="b2602c69:ProjectViewProjectNode" />
               <item name="oc_bibliotheque_webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="bibliotheque-model" type="462c0819:PsiDirectoryNode" />
+              <item name="bibliotheque-webservice" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bibliotheque" type="b2602c69:ProjectViewProjectNode" />
               <item name="oc_bibliotheque_webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="bibliotheque-model" type="462c0819:PsiDirectoryNode" />
+              <item name="bibliotheque-webservice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bibliotheque" type="b2602c69:ProjectViewProjectNode" />
               <item name="oc_bibliotheque_webservice" type="462c0819:PsiDirectoryNode" />
               <item name="bibliotheque-webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bibliotheque" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oc_bibliotheque_webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="bibliotheque-webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555326820625" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555342934765" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.35977012" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RunDashboard">
@@ -232,15 +312,17 @@
       <workItem from="1554715222819" duration="21000" />
       <workItem from="1554717525630" duration="1624000" />
       <workItem from="1554727019181" duration="67000" />
-      <workItem from="1555321414120" duration="3417000" />
+      <workItem from="1555321414120" duration="13751000" />
+      <workItem from="1555340203426" duration="2728000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8868000" />
+    <option name="totallyTimeSpent" value="21930000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2835821" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -263,7 +345,8 @@
       <window_info anchor="bottom" id="Java Enterprise" order="10" sideWeight="0.49946696" weight="0.3286334" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50053304" side_tool="true" visible="true" weight="0.3286334" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50053304" side_tool="true" visible="true" weight="0.2516269" />
+      <window_info anchor="bottom" id="Spring" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -282,41 +365,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bibliotheque-webservice/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="76" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bibliotheque-business/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bibliotheque-consumer/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="2" selection-start-line="35" selection-start-column="2" selection-end-line="37" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bibliotheque-model/src/main/java/org/service/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-model/src/main/java/org/service/App.java" />
     <entry file="file://$PROJECT_DIR$/bibliotheque-model/src/main/java/org/service/model/bean/Ouvrage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -447,13 +496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bibliotheque-model/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="36" column="76" selection-start-line="36" selection-start-column="76" selection-end-line="36" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bibliotheque-model/src/main/java/org/service/model/bean/Photo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -472,6 +514,300 @@
             <element signature="e#644#645#0" expanded="true" />
             <element signature="e#686#687#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-business/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="50" column="41" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/contract/manager/CompteManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/contract/manager/EmpruntManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/contract/manager/LivreManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/contract/manager/OuvrageManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/contract/manager/PhotoManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/contract/DaoFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/contract/ManagerFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/contract/dao/CompteDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/contract/dao/EmpruntDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/contract/dao/LivreDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/contract/dao/OuvrageDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/contract/dao/PhotoDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-model/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="36" column="76" selection-start-line="36" selection-start-column="76" selection-end-line="36" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-webservice/src/main/webapp/webserviceContext.xml" />
+    <entry file="file://$PROJECT_DIR$/bibliotheque-webservice/src/main/java/org/service/webservice/CompteService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-webservice/src/main/resources/webservice.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="87" column="6" selection-start-line="87" selection-start-column="6" selection-end-line="91" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/Impl/dao/CompteImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/Impl/dao/EmpruntImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/Impl/dao/LivreImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="47" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/Impl/dao/OuvrageImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="49" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/Impl/dao/PhotoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="38" selection-start-column="38" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-webservice/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/Impl/DaoFactoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/impl/ManagerFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-webservice/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-consumer/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="39" column="36" lean-forward="true" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/impl/manager/LivreManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="57" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/impl/manager/OuvrageManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/impl/manager/PhotoManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-consumer/src/main/resources/consumerContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-business/src/main/resources/businessContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="54" lean-forward="true" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/impl/AbstractManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding>
+            <element signature="e#233#234#0" expanded="true" />
+            <element signature="e#289#290#0" expanded="true" />
+            <element signature="e#333#334#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-consumer/src/main/java/org/service/consumer/Impl/data/AbstractDataImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/impl/manager/CompteManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-business/src/main/java/org/service/business/impl/manager/EmpruntManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="59" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-webservice/src/main/resources/webserviceContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -529,7 +865,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>bibliotheque</last-edited>
+          <last-edited>bibliotheque-webservice</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

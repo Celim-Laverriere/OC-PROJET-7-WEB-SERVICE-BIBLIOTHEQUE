@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- ===== Déclaration DoaFactory ===== -->
+    <bean id="daoFactory" class="org.service.consumer.Impl.DaoFactoryImpl"/>
+    <bean id="abstractManager" abstract="true">
+        <property name="daoFactory" ref="daoFactory"/>
+    </bean>
+
+    <!-- ===== Déclaration des Manager ===== -->
+    <bean id="compteManager" class="org.service.business.impl.manager.CompteManagerImpl" parent="abstractManager"/>
+    <bean id="empruntManager" class="org.service.business.impl.manager.EmpruntManagerImpl" parent="abstractManager"/>
+    <bean id="livreManager" class="org.service.business.impl.manager.LivreManagerImpl" parent="abstractManager"/>
+    <bean id="ouvrageManager" class="org.service.business.impl.manager.OuvrageManagerImpl" parent="abstractManager"/>
+    <bean id="photoManager" class="org.service.business.impl.manager.PhotoManagerImpl" parent="abstractManager"/>
+
+    <!-- ===== ManagerFactory ====== -->
+    <bean id="managerFactory" class="org.service.business.impl.ManagerFactory">
+        <property name="compteManager" ref="compteManager"/>
+        <property name="empruntManager" ref="empruntManager"/>
+        <property name="livreManager" ref="livreManager"/>
+        <property name="ouvrageManager" ref="ouvrageManager"/>
+        <property name="photoManager" ref="photoManager"/>
+    </bean>
+</beans>

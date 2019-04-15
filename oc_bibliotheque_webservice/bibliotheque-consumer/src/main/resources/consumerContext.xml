@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/context
+                http://www.springframework.org/schema/context/spring-context.xsd
+                http://www.springframework.org/schema/jdbc
+                http://www.springframework.org/schema/jdbc/spring-jdbc.xsd">
+
+    <context:component-scan base-package="org.service"/>
+
+    <!-- ===== Déclaration dataSourceBibliotheque ===== -->
+    <jdbc:embedded-database id="dataSourceBibliotheque"/>
+
+    <bean id="abstractDataImpl" abstract="true">
+        <property name="dataSource" ref="dataSourceBibliotheque"/>
+    </bean>
+
+    <!-- ===== Déclaration des DAO ===== -->
+    <bean id="compteDao" class="org.service.consumer.Impl.dao.CompteImpl" parent="abstractDataImpl"/>
+    <bean id="empruntDao" class="org.service.consumer.Impl.dao.EmpruntImpl" parent="abstractDataImpl"/>
+    <bean id="livreDao" class="org.service.consumer.Impl.dao.LivreImpl" parent="abstractDataImpl"/>
+    <bean id="ouvrageDao" class="org.service.consumer.Impl.dao.OuvrageImpl" parent="abstractDataImpl"/>
+    <bean id="photoDao" class="org.service.consumer.Impl.dao.PhotoImpl" parent="abstractDataImpl"/>
+
+    <!-- ===== DaoFactory ===== -->
+    <bean id="daoFactory" class="org.service.consumer.Impl.DaoFactoryImpl">
+        <property name="compteDao" ref="compteDao"/>
+        <property name="empruntDao" ref="empruntDao"/>
+        <property name="livreDao" ref="livreDao"/>
+        <property name="ouvrageDao" ref="ouvrageDao"/>
+        <property name="photoDao" ref="photoDao"/>
+    </bean>
+
+
+
+</beans>

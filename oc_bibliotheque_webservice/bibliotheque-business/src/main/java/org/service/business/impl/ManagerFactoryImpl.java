@@ -1,8 +1,9 @@
 package org.service.business.impl;
 
+import org.service.business.contract.ManagerFactory;
 import org.service.business.contract.manager.*;
 
-public class ManagerFactory implements org.service.business.contract.ManagerFactory {
+public class ManagerFactoryImpl implements ManagerFactory {
 
     private CompteManager compteManager;
     private EmpruntManager empruntManager;

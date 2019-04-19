@@ -77,6 +77,13 @@
         <scope>import</scope>
       </dependency>
 
+      <!-- ==== JSR-250 ==== -->
+      <dependency>
+        <groupId>javax.annotation</groupId>
+        <artifactId>javax.annotation-api</artifactId>
+        <version>1.2</version>
+      </dependency>
+
       <!-- JSR-330 -->
       <dependency>
         <groupId>javax.inject</groupId>
@@ -91,19 +98,33 @@
         <version>1.6.0.RELEASE</version>
       </dependency>
 
-      <!-- mysql -->
-      <dependency>
-        <groupId>mysql</groupId>
-        <artifactId>mysql-connector-java</artifactId>
-        <version>5.1.9</version>
-      </dependency>
-
       <!-- ==== postgresql ==== -->
       <dependency>
         <groupId>org.postgresql</groupId>
         <artifactId>postgresql</artifactId>
         <version>9.4.1212</version>
         <scope>runtime</scope>
+      </dependency>
+
+      <!-- ==== persistence-api ==== -->
+      <dependency>
+        <groupId>javax.persistence</groupId>
+        <artifactId>persistence-api</artifactId>
+        <version>1.0</version>
+      </dependency>
+
+      <!-- ==== slf4j-api ==== -->
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>1.7.25</version>
+      </dependency>
+
+      <!-- ==== slf4j-simple ==== -->
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-simple</artifactId>
+        <version>1.7.25</version>
       </dependency>
 
       <!-- ==== junit ==== -->

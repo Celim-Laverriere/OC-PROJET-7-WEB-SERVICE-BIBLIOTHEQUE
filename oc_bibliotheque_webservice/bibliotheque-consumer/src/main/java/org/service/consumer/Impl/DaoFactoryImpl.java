@@ -16,7 +16,6 @@ public class DaoFactoryImpl implements DaoFactory {
         return compteDao;
     }
 
-    @Override
     public void setCompteDao(CompteDao compteDao) {
         this.compteDao = compteDao;
     }

@@ -39,11 +39,11 @@
         <!-- ===== Modules ===== -->
         <dependency>
             <groupId>org.service</groupId>
-            <artifactId>bibliotheque-consumer</artifactId>
+            <artifactId>bibliotheque-model</artifactId>
         </dependency>
         <dependency>
             <groupId>org.service</groupId>
-            <artifactId>bibliotheque-model</artifactId>
+            <artifactId>bibliotheque-consumer</artifactId>
         </dependency>
 
         <!-- ===== Bibliothèques tierces ===== -->
@@ -52,12 +52,6 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-        </dependency>
-
-        <!-- JSR-250 -->
-        <dependency>
-            <groupId>javax.annotation</groupId>
-            <artifactId>javax.annotation-api</artifactId>
         </dependency>
 
         <!-- JSR-330 -->

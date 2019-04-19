@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+    <context:component-scan base-package="org.service"/>
 
     <!-- ===== Déclaration DoaFactory ===== -->
-    <bean id="daoFactory" class="org.service.consumer.Impl.DaoFactoryImpl"/>
     <bean id="abstractManager" abstract="true">
         <property name="daoFactory" ref="daoFactory"/>
     </bean>
@@ -16,8 +22,8 @@
     <bean id="ouvrageManager" class="org.service.business.impl.manager.OuvrageManagerImpl" parent="abstractManager"/>
     <bean id="photoManager" class="org.service.business.impl.manager.PhotoManagerImpl" parent="abstractManager"/>
 
-    <!-- ===== ManagerFactory ====== -->
-    <bean id="managerFactory" class="org.service.business.impl.ManagerFactory">
+    <!-- ===== ManagerFactoryImpl ====== -->
+    <bean id="managerFactory" class="org.service.business.impl.ManagerFactoryImpl">
         <property name="compteManager" ref="compteManager"/>
         <property name="empruntManager" ref="empruntManager"/>
         <property name="livreManager" ref="livreManager"/>

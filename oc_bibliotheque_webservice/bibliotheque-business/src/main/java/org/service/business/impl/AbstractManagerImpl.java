@@ -2,7 +2,8 @@ package org.service.business.impl;
 
 import org.service.consumer.contract.DaoFactory;
 
-public class AbstractManagerImpl {
+
+public abstract class AbstractManagerImpl {
 
     private DaoFactory daoFactory;
 

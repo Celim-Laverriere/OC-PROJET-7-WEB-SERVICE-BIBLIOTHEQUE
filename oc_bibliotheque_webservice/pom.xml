@@ -1,186 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
 
-  <!-- =============================================================== -->
-  <!-- ================== Informations du projet ===================== -->
-  <!-- =============================================================== -->
+    <modelVersion>4.0.0</modelVersion>
 
-  <!-- ===== Informations Maven ===== -->
-  <groupId>org.service</groupId>
-  <artifactId>bibliotheque</artifactId>
-  <packaging>pom</packaging>
-  <version>1.0-SNAPSHOT</version>
+    <!-- =============================================================== -->
+    <!-- ================== Informations du projet ===================== -->
+    <!-- =============================================================== -->
 
-  <!-- =============================================================== -->
-  <!-- =========================== Modules =========================== -->
-  <!-- =============================================================== -->
-  <modules>
-    <module>bibliotheque-webservice</module>
-    <module>bibliotheque-business</module>
-    <module>bibliotheque-consumer</module>
-    <module>bibliotheque-model</module>
-  </modules>
+    <!-- ===== Informations Maven ===== -->
 
-  <!-- ===== Informations générales ===== -->
-  <name>bibliotheque</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+    <groupId>org.webservice</groupId>
+    <artifactId>bibliotheque</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
-  <!-- =============================================================== -->
-  <!-- ========================= Properties ========================== -->
-  <!-- =============================================================== -->
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.7</maven.compiler.source>
-    <maven.compiler.target>1.7</maven.compiler.target>
-  </properties>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.4.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
 
-  <!-- =============================================================== -->
-  <!-- ==================== Gestion des dépendances ================== -->
-  <!-- =============================================================== -->
-  <dependencyManagement>
-    <dependencies>
+    <!-- =============================================================== -->
+    <!-- =========================== Modules =========================== -->
+    <!-- =============================================================== -->
+    <modules>
+        <module>bibliotheque-service</module>
+        <module>bibliotheque-repository</module>
+        <module>bibliotheque-entity</module>
+        <module>bibliotheque-webservice</module>
+    </modules>
 
-      <!-- ===== Modules ===== -->
-      <dependency>
-        <groupId>org.service</groupId>
-        <artifactId>bibliotheque-webservice</artifactId>
-        <version>1.0-SNAPSHOT</version>
-      </dependency>
-      <dependency>
-        <groupId>org.service</groupId>
-        <artifactId>bibliotheque-business</artifactId>
-        <version>1.0-SNAPSHOT</version>
-      </dependency>
-      <dependency>
-        <groupId>org.service</groupId>
-        <artifactId>bibliotheque-consumer</artifactId>
-        <version>1.0-SNAPSHOT</version>
-      </dependency>
-      <dependency>
-        <groupId>org.service</groupId>
-        <artifactId>bibliotheque-model</artifactId>
-        <version>1.0-SNAPSHOT</version>
-      </dependency>
+    <!-- ===== Informations générales ===== -->
+    <name>bibliotheque</name>
+    <description>Web-service d'une bibliotheque</description>
 
-      <!-- ===== Bibliothèques tierces ===== -->
+    <!-- =============================================================== -->
+    <!-- ========================= Properties ========================== -->
+    <!-- =============================================================== -->
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
 
-      <!-- ==== Spring ==== -->
-      <dependency>
-        <groupId>org.springframework</groupId>
-        <artifactId>spring-framework-bom</artifactId>
-        <version>4.3.11.RELEASE</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
+    <!-- =============================================================== -->
+    <!-- ==================== Gestion des dépendances ================== -->
+    <!-- =============================================================== -->
+    <dependencyManagement>
+        <dependencies>
 
-      <!-- ==== JSR-250 ==== -->
-      <dependency>
-        <groupId>javax.annotation</groupId>
-        <artifactId>javax.annotation-api</artifactId>
-        <version>1.2</version>
-      </dependency>
+            <!-- ===== Modules ===== -->
+            <dependency>
+                <groupId>org.webservice</groupId>
+                <artifactId>bibliotheque-webservice</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
 
-      <!-- JSR-330 -->
-      <dependency>
-        <groupId>javax.inject</groupId>
-        <artifactId>javax.inject</artifactId>
-        <version>1</version>
-      </dependency>
+            <dependency>
+                <groupId>org.webservice</groupId>
+                <artifactId>bibliotheque-service</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
 
-      <!-- ==== spring-data-jpa ==== -->
-      <dependency>
-        <groupId>org.springframework.data</groupId>
-        <artifactId>spring-data-jpa</artifactId>
-        <version>1.6.0.RELEASE</version>
-      </dependency>
+            <dependency>
+                <groupId>org.webservice</groupId>
+                <artifactId>bibliotheque-repository</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
 
-      <!-- ==== postgresql ==== -->
-      <dependency>
-        <groupId>org.postgresql</groupId>
-        <artifactId>postgresql</artifactId>
-        <version>9.4.1212</version>
-        <scope>runtime</scope>
-      </dependency>
+            <dependency>
+                <groupId>org.webservice</groupId>
+                <artifactId>bibliotheque-entity</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
 
-      <!-- ==== persistence-api ==== -->
-      <dependency>
-        <groupId>javax.persistence</groupId>
-        <artifactId>persistence-api</artifactId>
-        <version>1.0</version>
-      </dependency>
+        </dependencies>
+    </dependencyManagement>
 
-      <!-- ==== slf4j-api ==== -->
-      <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-api</artifactId>
-        <version>1.7.25</version>
-      </dependency>
+    <!-- =============================================================== -->
+    <!-- ============================= Build  ========================== -->
+    <!-- =============================================================== -->
+    <build>
+        <directory>${project.basedir}/target</directory>
+    </build>
 
-      <!-- ==== slf4j-simple ==== -->
-      <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-simple</artifactId>
-        <version>1.7.25</version>
-      </dependency>
-
-      <!-- ==== junit ==== -->
-      <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>4.11</version>
-        <scope>test</scope>
-      </dependency>
-    </dependencies>
-
-  </dependencyManagement>
-
-  <build>
-    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-      <plugins>
-        <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
-        <plugin>
-          <artifactId>maven-clean-plugin</artifactId>
-          <version>3.1.0</version>
-        </plugin>
-        <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
-        <plugin>
-          <artifactId>maven-resources-plugin</artifactId>
-          <version>3.0.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.8.0</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.22.1</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>3.0.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-install-plugin</artifactId>
-          <version>2.5.2</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-deploy-plugin</artifactId>
-          <version>2.8.2</version>
-        </plugin>
-        <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
-        <plugin>
-          <artifactId>maven-site-plugin</artifactId>
-          <version>3.7.1</version>
-        </plugin>
-        <plugin>
-          <artifactId>maven-project-info-reports-plugin</artifactId>
-          <version>3.0.0</version>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
 </project>

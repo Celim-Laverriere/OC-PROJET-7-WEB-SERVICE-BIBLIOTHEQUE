@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" if-exists="true" version="2.1">
+  <!--
+
+Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.2.11 
+Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
+Généré le : 2019.05.02 à 04:50:30 PM CEST 
+
+  -->
+  <bindings xmlns:tns="http://www.webservice.org/bibliotheque-ws" if-exists="true" scd="x-schema::tns">
+    <schemaBindings map="false">
+      <package name="org.bibliotheque.wsdl"/>
+    </schemaBindings>
+    <bindings if-exists="true" scd="tns:getLivresByIdRequest">
+      <class ref="org.bibliotheque.wsdl.GetLivresByIdRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getLivresByIdResponse">
+      <class ref="org.bibliotheque.wsdl.GetLivresByIdResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:livreType">
+      <class ref="org.bibliotheque.wsdl.LivreType"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getAllLivresRequest">
+      <class ref="org.bibliotheque.wsdl.GetAllLivresRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getAllLivresResponse">
+      <class ref="org.bibliotheque.wsdl.GetAllLivresResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:addLivreRequest">
+      <class ref="org.bibliotheque.wsdl.AddLivreRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:addLivreResponse">
+      <class ref="org.bibliotheque.wsdl.AddLivreResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:serviceStatus">
+      <class ref="org.bibliotheque.wsdl.ServiceStatus"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateLivreRequest">
+      <class ref="org.bibliotheque.wsdl.UpdateLivreRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateLivreResponse">
+      <class ref="org.bibliotheque.wsdl.UpdateLivreResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:deleteLivreRequest">
+      <class ref="org.bibliotheque.wsdl.DeleteLivreRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:deleteLivreResponse">
+      <class ref="org.bibliotheque.wsdl.DeleteLivreResponse"/>
+    </bindings>
+  </bindings>
+</bindings>

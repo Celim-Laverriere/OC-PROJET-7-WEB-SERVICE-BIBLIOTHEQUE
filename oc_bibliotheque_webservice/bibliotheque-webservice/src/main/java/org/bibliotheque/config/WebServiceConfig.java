@@ -1,6 +1,6 @@
 package org.bibliotheque.config;
 
-import org.bibliotheque.endpoint.BibliothequeEndpoint;
+import org.bibliotheque.endpoint.LivreEndpoint;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -32,7 +32,7 @@ public class WebServiceConfig extends WsConfigurerAdapter {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
         wsdl11Definition.setPortTypeName("BibliothequePort");
         wsdl11Definition.setLocationUri("/ws");
-        wsdl11Definition.setTargetNamespace(BibliothequeEndpoint.NAMESPACE_URI);
+        wsdl11Definition.setTargetNamespace(LivreEndpoint.NAMESPACE_URI);
         wsdl11Definition.setSchema(schema);
         return wsdl11Definition;
     }

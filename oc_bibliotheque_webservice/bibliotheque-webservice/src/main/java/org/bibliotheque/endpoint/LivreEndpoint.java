@@ -57,7 +57,7 @@ public class LivreEndpoint {
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "addLivreRequest")
     @ResponsePayload
-    public AddLivreResponse addLivreResponse(@RequestPayload AddLivreRequest request) {
+    public AddLivreResponse addLivre(@RequestPayload AddLivreRequest request) {
         AddLivreResponse response = new AddLivreResponse();
         LivreType newLivreType = new LivreType();
         ServiceStatus serviceStatus = new ServiceStatus();
@@ -67,12 +67,12 @@ public class LivreEndpoint {
 
         if (savedLivreEntity == null) {
             serviceStatus.setStatusCode("CONFLICT");
-            serviceStatus.setMessage("Exception lors de l'ajout d'entité");
+            serviceStatus.setMessage("Exception while adding Entity");
         } else {
 
             BeanUtils.copyProperties(savedLivreEntity, newLivreType);
             serviceStatus.setStatusCode("SUCCESS");
-            serviceStatus.setMessage("Contenu ajouté avec succès");
+            serviceStatus.setMessage("Content Added Successfully");
         }
 
         response.setLivreType(newLivreType);

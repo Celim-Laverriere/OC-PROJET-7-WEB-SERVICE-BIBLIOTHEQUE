@@ -15,7 +15,7 @@ public class LivreRepository {
 
     private AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SoapConfig.class);
 
-    public LivreType livreType(Integer id) {
+    public LivreType livreById(Integer id) {
         LivreClient client = context.getBean(LivreClient.class);
         GetLivresByIdResponse response = client.getLivreById(new Integer(id));
         System.out.println("response: Movie id="+ response.getLivreType().getId()+", title=" +

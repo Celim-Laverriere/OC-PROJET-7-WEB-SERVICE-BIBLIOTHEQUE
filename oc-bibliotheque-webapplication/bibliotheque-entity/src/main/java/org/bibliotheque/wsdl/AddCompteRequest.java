@@ -25,8 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="refBibliotheque" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="ouvrageId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="compteType" type="{http://www.webservice.org/bibliotheque-ws}compteType"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -37,54 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "refBibliotheque",
-    "ouvrageId"
+    "compteType"
 })
-@XmlRootElement(name = "addLivreRequest")
-public class AddLivreRequest {
+@XmlRootElement(name = "addCompteRequest")
+public class AddCompteRequest {
 
     @XmlElement(required = true)
-    protected String refBibliotheque;
-    protected int ouvrageId;
+    protected CompteType compteType;
 
     /**
-     * Obtient la valeur de la propriété refBibliotheque.
+     * Obtient la valeur de la propriété compteType.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link CompteType }
      *     
      */
-    public String getRefBibliotheque() {
-        return refBibliotheque;
+    public CompteType getCompteType() {
+        return compteType;
     }
 
     /**
-     * Définit la valeur de la propriété refBibliotheque.
+     * Définit la valeur de la propriété compteType.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link CompteType }
      *     
      */
-    public void setRefBibliotheque(String value) {
-        this.refBibliotheque = value;
-    }
-
-    /**
-     * Obtient la valeur de la propriété ouvrageId.
-     * 
-     */
-    public int getOuvrageId() {
-        return ouvrageId;
-    }
-
-    /**
-     * Définit la valeur de la propriété ouvrageId.
-     * 
-     */
-    public void setOuvrageId(int value) {
-        this.ouvrageId = value;
+    public void setCompteType(CompteType value) {
+        this.compteType = value;
     }
 
 }

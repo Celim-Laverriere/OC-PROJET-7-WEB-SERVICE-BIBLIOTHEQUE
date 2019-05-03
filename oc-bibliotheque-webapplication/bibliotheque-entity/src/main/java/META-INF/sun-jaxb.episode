@@ -5,7 +5,7 @@
 Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.2.11 
 Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-Généré le : 2019.05.02 à 04:50:30 PM CEST 
+Généré le : 2019.05.03 à 05:11:04 PM CEST 
 
   -->
   <bindings xmlns:tns="http://www.webservice.org/bibliotheque-ws" if-exists="true" scd="x-schema::tns">
@@ -47,6 +47,39 @@ Généré le : 2019.05.02 à 04:50:30 PM CEST
     </bindings>
     <bindings if-exists="true" scd="tns:deleteLivreResponse">
       <class ref="org.bibliotheque.wsdl.DeleteLivreResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getCompteByIdRequest">
+      <class ref="org.bibliotheque.wsdl.GetCompteByIdRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getCompteByIdResponse">
+      <class ref="org.bibliotheque.wsdl.GetCompteByIdResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:compteType">
+      <class ref="org.bibliotheque.wsdl.CompteType"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getAllComptesRequest">
+      <class ref="org.bibliotheque.wsdl.GetAllComptesRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getAllComptesResponse">
+      <class ref="org.bibliotheque.wsdl.GetAllComptesResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:addCompteRequest">
+      <class ref="org.bibliotheque.wsdl.AddCompteRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:addCompteResponse">
+      <class ref="org.bibliotheque.wsdl.AddCompteResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateCompteRequest">
+      <class ref="org.bibliotheque.wsdl.UpdateCompteRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:updateCompteResponse">
+      <class ref="org.bibliotheque.wsdl.UpdateCompteResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:deleteCompteRequest">
+      <class ref="org.bibliotheque.wsdl.DeleteCompteRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:deleteCompteResponse">
+      <class ref="org.bibliotheque.wsdl.DeleteCompteResponse"/>
     </bindings>
   </bindings>
 </bindings>

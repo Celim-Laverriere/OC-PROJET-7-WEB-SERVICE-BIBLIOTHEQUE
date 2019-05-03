@@ -12,7 +12,7 @@ import java.util.Collection;
 @Getter @Setter
 public class CompteEntity implements Serializable {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String nom;
     private String prenom;
@@ -49,6 +49,10 @@ public class CompteEntity implements Serializable {
         this.numCarteBibliotheque = numCarteBibliotheque;
         this.mail = mail;
         this.motDePasse = motDePasse;
+    }
+
+    public CompteEntity(CompteEntity compteEntity){
+
     }
 
 }

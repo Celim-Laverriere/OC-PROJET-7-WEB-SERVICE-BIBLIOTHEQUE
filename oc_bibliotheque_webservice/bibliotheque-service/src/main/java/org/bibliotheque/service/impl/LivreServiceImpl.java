@@ -33,7 +33,7 @@ public class LivreServiceImpl implements LivreService {
     @Override
     public List<LivreEntity> getAllLivres() {
         List<LivreEntity> livreEntities = new ArrayList<LivreEntity>();
-        repository.findAll().forEach(e -> livreEntities.add(e));
+        this.repository.findAll().forEach(e -> livreEntities.add(e));
         return livreEntities;
     }
 
@@ -69,6 +69,7 @@ public class LivreServiceImpl implements LivreService {
             this.repository.deleteById(id);
             return true;
         } catch (Exception pEX){
+            pEX.printStackTrace();
             return false;
         }
     }

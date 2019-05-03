@@ -11,13 +11,13 @@ import java.util.List;
 public class LivreService {
 
     @Autowired
-    private LivreRepository runLivre;
+    private LivreRepository repository;
 
-    public LivreType LivreId(Integer id){
-      return runLivre.livreType(id);
+    public LivreType LivreById(Integer id){
+      return repository.livreById(id);
     }
 
     public List<LivreType> livreTypeList(){
-        return runLivre.livreTypeList();
+        return repository.livreTypeList();
     }
 }

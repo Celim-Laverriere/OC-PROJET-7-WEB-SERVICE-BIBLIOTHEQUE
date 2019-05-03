@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="livreId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -35,27 +35,27 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "livreId"
+    "id"
 })
-@XmlRootElement(name = "getLivresByIdRequest")
-public class GetLivresByIdRequest {
+@XmlRootElement(name = "deleteCompteRequest")
+public class DeleteCompteRequest {
 
-    protected int livreId;
+    protected int id;
 
     /**
-     * Obtient la valeur de la propriété livreId.
+     * Obtient la valeur de la propriété id.
      * 
      */
-    public int getLivreId() {
-        return livreId;
+    public int getId() {
+        return id;
     }
 
     /**
-     * Définit la valeur de la propriété livreId.
+     * Définit la valeur de la propriété id.
      * 
      */
-    public void setLivreId(int value) {
-        this.livreId = value;
+    public void setId(int value) {
+        this.id = value;
     }
 
 }

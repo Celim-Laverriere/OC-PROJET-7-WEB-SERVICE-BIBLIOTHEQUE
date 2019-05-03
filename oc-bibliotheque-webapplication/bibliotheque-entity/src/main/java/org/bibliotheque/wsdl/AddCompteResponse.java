@@ -25,8 +25,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="refBibliotheque" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="ouvrageId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="serviceStatus" type="{http://www.webservice.org/bibliotheque-ws}serviceStatus"/&gt;
+ *         &lt;element name="compteType" type="{http://www.webservice.org/bibliotheque-ws}compteType"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -37,54 +37,63 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "refBibliotheque",
-    "ouvrageId"
+    "serviceStatus",
+    "compteType"
 })
-@XmlRootElement(name = "addLivreRequest")
-public class AddLivreRequest {
+@XmlRootElement(name = "addCompteResponse")
+public class AddCompteResponse {
 
     @XmlElement(required = true)
-    protected String refBibliotheque;
-    protected int ouvrageId;
+    protected ServiceStatus serviceStatus;
+    @XmlElement(required = true)
+    protected CompteType compteType;
 
     /**
-     * Obtient la valeur de la propriété refBibliotheque.
+     * Obtient la valeur de la propriété serviceStatus.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link ServiceStatus }
      *     
      */
-    public String getRefBibliotheque() {
-        return refBibliotheque;
+    public ServiceStatus getServiceStatus() {
+        return serviceStatus;
     }
 
     /**
-     * Définit la valeur de la propriété refBibliotheque.
+     * Définit la valeur de la propriété serviceStatus.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link ServiceStatus }
      *     
      */
-    public void setRefBibliotheque(String value) {
-        this.refBibliotheque = value;
+    public void setServiceStatus(ServiceStatus value) {
+        this.serviceStatus = value;
     }
 
     /**
-     * Obtient la valeur de la propriété ouvrageId.
+     * Obtient la valeur de la propriété compteType.
      * 
+     * @return
+     *     possible object is
+     *     {@link CompteType }
+     *     
      */
-    public int getOuvrageId() {
-        return ouvrageId;
+    public CompteType getCompteType() {
+        return compteType;
     }
 
     /**
-     * Définit la valeur de la propriété ouvrageId.
+     * Définit la valeur de la propriété compteType.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link CompteType }
+     *     
      */
-    public void setOuvrageId(int value) {
-        this.ouvrageId = value;
+    public void setCompteType(CompteType value) {
+        this.compteType = value;
     }
 
 }

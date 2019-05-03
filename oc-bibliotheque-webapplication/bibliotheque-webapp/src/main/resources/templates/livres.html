@@ -14,9 +14,24 @@
     <title>Title</title>
 </head>
 <body>
+
+<div class="container">
     <p th:text="'Bonjour ' + ${personne} + ' ' + ${nom}"></p>
-<!--    <p th:text="'Nom d\'un livre' + ${livre}"></p>-->
+    <!--    <p th:text="'Nom d\'un livre' + ${livre}"></p>-->
     <a type="button" class="btn btn-primary" th:href="@{test}">Test</a>
-<p>Bonjour</p>
+    <a type="button" class="btn btn-primary" th:href="@{compte}">COMPTE</a>
+    <a type="button" class="btn btn-primary" th:href="@{formCompte}">ADD COMPTE</a>
+</div>
+
+<div class="container">
+    <form action="#" th:action="@{addCompte}" method="POST">
+        <label>Créer un compte utilisateur</label>
+        <input type="text"/>
+        <button class="btn btn-primary">Validez</button>
+    </form>
+</div>
+
+
+
 </body>
 </html>

@@ -8,6 +8,8 @@
 
 package org.bibliotheque.wsdl;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -25,8 +27,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="refBibliotheque" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="ouvrageId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="compteType" type="{http://www.webservice.org/bibliotheque-ws}compteType" maxOccurs="unbounded"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -37,54 +38,41 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "refBibliotheque",
-    "ouvrageId"
+    "compteType"
 })
-@XmlRootElement(name = "addLivreRequest")
-public class AddLivreRequest {
+@XmlRootElement(name = "getAllComptesResponse")
+public class GetAllComptesResponse {
 
     @XmlElement(required = true)
-    protected String refBibliotheque;
-    protected int ouvrageId;
+    protected List<CompteType> compteType;
 
     /**
-     * Obtient la valeur de la propriété refBibliotheque.
+     * Gets the value of the compteType property.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getRefBibliotheque() {
-        return refBibliotheque;
-    }
-
-    /**
-     * Définit la valeur de la propriété refBibliotheque.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the compteType property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setRefBibliotheque(String value) {
-        this.refBibliotheque = value;
-    }
-
-    /**
-     * Obtient la valeur de la propriété ouvrageId.
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getCompteType().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link CompteType }
+     * 
      * 
      */
-    public int getOuvrageId() {
-        return ouvrageId;
-    }
-
-    /**
-     * Définit la valeur de la propriété ouvrageId.
-     * 
-     */
-    public void setOuvrageId(int value) {
-        this.ouvrageId = value;
+    public List<CompteType> getCompteType() {
+        if (compteType == null) {
+            compteType = new ArrayList<CompteType>();
+        }
+        return this.compteType;
     }
 
 }

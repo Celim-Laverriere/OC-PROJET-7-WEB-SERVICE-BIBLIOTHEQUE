@@ -45,7 +45,7 @@ public class CompteEndpoint {
     public GetAllComptesResponse getAllComptes(@RequestPayload GetAllComptesRequest request){
         GetAllComptesResponse response = new GetAllComptesResponse();
         List<CompteType> compteTypeList = new ArrayList<>();
-        List<CompteEntity> compteEntityList = service.getAllCompte();
+        List<CompteEntity> compteEntityList = service.getAllComptes();
 
         for (CompteEntity entity : compteEntityList){
             CompteType compteType = new CompteType();
@@ -90,31 +90,24 @@ public class CompteEndpoint {
         ServiceStatus serviceStatus = new ServiceStatus();
 
         // 1. Trouver si le compte est disponible
-        CompteEntity upCompte = service.getCompteById(request.getId());
+        CompteEntity upCompte = service.getCompteById(request.getCompteType().getId());
 
         if(upCompte == null){
             serviceStatus.setStatusCode("NOT FOUND");
-            serviceStatus.setMessage("Compte : " + request.getNom() + " " +request.getPrenom() + " " + " not found");
+            serviceStatus.setMessage("Compte : " + request.getCompteType().getNom() + " " +
+                    request.getCompteType().getPrenom() + " " + " not found");
         } else {
 
             // 2. Obtenir les informations du compte à mettre à jour à partir de la requête
-            upCompte.setNom(request.getNom());
-            upCompte.setPrenom(request.getPrenom());
-            upCompte.setAdresse(request.getAdresse());
-            upCompte.setCodePostal(request.getCodePostal());
-            upCompte.setVille(request.getVille());
-            upCompte.setNumPortable(request.getNumPortable());
-            upCompte.setNumDomicile(request.getNumDomicile());
-            upCompte.setNumCarteBibliotheque(request.getNumCarteBibliotheque());
-            upCompte.setMail(request.getMail());
-            upCompte.setMotDePasse(request.getMotDePasse());
+            BeanUtils.copyProperties(request.getCompteType(), upCompte);
 
             // 3. Mettre à jour le compte dans la base de données
             boolean flag = service.updateCompte(upCompte);
 
             if(flag == false){
                 serviceStatus.setStatusCode("CONFLICT");
-                serviceStatus.setMessage("Exception while updating Entity : " + request.getNom() + " " + request.getPrenom());
+                serviceStatus.setMessage("Exception while updating Entity : " + request.getCompteType().getNom() + " " +
+                        request.getCompteType().getPrenom());
             } else {
                 serviceStatus.setStatusCode("SUCCESS");
                 serviceStatus.setMessage("Content updated Successfully");
@@ -131,11 +124,11 @@ public class CompteEndpoint {
         DeleteCompteResponse response = new DeleteCompteResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
 
-        boolean flag = service.deleteCompte(request.getId());
+        boolean flag = service.deleteCompte(request.getCompteId());
 
         if (flag == false){
             serviceStatus.setStatusCode("FAIL");
-            serviceStatus.setMessage("Exception while deletint Entity id : " + request.getId());
+            serviceStatus.setMessage("Exception while deletint Entity id : " + request.getCompteId());
         } else {
             serviceStatus.setStatusCode("SUCCESS");
             serviceStatus.setMessage("Content Deleted Successfully");

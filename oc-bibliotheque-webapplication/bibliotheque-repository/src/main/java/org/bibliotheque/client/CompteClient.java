@@ -28,4 +28,10 @@ public class CompteClient extends WebServiceGatewaySupport {
         request.setId(id);
         return (DeleteCompteResponse) getWebServiceTemplate().marshalSendAndReceive(request);
     }
+
+    public UpdateCompteResponse updateCompte(CompteType compteType){
+        UpdateCompteRequest request = new UpdateCompteRequest();
+        request.setCompteType(compteType);
+        return (UpdateCompteResponse) getWebServiceTemplate().marshalSendAndReceive(request);
+    }
 }

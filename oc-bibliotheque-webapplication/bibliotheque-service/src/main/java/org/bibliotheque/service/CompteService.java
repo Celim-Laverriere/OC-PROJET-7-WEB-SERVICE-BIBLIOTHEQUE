@@ -28,4 +28,8 @@ public class CompteService {
     public String delCompt(Integer id){
         return repository.delCompte(id);
     }
+
+    public String upCompte(CompteType compteType){
+        return repository.upCompte(compteType);
+    }
 }

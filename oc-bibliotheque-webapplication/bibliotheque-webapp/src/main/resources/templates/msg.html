@@ -53,7 +53,10 @@
             </tr>
             </thead>
             <tbody>
-            <tr th:each="compte : ${compte}">
+            <tr th:each="compte : ${comptes}">
+                <td>
+                    <a href="#" type="button" class="btn btn-primary" th:href="@{fromUpCompte(compteId=${compte.getId()})}">Modifier</a>
+                </td>
                 <td th:text="${compte.getId()}"/>
                 <td th:text="${compte.getNom()}"/>
                 <td th:text="${compte.getPrenom()}"/>
@@ -69,29 +72,29 @@
         </table>
     </div>
 
-    <div class="container">
-        <form action="#" th:action="@{addCompte}" th:object="${compteType}" method="post">
-            <label>Créer un compte utilisateur</label>
-            <input type="text" th:field="*{nom}" />
-            <input type="text" th:field="*{prenom}" />
-            <input type="text" th:field="*{adresse}" />
-            <input type="number" th:field="*{codePostal}" />
-            <input type="text" th:field="*{ville}" />
-            <input type="number" th:field="*{numPortable}" />
-            <input type="number" th:field="*{numDomicile}" />
-            <input type="number" th:field="*{numCarteBibliotheque}" />
-            <input type="text" th:field="*{mail}" />
-            <input type="text" th:field="*{motDePasse}" />
-            <button type="submit" class="btn btn-primary">Validez</button>
-        </form>
-    </div>
+<!--    <div class="container">-->
+<!--        <form action="#" th:action="@{addCompte}" th:object="${compteType}" method="post">-->
+<!--            <label>Créer un compte utilisateur</label>-->
+<!--            <input type="text" th:field="*{nom}" />-->
+<!--            <input type="text" th:field="*{prenom}" />-->
+<!--            <input type="text" th:field="*{adresse}" />-->
+<!--            <input type="number" th:field="*{codePostal}" />-->
+<!--            <input type="text" th:field="*{ville}" />-->
+<!--            <input type="number" th:field="*{numPortable}" />-->
+<!--            <input type="number" th:field="*{numDomicile}" />-->
+<!--            <input type="number" th:field="*{numCarteBibliotheque}" />-->
+<!--            <input type="text" th:field="*{mail}" />-->
+<!--            <input type="text" th:field="*{motDePasse}" />-->
+<!--            <button type="submit" class="btn btn-primary">Validez</button>-->
+<!--        </form>-->
+<!--    </div>-->
 
-    <div class="container">
-        <form action="#" th:action="@{delCompte}" th:object="${compteType}" method="post">
-            <input type="number" th:field="*{id}"/>
-            <button type="submit" class="btn btn-primary">Supprimez</button>
-        </form>
-    </div>
+<!--    <div class="container">-->
+<!--        <form action="#" th:action="@{delCompte}" th:object="${compteType}" method="post">-->
+<!--            <input type="number" th:field="*{id}"/>-->
+<!--            <button type="submit" class="btn btn-primary">Supprimez</button>-->
+<!--        </form>-->
+<!--    </div>-->
 </section>
 
 </body>

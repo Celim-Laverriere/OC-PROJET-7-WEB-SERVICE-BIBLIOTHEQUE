@@ -13,7 +13,7 @@ import java.util.Collection;
 public class LivreEntity implements Serializable {
 
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     @Column(name = "ref_bibliotheque")
     private String refBibliotheque;

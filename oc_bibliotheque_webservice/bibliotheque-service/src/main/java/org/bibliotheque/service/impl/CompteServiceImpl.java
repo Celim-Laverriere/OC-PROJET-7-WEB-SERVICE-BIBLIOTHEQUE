@@ -1,21 +1,22 @@
 package org.bibliotheque.service.impl;
 
+import lombok.NoArgsConstructor;
 import org.bibliotheque.entity.CompteEntity;
 import org.bibliotheque.repository.CompteRepository;
 import org.bibliotheque.service.contract.CompteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@Transactional
+@NoArgsConstructor
 public class CompteServiceImpl implements CompteService {
 
     private CompteRepository repository;
-
-    public CompteServiceImpl(){
-    }
 
     @Autowired
     public CompteServiceImpl(CompteRepository repository){
@@ -28,7 +29,7 @@ public class CompteServiceImpl implements CompteService {
     }
 
     @Override
-    public List<CompteEntity> getAllCompte() {
+    public List<CompteEntity> getAllComptes() {
         List<CompteEntity> compteEntities = new ArrayList<>();
         this.repository.findAll().forEach(e -> compteEntities.add(e));
         return compteEntities;

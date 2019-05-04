@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html   xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"/>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header>
+
+</header>
+<section>
+    <div class="container">
+        <form action="#" th:action="@{upCompte}" th:object="${compteType}" method="post">
+            <label>Créer un compte utilisateur</label>
+            <input type="hidden" th:field="*{id}" th:placeholder="*{id}"/>
+            <input type="text" th:field="*{nom}" th:placeholder="*{nom}"/>
+            <input type="text" th:field="*{prenom}" th:placeholder="*{prenom}"/>
+            <input type="text" th:field="*{adresse}" th:placeholder="*{adresse}"/>
+            <input type="number" th:field="*{codePostal}" th:placeholder="*{codePostal}"/>
+            <input type="text" th:field="*{ville}" th:placeholder="*{ville}"/>
+            <input type="number" th:field="*{numPortable}" th:placeholder="*{numPortable}"/>
+            <input type="number" th:field="*{numDomicile}" th:placeholder="*{numDomicile}"/>
+            <input type="number" th:field="*{numCarteBibliotheque}" th:placeholder="*{numCarteBibliotheque}"/>
+            <input type="text" th:field="*{mail}" th:placeholder="*{mail}"/>
+            <input type="text" th:field="*{motDePasse}" th:placeholder="*{motDePasse}"/>
+            <button type="submit" class="btn btn-primary">Validez</button>
+        </form>
+    </div>
+</section>
+<footer>
+
+</footer>
+</body>
+</html>

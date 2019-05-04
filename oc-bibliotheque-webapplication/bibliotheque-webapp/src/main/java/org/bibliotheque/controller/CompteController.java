@@ -25,7 +25,7 @@ public class CompteController {
         CompteType compteType = new CompteType();
         List<CompteType> compteList = compteService.compteList();
         pModel.addAttribute("compteType", compteType);
-        pModel.addAttribute("compte", compteList);
+        pModel.addAttribute("comptes", compteList);
         return "msg";
     }
 
@@ -40,9 +40,9 @@ public class CompteController {
     @RequestMapping(value = "addCompte", method = RequestMethod.POST)
     public String addCompte (@Valid CompteType compteType, BindingResult bindingResult,
                              RedirectAttributes redirectAttributes) {
-            String message = compteService.addCompte(compteType);
-            System.out.println(message);
-            return "msg";
+        String message = compteService.addCompte(compteType);
+        System.out.println(message);
+        return "msg";
 
     }
 
@@ -53,4 +53,22 @@ public class CompteController {
         System.out.println(message);
         return "msg";
     }
+
+    @RequestMapping(value = "fromUpCompte", method = RequestMethod.GET)
+    public String formUpCompte(CompteType compteType, Model model, @RequestParam(name = "compteId") Integer compteId){
+        compteType = compteService.compteById(compteId);
+        model.addAttribute("compteType", compteType);
+        return "formUpCompte";
+
+    }
+
+    @RequestMapping(value = "upCompte", method = RequestMethod.POST)
+    public String uuCompte(@Valid CompteType compteType, BindingResult bindingResult,
+                           RedirectAttributes redirectAttributes){
+        System.out.println(compteType.getId());
+        String message = compteService.upCompte(compteType);
+        System.out.println(message);
+        return "formUpCompte";
+    }
+
 }

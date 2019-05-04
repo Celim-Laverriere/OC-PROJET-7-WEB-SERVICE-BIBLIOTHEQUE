@@ -11,15 +11,14 @@ import java.io.Serializable;
 @Getter @Setter
 public class PhotoEntity implements Serializable {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     @Column(name = "url_photo")
     private String urlPhoto;
     @Column(name = "nom_photo")
     private String nomPhoto;
 
-   @ManyToOne(fetch = FetchType.LAZY)
-   @JoinColumn(name = "photo_id")
+   @ManyToOne(fetch = FetchType.EAGER)
     private OuvrageEntity ouvrage;
 
     public PhotoEntity() {

@@ -36,4 +36,9 @@ public class CompteRepository {
         DeleteCompteResponse response = client.deleteCompte(id);
         return response.getServiceStatus().getStatusCode();
     }
+
+    public String upCompte(CompteType compteType){
+        UpdateCompteResponse response = client.updateCompte(compteType);
+        return response.getServiceStatus().getMessage();
+    }
 }

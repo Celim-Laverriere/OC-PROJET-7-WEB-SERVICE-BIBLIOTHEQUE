@@ -1,5 +1,6 @@
 package org.bibliotheque.service.impl;
 
+import lombok.NoArgsConstructor;
 import org.bibliotheque.entity.LivreEntity;
 import org.bibliotheque.repository.LivreRepository;
 import org.bibliotheque.service.contract.LivreService;
@@ -12,13 +13,10 @@ import java.util.List;
 
 @Service
 @Transactional
+@NoArgsConstructor
 public class LivreServiceImpl implements LivreService {
 
     private LivreRepository repository;
-
-    public  LivreServiceImpl(){
-
-    }
 
     @Autowired
     public LivreServiceImpl(LivreRepository repository){

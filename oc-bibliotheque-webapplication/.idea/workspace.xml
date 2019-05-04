@@ -2,40 +2,52 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="401b9004-2ed0-4147-9f57-ec6c94108e23" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/client/CompteClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/CompteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/CompteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/CompteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-repository/src/main/java/org/bibliotheque/repository/CompteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/contract/CompteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/CompteServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/CompteEndpoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bibliotheque-webapp/src/main/resources/templates/formUpCompte.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-repository/src/main/java/org/bibliotheque/repository/OuvrageRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/contract/OuvrageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/OuvrageServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/OuvrageEndpoint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/META-INF/sun-jaxb.episode" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/META-INF/sun-jaxb.episode" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddCompteRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddCompteRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddCompteResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddCompteResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddLivreRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddLivreRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddLivreResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddLivreResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/CompteType.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/CompteType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteCompteRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteCompteRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteCompteResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteCompteResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteLivreRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteLivreRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteLivreResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/DeleteLivreResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllComptesRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllComptesRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllComptesResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllComptesResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllLivresRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllLivresRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllLivresResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetAllLivresResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetCompteByIdRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetCompteByIdRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetCompteByIdResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetCompteByIdResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetLivresByIdRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetLivresByIdRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetLivresByIdResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/GetLivresByIdResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/LivreType.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/LivreType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/ObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/ObjectFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/ServiceStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/ServiceStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateCompteRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateCompteRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateCompteResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateCompteResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateLivreRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateLivreRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateLivreResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdateLivreResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/config/SoapConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/config/SoapConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/LivreRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/LivreRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/LivreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/LivreService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/LivreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/LivreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bibliotheque-webapp/src/main/resources/templates/livres.html" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webapp/src/main/resources/templates/livres.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/client/CompteClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/client/CompteClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/CompteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/CompteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/CompteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/CompteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/CompteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/CompteController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bibliotheque-webapp/src/main/resources/templates/msg.html" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webapp/src/main/resources/templates/msg.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/CompteEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/CompteEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/EmpruntEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/EmpruntEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/LivreEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/LivreEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/OuvrageEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/OuvrageEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/PhotoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-entity/src/main/java/org/bibliotheque/entity/PhotoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/contract/CompteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/contract/CompteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/CompteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/CompteServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/LivreServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/LivreServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/LivreEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/LivreEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/CompteEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/CompteEndpoint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/resources/xsd/bibliotheque.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/../oc_bibliotheque_webservice/bibliotheque-webservice/src/main/resources/xsd/bibliotheque.xsd" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -61,8 +73,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -103,12 +115,13 @@
         <option value="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/LivreRepository.java" />
         <option value="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/config/SoapConfig.java" />
         <option value="$PROJECT_DIR$/bibliotheque-webapp/src/main/resources/templates/livres.html" />
+        <option value="$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/LivreController.java" />
         <option value="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/client/CompteClient.java" />
         <option value="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/CompteRepository.java" />
         <option value="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/CompteService.java" />
         <option value="$PROJECT_DIR$/bibliotheque-webapp/src/main/resources/templates/msg.html" />
+        <option value="$PROJECT_DIR$/bibliotheque-webapp/src/main/resources/templates/formUpCompte.html" />
         <option value="$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/CompteController.java" />
-        <option value="$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/LivreController.java" />
       </list>
     </option>
   </component>
@@ -150,7 +163,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -162,6 +174,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -244,16 +257,18 @@
       <workItem from="1556724554329" duration="458000" />
       <workItem from="1556780449813" duration="5190000" />
       <workItem from="1556872446505" duration="17913000" />
+      <workItem from="1556955975176" duration="13465000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42744000" />
+    <option name="totallyTimeSpent" value="56209000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20309168" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20522387" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -286,46 +301,9 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.32995737" />
-      <window_info active="true" anchor="right" id="Maven" order="9" visible="true" weight="0.12633263" />
+      <window_info active="true" anchor="right" id="Maven" order="9" visible="true" weight="0.1380597" />
       <window_info anchor="right" id="Bean Validation" order="10" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20309168" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Web" order="6" side_tool="true" />
-      <window_info id="Capture Tool" order="7" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49840087" visible="true" weight="0.29577464" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
-      <window_info active="true" anchor="bottom" id="Application Servers" order="7" sideWeight="0.49840087" visible="true" weight="0.3286334" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4989339" weight="0.3286334" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32897604" />
-      <window_info anchor="bottom" id="Java Enterprise" order="10" sideWeight="0.49946696" weight="0.3286334" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50159913" side_tool="true" weight="0.29577464" />
-      <window_info anchor="bottom" id="Spring" order="14" />
-      <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Database" order="5" weight="0.32995737" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" weight="0.32995737" />
-      <window_info anchor="right" id="Maven" order="9" weight="0.10714286" />
-      <window_info anchor="right" id="Bean Validation" order="10" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -350,13 +328,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bibliotheque-service/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -378,13 +349,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bibliotheque-webapp/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -429,13 +393,6 @@
           <folding>
             <element signature="e#0#541#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bibliotheque-entity/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -487,72 +444,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/client/CompteClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="93" selection-start-line="28" selection-start-column="93" selection-end-line="28" selection-end-column="93" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/CompteRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="36" column="59" selection-start-line="36" selection-start-column="59" selection-end-line="36" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/CompteService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#380#381#0" expanded="true" />
-            <element signature="e#428#429#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-            <element signature="e#631#632#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#727#728#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bibliotheque-webapp/src/main/resources/templates/msg.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="74" selection-start-line="74" selection-end-line="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bibliotheque-webapp/src/main/resources/templates/livres.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/LivreRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="64" selection-start-line="26" selection-start-column="64" selection-end-line="26" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/CompteController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="31" column="69" lean-forward="true" selection-start-line="31" selection-start-column="69" selection-end-line="31" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -566,6 +461,92 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-webapp/src/main/resources/templates/livres.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/CompteService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
+            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#794#795#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/client/CompteClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="34" column="62" selection-start-line="34" selection-start-column="62" selection-end-line="34" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/CompteRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-webapp/src/main/resources/templates/formUpCompte.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-605">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-webapp/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-194">
+          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-entity/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/CompteController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="53" column="21" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-webapp/src/main/resources/templates/msg.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="72" column="10" lean-forward="true" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
         </state>
       </provider>
     </entry>

@@ -7,7 +7,7 @@ import java.util.List;
 public interface CompteService {
 
     CompteEntity getCompteById(Integer id);
-    List<CompteEntity> getAllCompte();
+    List<CompteEntity> getAllComptes();
     CompteEntity addCompte(CompteEntity compte);
     boolean updateCompte(CompteEntity compte);
     boolean deleteCompte(Integer id);

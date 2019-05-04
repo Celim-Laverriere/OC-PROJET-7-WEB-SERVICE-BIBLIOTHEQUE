@@ -12,7 +12,7 @@ import java.util.Collection;
 @Getter @Setter
 public class OuvrageEntity implements Serializable {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String titre;
     private String genre;

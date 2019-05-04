@@ -154,7 +154,7 @@
         </xs:complexType>
     </xs:element>
 
-    <!-- ==== ADD ==== -->
+    <!-- ==== ADD COMPTE ==== -->
     <xs:element name="addCompteRequest">
         <xs:complexType>
             <xs:sequence>
@@ -171,21 +171,11 @@
         </xs:complexType>
     </xs:element>
 
-    <!-- ==== UPDATE ==== -->
+    <!-- ==== UPDATE COMPTE ==== -->
     <xs:element name="updateCompteRequest">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="id" type="xs:int"/>
-                <xs:element name="nom" type="xs:string"/>
-                <xs:element name="prenom" type="xs:string"/>
-                <xs:element name="adresse" type="xs:string"/>
-                <xs:element name="codePostal" type="xs:int"/>
-                <xs:element name="ville" type="xs:string"/>
-                <xs:element name="numPortable" type="xs:int"/>
-                <xs:element name="numDomicile" type="xs:int"/>
-                <xs:element name="numCarteBibliotheque" type="xs:int"/>
-                <xs:element name="mail" type="xs:string"/>
-                <xs:element name="motDePasse" type="xs:string"/>
+                <xs:element name="compteType" type="tns:compteType"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -197,11 +187,11 @@
         </xs:complexType>
     </xs:element>
 
-    <!-- ==== DELETE ==== -->
+    <!-- ==== DELETE COMPTE ==== -->
     <xs:element name="deleteCompteRequest">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="id" type="xs:int"/>
+                <xs:element name="compteId" type="xs:int"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -217,4 +207,209 @@
     <!-- ==== SERVICES OUVRAGE ===== -->
     <!-- =========================== -->
 
+    <!-- ==== OUVRAGE TYPE ==== -->
+    <xs:complexType name="ouvrageType">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+            <xs:element name="titre" type="xs:string"/>
+            <xs:element name="genre" type="xs:string"/>
+            <xs:element name="resumer" type="xs:string"/>
+            <xs:element name="auteur" type="xs:string"/>
+            <xs:element name="editeur" type="xs:string"/>
+            <xs:element name="ref" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- ==== GET OUVRAGE BY ID ==== -->
+    <xs:element name="getOuvrageByIdRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ouvrageId" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getOuvrageByIdResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ouvrageType" type="tns:ouvrageType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- ==== GET ALL OUVRAGE ==== -->
+    <xs:element name="getAllOuvragesRequest">
+        <xs:complexType/>
+    </xs:element>
+    <xs:element name="getAllOuvragesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ouvrageType" type="tns:ouvrageType" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- ==== ADD OUVRAGE ==== -->
+    <xs:element name="addOuvrageRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ouvrageType" type="tns:ouvrageType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="addOuvrageResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="serviceStatus" type="tns:serviceStatus"/>
+                <xs:element name="ouvrageType" type="tns:ouvrageType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- ==== UPDATE OUVRAGE ==== -->
+    <xs:element name="updateOuvrageRequest">
+       <xs:complexType>
+           <xs:sequence>
+               <xs:element name="ouvrageType" type="tns:ouvrageType"/>
+           </xs:sequence>
+       </xs:complexType>
+    </xs:element>
+    <xs:element name="updateOuvrageResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="serviceStatus" type="tns:serviceStatus"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- ==== DELETE OUVRAGE ==== -->
+    <xs:element name="deleteOuvrageRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ouvrageId" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="deleteOuvrageResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="serviceStatus" type="tns:serviceStatus"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- =========================== -->
+    <!-- ==== SERVICES PHOTO ======= -->
+    <!-- =========================== -->
+
+    <!-- ==== PHOTO TYPE ==== -->
+    <xs:complexType name="photoType">
+        <xs:sequence>
+            <xs:element name="photoId" type="xs:int"/>
+            <xs:element name="urlPhoto" type="xs:string"/>
+            <xs:element name="nomPhoto" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- ==== GET PHOTO BY ID ==== -->
+    <xs:element name="getPhotoByIdRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="photoId" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getPhotoByResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="photoType" type="tns:photoType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- ==== GET ALL PHOTO ==== -->
+    <xs:element name="getAllPhotoRequest">
+        <xs:complexType/>
+    </xs:element>
+    <xs:complexType name="getAllPhotoResponse">
+        <xs:sequence>
+            <xs:element name="photoType" type="tns:photoType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- ==== ADD PHOTO ==== -->
+    <xs:element name="addPhotoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="photoType" type="tns:photoType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="addPhotoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="serviceStatus" type="tns:serviceStatus"/>
+                <xs:element name="photoType" type="tns:photoType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- ==== UPDATE PHOTO ==== -->
+    <xs:element name="updatePhotoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="photoType" type="tns:photoType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="updatePhotoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="serviceStatus" type="tns:serviceStatus"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- ==== DELETE PHOTO ==== -->
+    <xs:element name="deletePhotoRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="photoId" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="deletePhotoResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="serviceStatus" type="tns:serviceStatus"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
 </xs:schema>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

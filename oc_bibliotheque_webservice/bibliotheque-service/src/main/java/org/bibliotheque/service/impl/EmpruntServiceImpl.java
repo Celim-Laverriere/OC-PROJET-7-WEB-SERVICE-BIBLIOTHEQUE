@@ -1,9 +1,9 @@
 package org.bibliotheque.service.impl;
 
 import lombok.NoArgsConstructor;
-import org.bibliotheque.entity.LivreEntity;
-import org.bibliotheque.repository.LivreRepository;
-import org.bibliotheque.service.contract.LivreService;
+import org.bibliotheque.entity.EmpruntEntity;
+import org.bibliotheque.repository.EmpruntRepository;
+import org.bibliotheque.service.contract.EmpruntService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,31 +14,31 @@ import java.util.List;
 @Service
 @Transactional
 @NoArgsConstructor
-public class LivreServiceImpl implements LivreService {
+public class EmpruntServiceImpl implements EmpruntService {
 
-    private LivreRepository repository;
+    private EmpruntRepository repository;
 
     @Autowired
-    public LivreServiceImpl(LivreRepository repository){
+    public EmpruntServiceImpl(EmpruntRepository repository) {
         this.repository = repository;
     }
 
     @Override
-    public LivreEntity getLivreById(Integer id) {
+    public EmpruntEntity getEmpruntById(Integer id) {
         return this.repository.findById(id).get();
     }
 
     @Override
-    public List<LivreEntity> getAllLivres() {
-        List<LivreEntity> livreEntities = new ArrayList<LivreEntity>();
-        this.repository.findAll().forEach(e -> livreEntities.add(e));
-        return livreEntities;
+    public List<EmpruntEntity> getAllEmprunts() {
+        List<EmpruntEntity> empruntEntities = new ArrayList<>();
+        this.repository.findAll().forEach(e -> empruntEntities.add(e));
+        return empruntEntities;
     }
 
     @Override
-    public LivreEntity addLivre(LivreEntity livre) {
+    public EmpruntEntity addEmprunt(EmpruntEntity emprunt) {
         try{
-            return this.repository.save(livre);
+            return this.repository.save(emprunt);
         } catch (Exception pEX){
             pEX.printStackTrace();
             return null;
@@ -46,9 +46,9 @@ public class LivreServiceImpl implements LivreService {
     }
 
     @Override
-    public boolean updateLivre(LivreEntity livre) {
+    public boolean updateEmprunt(EmpruntEntity emprunt) {
         try{
-            this.repository.save(livre);
+            this.repository.save(emprunt);
             return true;
         } catch (Exception pEX){
             pEX.printStackTrace();
@@ -57,15 +57,14 @@ public class LivreServiceImpl implements LivreService {
     }
 
     @Override
-    public boolean deleteLivre(Integer id) {
-        try {
+    public boolean deleteEmprunt(Integer id) {
+        try{
             this.repository.deleteById(id);
             return true;
-        } catch (Exception pEX){
+        }catch (Exception pEX){
             pEX.printStackTrace();
             return false;
         }
+
     }
-
-
 }

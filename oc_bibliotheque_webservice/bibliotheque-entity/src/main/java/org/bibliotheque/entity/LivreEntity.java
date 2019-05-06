@@ -1,6 +1,7 @@
 package org.bibliotheque.entity;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -10,8 +11,8 @@ import java.util.Collection;
 @Entity
 @Table(name = "livre")
 @Getter @Setter
+@NoArgsConstructor
 public class LivreEntity implements Serializable {
-
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
@@ -20,22 +21,4 @@ public class LivreEntity implements Serializable {
     @Column(name = "ouvrage_id")
     private Integer ouvrageId;
 
-   @ManyToOne(fetch = FetchType.LAZY)
-   @JoinColumn(name = "livre_id")
-   private OuvrageEntity ouvrage;
-
-   @OneToMany(mappedBy = "livre")
-   private Collection<EmpruntEntity> emprunts;
-
-    public LivreEntity() {
-    }
-
-    public LivreEntity(String refBibliotheque, Integer ouvrageId) {
-        this.refBibliotheque = refBibliotheque;
-        this.ouvrageId = ouvrageId;
-    }
-
-    public LivreEntity(OuvrageEntity ouvrage) {
-        this.ouvrage = ouvrage;
-    }
 }

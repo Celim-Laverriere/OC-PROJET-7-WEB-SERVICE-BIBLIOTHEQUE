@@ -8,7 +8,6 @@ public interface LivreService {
 
    LivreEntity getLivreById(Integer id);
    List<LivreEntity> getAllLivres();
-   LivreEntity getLivreByRef(String ref);
    LivreEntity addLivre(LivreEntity livre);
    boolean updateLivre(LivreEntity livre);
    boolean deleteLivre(Integer id);

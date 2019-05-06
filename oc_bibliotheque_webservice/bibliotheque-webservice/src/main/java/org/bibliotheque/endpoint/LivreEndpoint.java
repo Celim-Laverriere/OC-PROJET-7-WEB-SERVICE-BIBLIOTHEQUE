@@ -1,6 +1,7 @@
 package org.bibliotheque.endpoint;
 
 import com.bibliotheque.gs_ws.*;
+import lombok.NoArgsConstructor;
 import org.bibliotheque.entity.LivreEntity;
 import org.bibliotheque.service.contract.LivreService;
 import org.springframework.beans.BeanUtils;
@@ -14,15 +15,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Endpoint
+@NoArgsConstructor
 public class LivreEndpoint {
 
     public static final String NAMESPACE_URI = "http://www.webservice.org/bibliotheque-ws";
 
     private LivreService service;
-
-    public LivreEndpoint(){
-
-    }
 
     @Autowired
     public LivreEndpoint(LivreService service){
@@ -61,8 +59,9 @@ public class LivreEndpoint {
         AddLivreResponse response = new AddLivreResponse();
         LivreType newLivreType = new LivreType();
         ServiceStatus serviceStatus = new ServiceStatus();
+        LivreEntity newLivreEntity = new LivreEntity();
 
-        LivreEntity newLivreEntity = new LivreEntity(request.getRefBibliotheque(), request.getOuvrageId());
+        BeanUtils.copyProperties(request.getLivreType(), newLivreEntity);
         LivreEntity savedLivreEntity = service.addLivre(newLivreEntity);
 
         if (savedLivreEntity == null) {
@@ -87,23 +86,22 @@ public class LivreEndpoint {
         ServiceStatus serviceStatus = new ServiceStatus();
 
         // 1. Trouver si le livre est disponible
-        LivreEntity upLivre = service.getLivreById(request.getId());
+        LivreEntity upLivre = service.getLivreById(request.getLivreType().getId());
 
         if(upLivre == null){
             serviceStatus.setStatusCode("NOT FOUND");
-            serviceStatus.setMessage("Livre : " + request.getRefBibliotheque() + " not found");
+            serviceStatus.setMessage("Livre : " + request.getLivreType().getRefBibliotheque() + " not found");
         } else {
 
             // 2. Obtenir les informations du livre à mettre à jour à partir de la requête
-            upLivre.setRefBibliotheque(request.getRefBibliotheque());
-            upLivre.setOuvrageId(request.getOuvrageId());
+            BeanUtils.copyProperties(request.getLivreType(), upLivre);
 
             // 3. met à jour le livre dans la base de données
             boolean flag = service.updateLivre(upLivre);
 
             if (flag == false) {
                 serviceStatus.setStatusCode("CONFLICT");
-                serviceStatus.setMessage("Exception while updating Entity : " + request.getRefBibliotheque());
+                serviceStatus.setMessage("Exception while updating Entity : " + request.getLivreType().getRefBibliotheque());
             } else {
                 serviceStatus.setStatusCode("SUCCESS");
                 serviceStatus.setMessage("Content updated Successfully");
@@ -120,11 +118,11 @@ public class LivreEndpoint {
         DeleteLivreResponse response = new DeleteLivreResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
 
-        boolean flag = service.deleteLivre(request.getId());
+        boolean flag = service.deleteLivre(request.getLivreId());
 
         if(flag == false){
             serviceStatus.setStatusCode("FAIL");
-            serviceStatus.setMessage("Exception while deletint Entity id : " + request.getId());
+            serviceStatus.setMessage("Exception while deletint Entity id : " + request.getLivreId());
         } else {
             serviceStatus.setStatusCode("SUCCESS");
             serviceStatus.setMessage("Content Deleted Successfully");

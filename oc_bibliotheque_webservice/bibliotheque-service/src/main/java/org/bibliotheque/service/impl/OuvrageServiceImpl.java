@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -15,35 +16,54 @@ import java.util.List;
 @NoArgsConstructor
 public class OuvrageServiceImpl implements OuvrageService {
 
-    private OuvrageRepository repository;
+    private OuvrageRepository ouvrageRepository;
 
     @Autowired
-    public OuvrageServiceImpl(OuvrageRepository repository){
-        this.repository = repository;
+    public OuvrageServiceImpl(OuvrageRepository ouvrageRepository){
+        this.ouvrageRepository = ouvrageRepository;
     }
 
     @Override
     public OuvrageEntity getOuvrageById(Integer id) {
-        return null;
+        return this.ouvrageRepository.findById(id).get();
     }
 
     @Override
     public List<OuvrageEntity> getAllOuvrages() {
-        return null;
+        List<OuvrageEntity> ouvrageEntities = new ArrayList<>();
+        this.ouvrageRepository.findAll().forEach(e -> ouvrageEntities.add(e));
+        return ouvrageEntities;
     }
 
     @Override
     public OuvrageEntity addOuvrage(OuvrageEntity ouvrage) {
-        return null;
+        try{
+            return this.ouvrageRepository.save(ouvrage);
+        } catch (Exception pEX){
+            pEX.printStackTrace();
+            return null;
+        }
     }
 
     @Override
     public boolean updateOuvrage(OuvrageEntity ouvrage) {
-        return false;
+        try {
+            this.ouvrageRepository.save(ouvrage);
+            return true;
+        } catch (Exception pEX){
+            pEX.printStackTrace();
+            return false;
+        }
     }
 
     @Override
     public boolean deleteOuvrage(Integer id) {
-        return false;
+        try {
+            this.ouvrageRepository.deleteById(id);
+            return true;
+        } catch (Exception pEX){
+            pEX.printStackTrace();
+            return false;
+        }
     }
 }

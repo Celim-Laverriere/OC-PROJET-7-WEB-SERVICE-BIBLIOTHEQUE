@@ -1,6 +1,7 @@
 package org.bibliotheque.entity;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -9,6 +10,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "photo")
 @Getter @Setter
+@NoArgsConstructor
 public class PhotoEntity implements Serializable {
 
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
@@ -17,16 +19,7 @@ public class PhotoEntity implements Serializable {
     private String urlPhoto;
     @Column(name = "nom_photo")
     private String nomPhoto;
+    @Column(name = "ouvrage_id")
+    private Integer ouvrageId;
 
-   @ManyToOne(fetch = FetchType.EAGER)
-    private OuvrageEntity ouvrage;
-
-    public PhotoEntity() {
-    }
-
-    public PhotoEntity(String urlPhoto, String nomPhoto, OuvrageEntity ouvrage) {
-        this.urlPhoto = urlPhoto;
-        this.nomPhoto = nomPhoto;
-        this.ouvrage = ouvrage;
-    }
 }

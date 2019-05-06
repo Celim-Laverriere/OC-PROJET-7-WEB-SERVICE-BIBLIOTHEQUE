@@ -1,6 +1,7 @@
 package org.bibliotheque.endpoint;
 
 import com.bibliotheque.gs_ws.*;
+import lombok.NoArgsConstructor;
 import org.bibliotheque.entity.CompteEntity;
 import org.bibliotheque.service.contract.CompteService;
 import org.springframework.beans.BeanUtils;
@@ -14,15 +15,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Endpoint
+@NoArgsConstructor
 public class CompteEndpoint {
 
     public static final String NAMESPACE_URI = "http://www.webservice.org/bibliotheque-ws";
 
     private CompteService service;
-
-    public CompteEndpoint(){
-
-    }
 
     @Autowired
     public CompteEndpoint(CompteService service){

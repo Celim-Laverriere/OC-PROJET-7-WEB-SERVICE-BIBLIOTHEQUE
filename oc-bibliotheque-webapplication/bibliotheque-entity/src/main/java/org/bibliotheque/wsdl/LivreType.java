@@ -2,7 +2,7 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.2.11 
 // Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2019.05.04 à 10:05:56 AM CEST 
+// Généré le : 2019.05.08 à 04:06:04 PM CEST 
 //
 
 
@@ -27,6 +27,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="refBibliotheque" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *         &lt;element name="ouvrageId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="statut" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -39,7 +40,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "livreType", propOrder = {
     "id",
     "refBibliotheque",
-    "ouvrageId"
+    "ouvrageId",
+    "statut"
 })
 public class LivreType {
 
@@ -47,6 +49,8 @@ public class LivreType {
     @XmlElement(required = true)
     protected String refBibliotheque;
     protected int ouvrageId;
+    @XmlElement(required = true)
+    protected String statut;
 
     /**
      * Obtient la valeur de la propriété id.
@@ -102,6 +106,30 @@ public class LivreType {
      */
     public void setOuvrageId(int value) {
         this.ouvrageId = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété statut.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getStatut() {
+        return statut;
+    }
+
+    /**
+     * Définit la valeur de la propriété statut.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setStatut(String value) {
+        this.statut = value;
     }
 
 }

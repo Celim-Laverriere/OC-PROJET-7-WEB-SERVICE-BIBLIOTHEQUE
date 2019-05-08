@@ -2,7 +2,7 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.2.11 
 // Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2019.05.04 à 10:05:56 AM CEST 
+// Généré le : 2019.05.08 à 04:06:04 PM CEST 
 //
 
 
@@ -218,6 +218,270 @@ public class ObjectFactory {
      */
     public DeleteCompteResponse createDeleteCompteResponse() {
         return new DeleteCompteResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetOuvrageByIdRequest }
+     * 
+     */
+    public GetOuvrageByIdRequest createGetOuvrageByIdRequest() {
+        return new GetOuvrageByIdRequest();
+    }
+
+    /**
+     * Create an instance of {@link GetOuvrageByIdResponse }
+     * 
+     */
+    public GetOuvrageByIdResponse createGetOuvrageByIdResponse() {
+        return new GetOuvrageByIdResponse();
+    }
+
+    /**
+     * Create an instance of {@link OuvrageType }
+     * 
+     */
+    public OuvrageType createOuvrageType() {
+        return new OuvrageType();
+    }
+
+    /**
+     * Create an instance of {@link GetAllOuvragesRequest }
+     * 
+     */
+    public GetAllOuvragesRequest createGetAllOuvragesRequest() {
+        return new GetAllOuvragesRequest();
+    }
+
+    /**
+     * Create an instance of {@link GetAllOuvragesResponse }
+     * 
+     */
+    public GetAllOuvragesResponse createGetAllOuvragesResponse() {
+        return new GetAllOuvragesResponse();
+    }
+
+    /**
+     * Create an instance of {@link AddOuvrageRequest }
+     * 
+     */
+    public AddOuvrageRequest createAddOuvrageRequest() {
+        return new AddOuvrageRequest();
+    }
+
+    /**
+     * Create an instance of {@link AddOuvrageResponse }
+     * 
+     */
+    public AddOuvrageResponse createAddOuvrageResponse() {
+        return new AddOuvrageResponse();
+    }
+
+    /**
+     * Create an instance of {@link UpdateOuvrageRequest }
+     * 
+     */
+    public UpdateOuvrageRequest createUpdateOuvrageRequest() {
+        return new UpdateOuvrageRequest();
+    }
+
+    /**
+     * Create an instance of {@link UpdateOuvrageResponse }
+     * 
+     */
+    public UpdateOuvrageResponse createUpdateOuvrageResponse() {
+        return new UpdateOuvrageResponse();
+    }
+
+    /**
+     * Create an instance of {@link DeleteOuvrageRequest }
+     * 
+     */
+    public DeleteOuvrageRequest createDeleteOuvrageRequest() {
+        return new DeleteOuvrageRequest();
+    }
+
+    /**
+     * Create an instance of {@link DeleteOuvrageResponse }
+     * 
+     */
+    public DeleteOuvrageResponse createDeleteOuvrageResponse() {
+        return new DeleteOuvrageResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetPhotoByIdRequest }
+     * 
+     */
+    public GetPhotoByIdRequest createGetPhotoByIdRequest() {
+        return new GetPhotoByIdRequest();
+    }
+
+    /**
+     * Create an instance of {@link GetPhotoByIdResponse }
+     * 
+     */
+    public GetPhotoByIdResponse createGetPhotoByIdResponse() {
+        return new GetPhotoByIdResponse();
+    }
+
+    /**
+     * Create an instance of {@link PhotoType }
+     * 
+     */
+    public PhotoType createPhotoType() {
+        return new PhotoType();
+    }
+
+    /**
+     * Create an instance of {@link GetAllPhotosRequest }
+     * 
+     */
+    public GetAllPhotosRequest createGetAllPhotosRequest() {
+        return new GetAllPhotosRequest();
+    }
+
+    /**
+     * Create an instance of {@link GetAllPhotosResponse }
+     * 
+     */
+    public GetAllPhotosResponse createGetAllPhotosResponse() {
+        return new GetAllPhotosResponse();
+    }
+
+    /**
+     * Create an instance of {@link AddPhotoRequest }
+     * 
+     */
+    public AddPhotoRequest createAddPhotoRequest() {
+        return new AddPhotoRequest();
+    }
+
+    /**
+     * Create an instance of {@link AddPhotoResponse }
+     * 
+     */
+    public AddPhotoResponse createAddPhotoResponse() {
+        return new AddPhotoResponse();
+    }
+
+    /**
+     * Create an instance of {@link UpdatePhotoRequest }
+     * 
+     */
+    public UpdatePhotoRequest createUpdatePhotoRequest() {
+        return new UpdatePhotoRequest();
+    }
+
+    /**
+     * Create an instance of {@link UpdatePhotoResponse }
+     * 
+     */
+    public UpdatePhotoResponse createUpdatePhotoResponse() {
+        return new UpdatePhotoResponse();
+    }
+
+    /**
+     * Create an instance of {@link DeletePhotoRequest }
+     * 
+     */
+    public DeletePhotoRequest createDeletePhotoRequest() {
+        return new DeletePhotoRequest();
+    }
+
+    /**
+     * Create an instance of {@link DeletePhotoResponse }
+     * 
+     */
+    public DeletePhotoResponse createDeletePhotoResponse() {
+        return new DeletePhotoResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetEmpruntByIdRequest }
+     * 
+     */
+    public GetEmpruntByIdRequest createGetEmpruntByIdRequest() {
+        return new GetEmpruntByIdRequest();
+    }
+
+    /**
+     * Create an instance of {@link GetEmpruntByIdResponse }
+     * 
+     */
+    public GetEmpruntByIdResponse createGetEmpruntByIdResponse() {
+        return new GetEmpruntByIdResponse();
+    }
+
+    /**
+     * Create an instance of {@link EmpruntType }
+     * 
+     */
+    public EmpruntType createEmpruntType() {
+        return new EmpruntType();
+    }
+
+    /**
+     * Create an instance of {@link GetAllEmpruntRequest }
+     * 
+     */
+    public GetAllEmpruntRequest createGetAllEmpruntRequest() {
+        return new GetAllEmpruntRequest();
+    }
+
+    /**
+     * Create an instance of {@link GetAllEmpruntResponse }
+     * 
+     */
+    public GetAllEmpruntResponse createGetAllEmpruntResponse() {
+        return new GetAllEmpruntResponse();
+    }
+
+    /**
+     * Create an instance of {@link AddEmpruntRequest }
+     * 
+     */
+    public AddEmpruntRequest createAddEmpruntRequest() {
+        return new AddEmpruntRequest();
+    }
+
+    /**
+     * Create an instance of {@link AddEmpruntResponse }
+     * 
+     */
+    public AddEmpruntResponse createAddEmpruntResponse() {
+        return new AddEmpruntResponse();
+    }
+
+    /**
+     * Create an instance of {@link UpdateEmpruntRequest }
+     * 
+     */
+    public UpdateEmpruntRequest createUpdateEmpruntRequest() {
+        return new UpdateEmpruntRequest();
+    }
+
+    /**
+     * Create an instance of {@link UpdateEmpruntResponse }
+     * 
+     */
+    public UpdateEmpruntResponse createUpdateEmpruntResponse() {
+        return new UpdateEmpruntResponse();
+    }
+
+    /**
+     * Create an instance of {@link DeleteEmpruntRequest }
+     * 
+     */
+    public DeleteEmpruntRequest createDeleteEmpruntRequest() {
+        return new DeleteEmpruntRequest();
+    }
+
+    /**
+     * Create an instance of {@link DeleteEmpruntResponse }
+     * 
+     */
+    public DeleteEmpruntResponse createDeleteEmpruntResponse() {
+        return new DeleteEmpruntResponse();
     }
 
 }

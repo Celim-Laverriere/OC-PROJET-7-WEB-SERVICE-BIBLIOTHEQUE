@@ -44,6 +44,7 @@ public class LivreEndpoint {
         GetAllLivresResponse response = new GetAllLivresResponse();
         List<LivreType> livreTypeList = new ArrayList<LivreType>();
         List<LivreEntity> livreEntityList = service.getAllLivres();
+
         for (LivreEntity entity : livreEntityList){
             LivreType livreType = new LivreType();
             BeanUtils.copyProperties(entity, livreType);

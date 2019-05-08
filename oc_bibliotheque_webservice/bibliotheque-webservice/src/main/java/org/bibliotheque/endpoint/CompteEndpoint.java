@@ -136,23 +136,3 @@ public class CompteEndpoint {
         return response;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

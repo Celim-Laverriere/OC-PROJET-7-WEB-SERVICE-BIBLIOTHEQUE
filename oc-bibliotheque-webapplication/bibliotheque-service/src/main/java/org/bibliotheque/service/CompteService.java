@@ -1,5 +1,6 @@
 package org.bibliotheque.service;
 
+import org.bibliotheque.client.CompteClient;
 import org.bibliotheque.repository.CompteRepository;
 import org.bibliotheque.wsdl.CompteType;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,23 +14,48 @@ public class CompteService {
     @Autowired
     private CompteRepository repository;
 
+    /**
+     * GET COMPTE BY ID
+     * @param id @return CompteType
+     * @see CompteClient#getCompteById(Integer)
+     */
     public CompteType compteById(Integer id){
         return repository.compteById(id);
     }
 
+    /**
+     * GET ALL COMPTES
+     * @return compteList
+     * @see CompteClient#getAllComptes() (Integer)
+     */
     public List<CompteType> compteList(){
         return  repository.compteList();
     }
 
+    /**
+     * ADD COMPTE
+     * @param compteType @return message de confirmation
+     * @see CompteClient#addCompte(CompteType)
+     */
     public String addCompte(CompteType compteType){
         return repository.addCompte(compteType);
     }
 
-    public String delCompt(Integer id){
-        return repository.delCompte(id);
-    }
-
+    /**
+     * UPDATE COMPTE
+     * @param compteType @return message de confirmation
+     * @see CompteClient#updateCompte(CompteType)
+     */
     public String upCompte(CompteType compteType){
         return repository.upCompte(compteType);
+    }
+
+    /**
+     * DELETE COMPTE
+     * @param id @return message de confirmation
+     * @see CompteClient#deleteCompte(Integer)
+     */
+    public String delCompt(Integer id){
+        return repository.delCompte(id);
     }
 }

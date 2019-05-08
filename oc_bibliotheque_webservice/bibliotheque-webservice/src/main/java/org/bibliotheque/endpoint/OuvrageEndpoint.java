@@ -2,8 +2,13 @@ package org.bibliotheque.endpoint;
 
 import com.bibliotheque.gs_ws.*;
 import lombok.NoArgsConstructor;
+import org.bibliotheque.entity.LivreEntity;
 import org.bibliotheque.entity.OuvrageEntity;
+import org.bibliotheque.entity.PhotoEntity;
 import org.bibliotheque.service.contract.OuvrageService;
+import org.hibernate.Hibernate;
+import org.hibernate.Session;
+import org.hibernate.internal.SessionImpl;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
@@ -12,7 +17,9 @@ import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 
 @Endpoint
 @NoArgsConstructor
@@ -33,6 +40,14 @@ public class OuvrageEndpoint {
         GetOuvrageByIdResponse response = new GetOuvrageByIdResponse();
         OuvrageEntity ouvrageEntity = service.getOuvrageById(request.getOuvrageId());
         OuvrageType ouvrageType = new OuvrageType();
+
+        // Récupération de la liste des photos de l'ouvrage
+        for (PhotoEntity photoEntity: ouvrageEntity.getPhotos()){
+            PhotoType photoType = new PhotoType();
+            BeanUtils.copyProperties(photoEntity, photoType);
+            ouvrageType.setPhotos(photoType);
+        }
+
         BeanUtils.copyProperties(ouvrageEntity, ouvrageType);
         response.setOuvrageType(ouvrageType);
         return response;
@@ -46,9 +61,19 @@ public class OuvrageEndpoint {
         List<OuvrageEntity> ouvrageEntityList = service.getAllOuvrages();
 
         for (OuvrageEntity entity : ouvrageEntityList){
-            OuvrageType ouvrageType = new OuvrageType();
-            BeanUtils.copyProperties(entity, ouvrageType);
-            ouvrageTypeList.add(ouvrageType);
+
+            for (PhotoEntity photoEntity : entity.getPhotos()){
+
+                OuvrageType ouvrageType = new OuvrageType();
+                PhotoType photoType = new PhotoType();
+
+                BeanUtils.copyProperties(photoEntity, photoType);
+                ouvrageType.setPhotos(photoType);
+
+                BeanUtils.copyProperties(entity, ouvrageType);
+                ouvrageTypeList.add(ouvrageType);
+            }
+
         }
 
         response.getOuvrageType().addAll(ouvrageTypeList);

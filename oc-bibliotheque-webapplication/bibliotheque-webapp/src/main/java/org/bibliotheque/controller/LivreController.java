@@ -1,8 +1,9 @@
 package org.bibliotheque.controller;
 
 import org.bibliotheque.service.LivreService;
-import org.bibliotheque.wsdl.CompteType;
+import org.bibliotheque.service.OuvrageService;
 import org.bibliotheque.wsdl.LivreType;
+import org.bibliotheque.wsdl.OuvrageType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -17,27 +18,28 @@ public class LivreController {
     @Autowired
     private LivreService livreService;
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String afficherBonjour(final ModelMap pModel){
-        pModel.addAttribute("personne", "Théo");
-//        String livre = livreService.Livres();
-//        pModel.addAttribute("livre", livre);
-        pModel.addAttribute("nom","Laverriere");
-        return "livres";
-    }
+    @Autowired
+    private OuvrageService ouvrageService;
 
-    @RequestMapping(value = "test", method = RequestMethod.GET)
+    @RequestMapping(value = "livres", method = RequestMethod.GET)
     public String AfficherMessage(final ModelMap modelMap){
-        LivreType livreType = livreService.LivreById(5);
-        CompteType compteType = new CompteType();
-        modelMap.addAttribute("compteType", compteType);
-        List<LivreType> livreTypes = livreService.livreTypeList();
-        modelMap.addAttribute("livres", livreTypes);
+        List<LivreType> livreTypeList = livreService.livreTypeList();
+        modelMap.addAttribute("livres", livreTypeList);
+        List<OuvrageType> ouvrageTypeList = ouvrageService.ouvrageTypeList();
 
-        for (LivreType livre : livreTypes) {
-            System.out.println(livre.getRefBibliotheque());
+        for (OuvrageType ouvrage : ouvrageTypeList) {
+            for (LivreType livre : livreTypeList) {
+
+                if (ouvrage.getId() == livre.getOuvrageId()){
+                    System.out.println(ouvrage.getTitre());
+                    System.out.println(ouvrage.getAuteur());
+                    System.out.println(livre.getRefBibliotheque());
+                    System.out.println(livre.getOuvrageId());
+                }
+            }
         }
-        modelMap.addAttribute("test", livreType.getRefBibliotheque());
-        return "msg";
+
+        modelMap.addAttribute("ouvrages", ouvrageTypeList);
+        return "ouvrageList";
     }
 }

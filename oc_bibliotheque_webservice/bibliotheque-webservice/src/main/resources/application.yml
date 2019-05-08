@@ -11,7 +11,7 @@ spring:
     properties:
       hibernate:
         temp:
-          #                    Évite les erreurs avec jpa et hibernate
+          #Évite les erreurs avec jpa et hibernate
           use_jdbc_metadata_defaults: false
     show-sql: true
 server:

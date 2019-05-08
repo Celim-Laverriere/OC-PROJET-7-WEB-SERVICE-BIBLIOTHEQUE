@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html   xmlns:th="http://www.thymeleaf.org" lang="en">
+<html   xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorator="layout"
+        lang="en">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -15,27 +18,8 @@
 
 <body>
 
-<section>
-    <div class="container">
+<div layout:fragment = "content">
 
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Référence du livre</th>
-                <th scope="col">ID de l'ouvrage</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr th:each="LivreType : ${livres}">
-
-                <td th:text="${LivreType.getId()}"/>
-                <td th:text="${LivreType.getRefBibliotheque()}"/>
-                <td th:text="${LivreType.getOuvrageId()}"/>
-            </tr>
-            </tbody>
-        </table>
-    </div>
     <div class="container-fluid">
         <table class="table">
             <thead>
@@ -72,30 +56,30 @@
         </table>
     </div>
 
-<!--    <div class="container">-->
-<!--        <form action="#" th:action="@{addCompte}" th:object="${compteType}" method="post">-->
-<!--            <label>Créer un compte utilisateur</label>-->
-<!--            <input type="text" th:field="*{nom}" />-->
-<!--            <input type="text" th:field="*{prenom}" />-->
-<!--            <input type="text" th:field="*{adresse}" />-->
-<!--            <input type="number" th:field="*{codePostal}" />-->
-<!--            <input type="text" th:field="*{ville}" />-->
-<!--            <input type="number" th:field="*{numPortable}" />-->
-<!--            <input type="number" th:field="*{numDomicile}" />-->
-<!--            <input type="number" th:field="*{numCarteBibliotheque}" />-->
-<!--            <input type="text" th:field="*{mail}" />-->
-<!--            <input type="text" th:field="*{motDePasse}" />-->
-<!--            <button type="submit" class="btn btn-primary">Validez</button>-->
-<!--        </form>-->
-<!--    </div>-->
+    <div class="container">
+        <form action="#" th:action="@{addCompte}" th:object="${compteType}" method="post">
+            <label>Créer un compte utilisateur</label>
+            <input type="text" th:field="*{nom}" />
+            <input type="text" th:field="*{prenom}" />
+            <input type="text" th:field="*{adresse}" />
+            <input type="number" th:field="*{codePostal}" />
+            <input type="text" th:field="*{ville}" />
+            <input type="number" th:field="*{numPortable}" />
+            <input type="number" th:field="*{numDomicile}" />
+            <input type="number" th:field="*{numCarteBibliotheque}" />
+            <input type="text" th:field="*{mail}" />
+            <input type="text" th:field="*{motDePasse}" />
+            <button type="submit" class="btn btn-primary">Validez</button>
+        </form>
+    </div>
 
-<!--    <div class="container">-->
-<!--        <form action="#" th:action="@{delCompte}" th:object="${compteType}" method="post">-->
-<!--            <input type="number" th:field="*{id}"/>-->
-<!--            <button type="submit" class="btn btn-primary">Supprimez</button>-->
-<!--        </form>-->
+    <div class="container">
+        <form action="#" th:action="@{delCompte}" th:object="${compteType}" method="post">
+            <input type="number" th:field="*{id}"/>
+            <button type="submit" class="btn btn-primary">Supprimez</button>
+        </form>
 <!--    </div>-->
-</section>
+</div>
 
 </body>
 </html>

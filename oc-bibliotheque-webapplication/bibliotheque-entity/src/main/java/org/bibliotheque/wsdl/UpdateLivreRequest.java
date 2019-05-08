@@ -2,7 +2,7 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.2.11 
 // Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2019.05.04 à 10:05:56 AM CEST 
+// Généré le : 2019.05.08 à 04:06:04 PM CEST 
 //
 
 
@@ -25,9 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
- *         &lt;element name="refBibliotheque" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="ouvrageId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="livreType" type="{http://www.webservice.org/bibliotheque-ws}livreType"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -38,72 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "id",
-    "refBibliotheque",
-    "ouvrageId"
+    "livreType"
 })
 @XmlRootElement(name = "updateLivreRequest")
 public class UpdateLivreRequest {
 
-    protected int id;
     @XmlElement(required = true)
-    protected String refBibliotheque;
-    protected int ouvrageId;
+    protected LivreType livreType;
 
     /**
-     * Obtient la valeur de la propriété id.
-     * 
-     */
-    public int getId() {
-        return id;
-    }
-
-    /**
-     * Définit la valeur de la propriété id.
-     * 
-     */
-    public void setId(int value) {
-        this.id = value;
-    }
-
-    /**
-     * Obtient la valeur de la propriété refBibliotheque.
+     * Obtient la valeur de la propriété livreType.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link LivreType }
      *     
      */
-    public String getRefBibliotheque() {
-        return refBibliotheque;
+    public LivreType getLivreType() {
+        return livreType;
     }
 
     /**
-     * Définit la valeur de la propriété refBibliotheque.
+     * Définit la valeur de la propriété livreType.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link LivreType }
      *     
      */
-    public void setRefBibliotheque(String value) {
-        this.refBibliotheque = value;
-    }
-
-    /**
-     * Obtient la valeur de la propriété ouvrageId.
-     * 
-     */
-    public int getOuvrageId() {
-        return ouvrageId;
-    }
-
-    /**
-     * Définit la valeur de la propriété ouvrageId.
-     * 
-     */
-    public void setOuvrageId(int value) {
-        this.ouvrageId = value;
+    public void setLivreType(LivreType value) {
+        this.livreType = value;
     }
 
 }

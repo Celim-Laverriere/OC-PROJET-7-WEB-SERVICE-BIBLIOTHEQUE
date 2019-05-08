@@ -1,11 +1,8 @@
 package org.bibliotheque.repository;
 
 import org.bibliotheque.client.LivreClient;
-import org.bibliotheque.config.SoapConfig;
-import org.bibliotheque.wsdl.GetAllLivresResponse;
-import org.bibliotheque.wsdl.GetLivresByIdResponse;
-import org.bibliotheque.wsdl.LivreType;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.bibliotheque.wsdl.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,19 +10,36 @@ import java.util.List;
 @Repository
 public class LivreRepository {
 
-    private AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SoapConfig.class);
+    @Autowired
+    private LivreClient client;
 
+    /* ==== GET LIVRE BY ID ==== */
     public LivreType livreById(Integer id) {
-        LivreClient client = context.getBean(LivreClient.class);
         GetLivresByIdResponse response = client.getLivreById(new Integer(id));
-        System.out.println("response: Movie id="+ response.getLivreType().getId()+", title=" +
-                response.getLivreType().getOuvrageId() + ", category="+ response.getLivreType().getRefBibliotheque());
         return response.getLivreType();
     }
 
+    /* ==== GET ALL LIVRES ==== */
     public List<LivreType> livreTypeList(){
-        LivreClient client = context.getBean(LivreClient.class);
         GetAllLivresResponse response = client.getAllLivres();
         return response.getLivreType();
+    }
+
+    /* ==== ADD LIVRE ==== */
+    public String addLivre(LivreType livreType){
+        AddLivreResponse response = client.addLivre(livreType);
+        return response.getServiceStatus().getMessage();
+    }
+
+    /* ==== UPDATE LIVRE ==== */
+    public String upLivre(LivreType livreType){
+        UpdateLivreResponse response = client.updateLivre(livreType);
+        return response.getServiceStatus().getMessage();
+    }
+
+    /* ==== DELETE LIVRE ==== */
+    public String delLivre(Integer id){
+        DeleteLivreResponse response = client.deleteLivre(id);
+        return response.getServiceStatus().getMessage();
     }
 }

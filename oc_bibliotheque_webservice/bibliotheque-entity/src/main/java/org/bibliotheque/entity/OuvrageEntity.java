@@ -8,6 +8,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Collection;
 
+
 @Entity
 @Table(name = "ouvrage")
 @Getter @Setter
@@ -24,5 +25,10 @@ public class OuvrageEntity implements Serializable {
     private String ref;
 
 
+    @OneToMany(mappedBy = "ouvragePhoto", fetch = FetchType.EAGER)
+    private Collection<PhotoEntity> photos;
+
+    @OneToMany(mappedBy = "ouvrageLivre", fetch = FetchType.LAZY)
+    private Collection<LivreEntity> livres;
 
 }

@@ -24,8 +24,8 @@ public class PhotoEndpoint {
     private PhotoService service;
 
     @Autowired
-    public PhotoEndpoint(PhotoService photoService){
-        this.service = photoService;
+    public PhotoEndpoint(PhotoService service){
+        this.service = service;
     }
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getPhotoByIdRequest")

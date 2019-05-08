@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 
-<html   xmlns:th="http://www.thymeleaf.org" lang="en">
+<html   xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorator="layout"
+        lang="en">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -13,10 +16,8 @@
     <title>Title</title>
 </head>
 <body>
-<header>
 
-</header>
-<section>
+<div layout:fragment = "content">
     <div class="container">
         <form action="#" th:action="@{upCompte}" th:object="${compteType}" method="post">
             <label>Créer un compte utilisateur</label>
@@ -34,9 +35,6 @@
             <button type="submit" class="btn btn-primary">Validez</button>
         </form>
     </div>
-</section>
-<footer>
-
-</footer>
+</div>
 </body>
 </html>

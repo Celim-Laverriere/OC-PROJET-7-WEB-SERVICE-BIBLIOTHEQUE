@@ -2,7 +2,7 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.2.11 
 // Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2019.05.04 à 10:05:56 AM CEST 
+// Généré le : 2019.05.08 à 04:06:04 PM CEST 
 //
 
 
@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="compteId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -35,27 +35,27 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "id"
+    "compteId"
 })
 @XmlRootElement(name = "deleteCompteRequest")
 public class DeleteCompteRequest {
 
-    protected int id;
+    protected int compteId;
 
     /**
-     * Obtient la valeur de la propriété id.
+     * Obtient la valeur de la propriété compteId.
      * 
      */
-    public int getId() {
-        return id;
+    public int getCompteId() {
+        return compteId;
     }
 
     /**
-     * Définit la valeur de la propriété id.
+     * Définit la valeur de la propriété compteId.
      * 
      */
-    public void setId(int value) {
-        this.id = value;
+    public void setCompteId(int value) {
+        this.compteId = value;
     }
 
 }

@@ -6,7 +6,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Collection;
+
 
 @Entity
 @Table(name = "livre")
@@ -18,7 +18,10 @@ public class LivreEntity implements Serializable {
     private Integer id;
     @Column(name = "ref_bibliotheque")
     private String refBibliotheque;
-    @Column(name = "ouvrage_id")
-    private Integer ouvrageId;
+    private String statut;
+
+    @ManyToOne
+    @JoinColumn(name = "ouvrage_id")
+    private OuvrageEntity ouvrageLivre;
 
 }

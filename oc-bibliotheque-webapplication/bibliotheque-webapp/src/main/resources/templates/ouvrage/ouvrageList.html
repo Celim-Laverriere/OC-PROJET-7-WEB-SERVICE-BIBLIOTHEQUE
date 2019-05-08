@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html   xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorator="layout"
+        lang="en">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"/>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <title>Ouvrages</title>
+</head>
+
+<body>
+
+<div layout:fragment = "content">
+
+
+    <div class="container" >
+        <div class="row">
+
+            <div class="col col-md-12">
+                <h2>Livres</h2>
+            </div>
+
+            <th:block th:each="ouvrage : ${ouvrageList}">
+                <div id="vignette" class="col col-md-4">
+                    <div class="thumbnail">
+                        <div class="caption">
+                            <p th:text="${ouvrage.getTitre()}"></p>
+                            <p th:text="${ouvrage.getAuteur()}"></p>
+                            <p>
+                                <a class="nav-link" href="#" th:href="@{ouvrage(ouvrageId=${ouvrage.getId()})}">
+                                    <img id="imageVignette" th:alt="${ouvrage.getPhotos().getNomPhoto()}" th:src="${ouvrage.getPhotos().getUrlPhoto()}">
+                                </a>
+                            </p>
+                            <p><a class="nav-link" href="#" th:href="@{ouvrage(ouvrageId=${ouvrage.getId()})}">Afficher détail</a></p>
+                        </div>
+                    </div>
+                </div>
+            </th:block>
+        </div>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

@@ -6,9 +6,6 @@ import org.bibliotheque.entity.LivreEntity;
 import org.bibliotheque.entity.OuvrageEntity;
 import org.bibliotheque.entity.PhotoEntity;
 import org.bibliotheque.service.contract.OuvrageService;
-import org.hibernate.Hibernate;
-import org.hibernate.Session;
-import org.hibernate.internal.SessionImpl;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
@@ -16,10 +13,9 @@ import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
-import java.util.Set;
 
 @Endpoint
 @NoArgsConstructor
@@ -36,16 +32,24 @@ public class OuvrageEndpoint {
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getOuvrageByIdRequest")
     @ResponsePayload
+    @Transactional
     public GetOuvrageByIdResponse getOuvrageById(@RequestPayload GetOuvrageByIdRequest request){
         GetOuvrageByIdResponse response = new GetOuvrageByIdResponse();
         OuvrageEntity ouvrageEntity = service.getOuvrageById(request.getOuvrageId());
         OuvrageType ouvrageType = new OuvrageType();
 
+        // Récupération de la liste des livres de l'ouvrage
+        for (LivreEntity livreEntity : ouvrageEntity.getLivres()) {
+            LivreType livreType = new LivreType();
+            BeanUtils.copyProperties(livreEntity, livreType);
+            ouvrageType.getLivres().add(livreType);
+        }
+
         // Récupération de la liste des photos de l'ouvrage
         for (PhotoEntity photoEntity: ouvrageEntity.getPhotos()){
             PhotoType photoType = new PhotoType();
             BeanUtils.copyProperties(photoEntity, photoType);
-            ouvrageType.setPhotos(photoType);
+            ouvrageType.getPhotos().add(photoType);
         }
 
         BeanUtils.copyProperties(ouvrageEntity, ouvrageType);
@@ -55,6 +59,7 @@ public class OuvrageEndpoint {
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllOuvragesRequest")
     @ResponsePayload
+    @Transactional
     public GetAllOuvragesResponse getAllOuvrages(@RequestPayload GetAllOuvragesRequest request){
         GetAllOuvragesResponse response = new GetAllOuvragesResponse();
         List<OuvrageType> ouvrageTypeList = new ArrayList<>();
@@ -68,7 +73,7 @@ public class OuvrageEndpoint {
                 PhotoType photoType = new PhotoType();
 
                 BeanUtils.copyProperties(photoEntity, photoType);
-                ouvrageType.setPhotos(photoType);
+                ouvrageType.getPhotos().add(photoType);
 
                 BeanUtils.copyProperties(entity, ouvrageType);
                 ouvrageTypeList.add(ouvrageType);

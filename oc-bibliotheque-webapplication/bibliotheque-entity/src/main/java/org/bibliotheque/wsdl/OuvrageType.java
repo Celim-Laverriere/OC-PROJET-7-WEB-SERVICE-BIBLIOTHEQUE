@@ -2,12 +2,14 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.2.11 
 // Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2019.05.08 à 04:06:04 PM CEST 
+// Généré le : 2019.05.11 à 05:55:42 PM CEST 
 //
 
 
 package org.bibliotheque.wsdl;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -31,8 +33,8 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="auteur" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *         &lt;element name="editeur" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *         &lt;element name="ref" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="photos" type="{http://www.webservice.org/bibliotheque-ws}photoType"/&gt;
- *         &lt;element name="livres" type="{http://www.webservice.org/bibliotheque-ws}livreType"/&gt;
+ *         &lt;element name="photos" type="{http://www.webservice.org/bibliotheque-ws}photoType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="livres" type="{http://www.webservice.org/bibliotheque-ws}livreType" maxOccurs="unbounded" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -68,10 +70,8 @@ public class OuvrageType {
     protected String editeur;
     @XmlElement(required = true)
     protected String ref;
-    @XmlElement(required = true)
-    protected PhotoType photos;
-    @XmlElement(required = true)
-    protected LivreType livres;
+    protected List<PhotoType> photos;
+    protected List<LivreType> livres;
 
     /**
      * Obtient la valeur de la propriété id.
@@ -234,51 +234,61 @@ public class OuvrageType {
     }
 
     /**
-     * Obtient la valeur de la propriété photos.
+     * Gets the value of the photos property.
      * 
-     * @return
-     *     possible object is
-     *     {@link PhotoType }
-     *     
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the photos property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getPhotos().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link PhotoType }
+     * 
+     * 
      */
-    public PhotoType getPhotos() {
-        return photos;
+    public List<PhotoType> getPhotos() {
+        if (photos == null) {
+            photos = new ArrayList<PhotoType>();
+        }
+        return this.photos;
     }
 
     /**
-     * Définit la valeur de la propriété photos.
+     * Gets the value of the livres property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link PhotoType }
-     *     
-     */
-    public void setPhotos(PhotoType value) {
-        this.photos = value;
-    }
-
-    /**
-     * Obtient la valeur de la propriété livres.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the livres property.
      * 
-     * @return
-     *     possible object is
-     *     {@link LivreType }
-     *     
-     */
-    public LivreType getLivres() {
-        return livres;
-    }
-
-    /**
-     * Définit la valeur de la propriété livres.
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getLivres().add(newItem);
+     * </pre>
      * 
-     * @param value
-     *     allowed object is
-     *     {@link LivreType }
-     *     
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link LivreType }
+     * 
+     * 
      */
-    public void setLivres(LivreType value) {
-        this.livres = value;
+    public List<LivreType> getLivres() {
+        if (livres == null) {
+            livres = new ArrayList<LivreType>();
+        }
+        return this.livres;
     }
 
 }

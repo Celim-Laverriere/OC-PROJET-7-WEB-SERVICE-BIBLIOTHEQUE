@@ -1,10 +1,8 @@
 package org.bibliotheque.repository;
 
 import org.bibliotheque.client.CompteClient;
-import org.bibliotheque.config.SoapConfig;
 import org.bibliotheque.wsdl.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -12,11 +10,8 @@ import java.util.List;
 @Repository
 public class CompteRepository {
 
-
-    private AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SoapConfig.class);
-
     @Autowired
-    private CompteClient client = context.getBean(CompteClient.class);
+    private CompteClient client;
 
     /* ==== GET COMPTE BY ID ==== */
     public CompteType compteById(Integer id){

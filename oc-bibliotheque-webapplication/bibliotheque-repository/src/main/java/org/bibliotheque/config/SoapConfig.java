@@ -1,9 +1,6 @@
 package org.bibliotheque.config;
 
-import org.bibliotheque.client.CompteClient;
-import org.bibliotheque.client.LivreClient;
-import org.bibliotheque.client.OuvrageClient;
-import org.bibliotheque.client.PhotoClient;
+import org.bibliotheque.client.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
@@ -55,4 +52,14 @@ public class SoapConfig {
         client.setUnmarshaller(marshaller);
         return client;
     }
+
+    @Bean
+    public LoginClient loginClient(Jaxb2Marshaller marshaller){
+        LoginClient client = new LoginClient();
+        client.setDefaultUri("http://localhost:8088/ws/bibliotheque.wsdl");
+        client.setMarshaller(marshaller);
+        client.setUnmarshaller(marshaller);
+        return client;
+    }
+
 }

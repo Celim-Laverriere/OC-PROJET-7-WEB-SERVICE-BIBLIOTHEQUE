@@ -30,8 +30,8 @@
             </div>
                 <hr/>
             <div class="col col-md-5">
-                <th:block th:each="ouvrage : ${ouvrageDetail}">
-                    <p><img id="imageDetail"  th:src="${ouvrageDetail.getPhotos().getUrlPhoto()}"></p>
+                <th:block th:each="photo : ${ouvrageDetail.getPhotos()}">
+                    <p><img id="imageDetail"  th:src="${photo.getUrlPhoto()}"></p>
                 </th:block>
             </div>
 
@@ -42,7 +42,16 @@
                 <p th:text="'EAN : ' + ${ouvrageDetail.getRef()}"></p>
             </div>
         </div>
+
+        <div class="col col-md-12">
+            <th:block th:each="livre : ${ouvrageDetail.getLivres()}">
+                <p th:text="${livre.getStatut()}"></p>
+            </th:block>
+
+        </div>
     </div>
+
+
 
 
 

@@ -16,12 +16,8 @@ import java.util.List;
 @NoArgsConstructor
 public class LivreServiceImpl implements LivreService {
 
-    private LivreRepository repository;
-
     @Autowired
-    public LivreServiceImpl(LivreRepository repository){
-        this.repository = repository;
-    }
+    private LivreRepository repository;
 
     @Override
     public LivreEntity getLivreById(Integer id) {

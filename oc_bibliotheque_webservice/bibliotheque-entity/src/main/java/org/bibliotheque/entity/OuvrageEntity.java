@@ -6,8 +6,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Collection;
-
+import java.util.List;
 
 @Entity
 @Table(name = "ouvrage")
@@ -24,11 +23,10 @@ public class OuvrageEntity implements Serializable {
     private String editeur;
     private String ref;
 
-
-    @OneToMany(mappedBy = "ouvragePhoto", fetch = FetchType.EAGER)
-    private Collection<PhotoEntity> photos;
+    @OneToMany(mappedBy = "ouvragePhoto", fetch = FetchType.LAZY)
+    private List<PhotoEntity> photos;
 
     @OneToMany(mappedBy = "ouvrageLivre", fetch = FetchType.LAZY)
-    private Collection<LivreEntity> livres;
+    private List<LivreEntity> livres;
 
 }

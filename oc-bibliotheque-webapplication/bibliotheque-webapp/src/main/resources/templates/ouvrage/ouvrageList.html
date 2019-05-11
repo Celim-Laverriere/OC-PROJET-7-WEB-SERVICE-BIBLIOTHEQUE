@@ -36,18 +36,19 @@
                         <div class="caption">
                             <p th:text="${ouvrage.getTitre()}"></p>
                             <p th:text="${ouvrage.getAuteur()}"></p>
-                            <p>
-                                <a class="nav-link" href="#" th:href="@{ouvrage(ouvrageId=${ouvrage.getId()})}">
-                                    <img id="imageVignette" th:alt="${ouvrage.getPhotos().getNomPhoto()}" th:src="${ouvrage.getPhotos().getUrlPhoto()}">
-                                </a>
-                            </p>
-                            <p><a class="nav-link" href="#" th:href="@{ouvrage(ouvrageId=${ouvrage.getId()})}">Afficher détail</a></p>
+                            <th:block th:each="photo : ${ouvrage.getPhotos()}">
+                                <p>
+                                    <a class="nav-link" href="#" th:href="@{ouvrage(ouvrageId=${ouvrage.getId()})}">
+                                        <img id="imageVignette" th:alt="${photo.getNomPhoto()}" th:src="${photo.getUrlPhoto()}"/>
+                                    </a>
+                                </p>
+                            </th:block>
+                            <p><a class="nav-link" href="#" th:href="@{/secured/ouvrage(ouvrageId=${ouvrage.getId()})}">Afficher détail</a></p>
                         </div>
                     </div>
                 </div>
             </th:block>
         </div>
-
     </div>
 
 </div>

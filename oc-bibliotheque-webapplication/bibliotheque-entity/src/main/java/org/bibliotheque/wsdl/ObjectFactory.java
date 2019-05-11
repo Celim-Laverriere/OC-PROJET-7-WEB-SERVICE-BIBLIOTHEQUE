@@ -2,7 +2,7 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.2.11 
 // Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2019.05.08 à 04:06:04 PM CEST 
+// Généré le : 2019.05.11 à 05:55:42 PM CEST 
 //
 
 
@@ -482,6 +482,22 @@ public class ObjectFactory {
      */
     public DeleteEmpruntResponse createDeleteEmpruntResponse() {
         return new DeleteEmpruntResponse();
+    }
+
+    /**
+     * Create an instance of {@link LoginRequest }
+     * 
+     */
+    public LoginRequest createLoginRequest() {
+        return new LoginRequest();
+    }
+
+    /**
+     * Create an instance of {@link LoginResponse }
+     * 
+     */
+    public LoginResponse createLoginResponse() {
+        return new LoginResponse();
     }
 
 }

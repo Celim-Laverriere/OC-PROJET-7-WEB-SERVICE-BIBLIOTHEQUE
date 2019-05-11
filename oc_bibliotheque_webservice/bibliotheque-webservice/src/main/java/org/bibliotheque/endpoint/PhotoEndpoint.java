@@ -1,6 +1,5 @@
 package org.bibliotheque.endpoint;
 
-
 import com.bibliotheque.gs_ws.*;
 import lombok.NoArgsConstructor;
 import org.bibliotheque.entity.PhotoEntity;

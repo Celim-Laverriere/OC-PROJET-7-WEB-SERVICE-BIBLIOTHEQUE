@@ -24,6 +24,10 @@
           <element id="library" level="project" name="Maven: org.springframework.ws:spring-xml:3.0.7.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-oxm:5.1.6.RELEASE" />
           <element id="library" level="project" name="Maven: commons-io:commons-io:2.5" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-security:2.1.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:5.1.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:5.1.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:5.1.5.RELEASE" />
           <element id="archive" name="bibliotheque-repository-0.0.1-SNAPSHOT.jar">
             <element id="module-output" name="bibliotheque-repository" />
           </element>

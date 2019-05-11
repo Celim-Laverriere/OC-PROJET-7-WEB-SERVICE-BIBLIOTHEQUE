@@ -20,12 +20,8 @@ public class CompteEndpoint {
 
     public static final String NAMESPACE_URI = "http://www.webservice.org/bibliotheque-ws";
 
-    private CompteService service;
-
     @Autowired
-    public CompteEndpoint(CompteService service){
-        this.service = service;
-    }
+    private CompteService service;
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getCompteByIdRequest")
     @ResponsePayload

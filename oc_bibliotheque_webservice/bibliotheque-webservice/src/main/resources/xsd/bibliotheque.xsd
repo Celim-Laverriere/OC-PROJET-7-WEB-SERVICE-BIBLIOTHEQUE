@@ -206,6 +206,8 @@
     <!-- =========================== -->
 
     <!-- ==== OUVRAGE TYPE ==== -->
+
+
     <xs:complexType name="ouvrageType">
         <xs:sequence>
             <xs:element name="id" type="xs:int"/>
@@ -215,8 +217,8 @@
             <xs:element name="auteur" type="xs:string"/>
             <xs:element name="editeur" type="xs:string"/>
             <xs:element name="ref" type="xs:string"/>
-            <xs:element name="photos" type="tns:photoType"/>
-            <xs:element name="livres" type="tns:livreType"/>
+            <xs:element name="photos" type="tns:photoType" maxOccurs="unbounded" minOccurs="0"/>
+            <xs:element name="livres" type="tns:livreType" maxOccurs="unbounded" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -474,6 +476,26 @@
     <xs:element name="deleteEmpruntResponse">
         <xs:complexType>
             <xs:sequence>
+                <xs:element name="serviceStatus" type="tns:serviceStatus"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- ========================= -->
+    <!-- ==== SERVICES LOGIN ===== -->
+    <!-- ========================= -->
+
+    <xs:element name="loginRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="mail" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="loginResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="compteType" type="tns:compteType"/>
                 <xs:element name="serviceStatus" type="tns:serviceStatus"/>
             </xs:sequence>
         </xs:complexType>

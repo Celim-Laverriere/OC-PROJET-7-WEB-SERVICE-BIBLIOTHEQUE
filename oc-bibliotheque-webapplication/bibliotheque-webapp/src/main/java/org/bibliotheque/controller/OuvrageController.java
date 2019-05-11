@@ -2,9 +2,10 @@ package org.bibliotheque.controller;
 
 
 import org.bibliotheque.service.OuvrageService;
+import org.bibliotheque.wsdl.LivreType;
 import org.bibliotheque.wsdl.OuvrageType;
-import org.bibliotheque.wsdl.PhotoType;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,6 +29,7 @@ public class OuvrageController {
         return "ouvrage/ouvrageList";
     }
 
+    @PreAuthorize("hasAnyRole('USER')")
     @RequestMapping(value = "ouvrage", method = RequestMethod.GET)
     public String ouvrageDetail(OuvrageType ouvrageType, Model model, @RequestParam(name = "ouvrageId") Integer ouvrageId){
         ouvrageType = ouvrageService.ouvrageById(ouvrageId);

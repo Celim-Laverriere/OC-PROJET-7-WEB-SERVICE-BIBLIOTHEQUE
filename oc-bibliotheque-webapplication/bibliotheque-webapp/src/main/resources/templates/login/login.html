@@ -22,7 +22,7 @@
 
 <div layout:fragment = "content">
 
-<form th:action="@{/}" method="post">
+<form th:action="@{/login}" method="post">
     <div>
         <label>Username</label>
         <input type="text" name="username"/>
@@ -31,8 +31,9 @@
         <label>Password</label>
         <input type="password" name="password"/>
     </div>
-    <button type="submit">Login</button>
+    <input type="submit" value="Login"/>
 </form>
+
 </div>
 
 </body>

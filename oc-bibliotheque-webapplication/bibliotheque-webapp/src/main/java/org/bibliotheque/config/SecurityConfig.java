@@ -1,51 +1,49 @@
 package org.bibliotheque.config;
 
-import org.bibliotheque.repository.LoginRepository;
-import org.bibliotheque.service.CustomUserDetailsService;
+import org.bibliotheque.service.CustomAuthenticationProvider;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.Http403ForbiddenEntryPoint;
 
-@EnableGlobalMethodSecurity(prePostEnabled = true)
 @EnableWebSecurity
 @Configuration
+@EnableGlobalMethodSecurity(securedEnabled = true)
+@ComponentScan(basePackageClasses = CustomAuthenticationProvider.class)
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    private CustomUserDetailsService userDetailsService;
+    CustomAuthenticationProvider customAuthenticationProvider;
 
-    @Override
+    @Autowired
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailsService).passwordEncoder(getPasswordEncoder());
+        auth.authenticationProvider(customAuthenticationProvider);
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable();
-        http.authorizeRequests()
-                .antMatchers("**/secured/**").authenticated()
-                .anyRequest().permitAll()
+        http.csrf()
+                .disable()
+                .exceptionHandling()
+                .authenticationEntryPoint(new Http403ForbiddenEntryPoint() {
+                });
+
+        http
+                .authorizeRequests()
+                .antMatchers("/image/**", "/css/**", "/", "/ouvrages").permitAll()
+                .anyRequest()
+                .authenticated()
                 .and()
-                .formLogin().permitAll();
-    }
+                .formLogin()
+                .loginPage("/login")
+                .permitAll()
+                .defaultSuccessUrl("/");
 
-    private PasswordEncoder getPasswordEncoder(){
-        return new PasswordEncoder() {
-            @Override
-            public String encode(CharSequence charSequence) {
-                return charSequence.toString();
-            }
-
-            @Override
-            public boolean matches(CharSequence charSequence, String s) {
-                return true;
-            }
-        };
     }
 
 

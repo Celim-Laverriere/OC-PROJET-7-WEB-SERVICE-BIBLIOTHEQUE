@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html   xmlns:th="http://www.thymeleaf.org"
-        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-        lang="en">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.w3.org/1999/xhtml"
+      lang="en">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
@@ -12,37 +13,63 @@
 
 <head>
     <meta charset="UTF-8"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
     <title>Layout bibliotheque</title>
 </head>
 
 <body>
 
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">BIBLIOTHEQUE</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <div class="container-fluid">
+        <hr/>
+        <div class="row align-items-center">
+            <div class="col col-md-2 stylLigneVerticaleDroite styleTitreDiv">
+                <h2 class="styleTitre">BIBLIOTHEQUE</h2>
+                <th:block th:if="${session.user != null}">
+                    <hr style="width: 70%"/>
+                    <h6 class="styleAfficheNomUser" th:text="'Bonjour : ' + ${session.user.prenom}"></h6>
+                </th:block>
+            </div>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" th:href="@{/accueil}">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" th:href="@{ouvrages}">Livres</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" th:href="@{/login}">Login</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            <div class="col col-md-10">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active stylLigneVerticaleDroite styleNavLayout">
+                                <a class="btn btn-light" th:href="@{/}">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item stylLigneVerticaleDroite styleNavLayout">
+                                <a class="btn btn-light" th:href="@{ouvrages}">Livres</a>
+                            </li>
+                        </ul>
+
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-md-2" style="width: 500px" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-12 mr-md-2" type="submit">Search</button>
+                        </form>
+                        <ul class="navbar-nav my-2 my-lg-0">
+                            <th:block th:if="${#httpServletRequest.remoteUser == null}">
+                                <li class="nav-item">
+                                    <a class="btn btn-outline-primary" th:href="@{/login}">Login</a>
+                                </li>
+                            </th:block>
+                            <th:block th:if="${#httpServletRequest.remoteUser}">
+                                <li class="nav-item">
+                                    <form sec:authorize="isAuthenticated()" th:action="@{/logout}" method="post">
+                                        <input class="btn btn-outline-danger" type="submit" value="Logout" />
+                                    </form>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="btn btn-light styleNavLayout" th:href="@{/compte}">Compte</a>
+                                </li>
+                            </th:block>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
         </div>
-    </nav>
+    </div>
     <hr/>
 </header>
 
@@ -53,9 +80,7 @@
 <footer class="navbar-fixed-bottom">
     <hr/>
     <div class="container-fluid">
-        <small>
-            Copyright @2019
-        </small>
+        <div class="footer-copyright text-center py-3">Copyright @2019</div>
     </div>
 </footer>
 

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html   xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorator="layout"
+        lang="en">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"/>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <title>Compte</title>
+</head>
+
+<body>
+
+<div layout:fragment = "content">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col col-md-2 stylLigneVerticaleDroite" style="height: 1000px">
+
+                <button class="btn btn-light navMenuCompte" href="#">MES INFOS PERSO</button>
+                <hr/>
+                <button class="btn btn-light navMenuCompte" href="#">MES EMPRUNTS</button>
+                <hr/>
+                <button class="btn btn-light navMenuCompte" href="#">Link</button>
+                <hr/>
+            </div>
+
+            <div class="col col-md-10">
+                <h4 class="styleTitre">MES INFORMATIONS PERSONNELLES</h4>
+                <hr/>
+                <div class="row justify-content-center">
+                    <div class="col col-md-11">
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label for="validationServer01">First name</label>
+                                <input type="text" class="form-control is-valid" id="validationServer01"
+                                       th:placeholder="${session.user.prenom}" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationServer02">Last name</label>
+                                <input type="text" class="form-control is-valid" id="validationServer02"
+                                       th:placeholder="${session.user.nom}" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="validationServerUsername">E-Mail</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                                    </div>
+                                    <input type="text" class="form-control is-valid" id="validationServerUsername"
+                                           th:placeholder="${session.user.mail}" aria-describedby="inputGroupPrepend3" required>
+                                    <div class="valid-feedback">
+                                        Please choose a username.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="validationServer02">Adresse</label>
+                                <input type="text" class="form-control is-valid" id="validationAdresse"
+                                       th:placeholder="${session.user.adresse}" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="validationServer03">Ville</label>
+                                <input type="text" class="form-control is-valid" id="validationServer03"
+                                       th:placeholder="${session.user.ville}" required>
+                                <div class="valid-feedback">
+                                    Please provide a valid city.
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="validationServer04">Code postal</label>
+                                <input type="text" class="form-control is-valid" id="validationServer04"
+                                       th:placeholder="${session.user.codePostal}"required>
+                                <div class="valid-feedback">
+                                    Please provide a valid state.
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="validationServer05">Portable</label>
+                                <input type="text" class="form-control is-valid" id="validationServer05"
+                                       th:placeholder="${session.user.numPortable}" required>
+                                <div class="valid-feedback">
+                                    Please provide a valid zip.
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="validationServer05">Domicile</label>
+                                <input type="text" class="form-control is-valid" id="telDomicile"
+                                       th:placeholder="${session.user.numDomicile}" required>
+                                <div class="valid-feedback">
+                                    Please provide a valid zip.
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="validationServer05">ID Carte</label>
+                                <input type="text" class="form-control is-valid" id="IDCarte"
+                                       th:placeholder="${session.user.numCarteBibliotheque}" required>
+                                <div class="valid-feedback">
+                                    Please provide a valid zip.
+                                </div>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="validationServer05">Password</label>
+                                <input type="text" class="form-control is-valid" id="password"
+                                       th:placeholder="${session.user.motDePasse}" required>
+                                <div class="valid-feedback">
+                                    Please provide a valid zip.
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                        <button class="btn btn-primary" type="submit">Submit form</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

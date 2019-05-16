@@ -9,6 +9,7 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.authentication.Http403ForbiddenEntryPoint;
 
 @EnableWebSecurity
@@ -35,16 +36,25 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         http
                 .authorizeRequests()
-                .antMatchers("/image/**", "/css/**", "/", "/ouvrages").permitAll()
+                .antMatchers("/image/**", "/css/**", "/", "/ouvrages", "/webjars/**", "/login","/accueil")
+                .permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
                 .formLogin()
                 .loginPage("/login")
                 .permitAll()
-                .defaultSuccessUrl("/");
+                .defaultSuccessUrl("/loginSuccess")
+                .and()
+                .logout()
+                .invalidateHttpSession(true)
+                .logoutUrl("/logout")
+                .logoutSuccessUrl("/");
+
+        http
+                .sessionManagement()
+                .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED);
 
     }
-
 
 }

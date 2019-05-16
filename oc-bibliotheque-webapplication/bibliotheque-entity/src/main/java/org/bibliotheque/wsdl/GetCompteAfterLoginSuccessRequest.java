@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="photoType" type="{http://www.webservice.org/bibliotheque-ws}photoType"/&gt;
+ *         &lt;element name="mail" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,36 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "photoType"
+    "mail"
 })
-@XmlRootElement(name = "addPhotoRequest")
-public class AddPhotoRequest {
+@XmlRootElement(name = "getCompteAfterLoginSuccessRequest")
+public class GetCompteAfterLoginSuccessRequest {
 
     @XmlElement(required = true)
-    protected PhotoType photoType;
+    protected String mail;
 
     /**
-     * Obtient la valeur de la propriété photoType.
+     * Obtient la valeur de la propriété mail.
      * 
      * @return
      *     possible object is
-     *     {@link PhotoType }
+     *     {@link String }
      *     
      */
-    public PhotoType getPhotoType() {
-        return photoType;
+    public String getMail() {
+        return mail;
     }
 
     /**
-     * Définit la valeur de la propriété photoType.
+     * Définit la valeur de la propriété mail.
      * 
      * @param value
      *     allowed object is
-     *     {@link PhotoType }
+     *     {@link String }
      *     
      */
-    public void setPhotoType(PhotoType value) {
-        this.photoType = value;
+    public void setMail(String value) {
+        this.mail = value;
     }
 
 }

@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2c7fac0-6381-4e83-8550-d1be6347a45d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-service/src/main/java/org/bibliotheque/service/CustomAuthenticationProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/resources/templates/compte/compte.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/META-INF/sun-jaxb.episode" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/META-INF/sun-jaxb.episode" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/entity/CustomUserDetails.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddCompteRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddCompteRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddCompteResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddCompteResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddEmpruntRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/AddEmpruntRequest.java" afterDir="false" />
@@ -66,15 +65,27 @@
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdatePhotoRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdatePhotoRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdatePhotoResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/UpdatePhotoResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-entity/src/main/java/org/bibliotheque/wsdl/package-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-service/src/main/java/org/bibliotheque/service/CustomUserDetailsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-repository/src/main/java/org/bibliotheque/client/LoginClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-repository/src/main/java/org/bibliotheque/client/LoginClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-repository/src/main/java/org/bibliotheque/repository/LoginRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-repository/src/main/java/org/bibliotheque/repository/LoginRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-service/src/main/java/org/bibliotheque/service/CompteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-service/src/main/java/org/bibliotheque/service/CompteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-service/src/main/java/org/bibliotheque/service/CustomAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-service/src/main/java/org/bibliotheque/service/CustomAuthenticationProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-service/src/main/java/org/bibliotheque/service/OuvrageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-service/src/main/java/org/bibliotheque/service/OuvrageService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/java/org/bibliotheque/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/java/org/bibliotheque/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/AccueilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/AccueilController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/CompteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/CompteController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/OuvrageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/OuvrageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/SecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/java/org/bibliotheque/controller/SecurityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/resources/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/resources/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/resources/templates/layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/resources/templates/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/resources/templates/login/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/resources/templates/ouvrage/ouvrageDetail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/resources/templates/ouvrage/ouvrageDetail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/resources/templates/ouvrage/ouvrageList.html" beforeDir="false" afterPath="$PROJECT_DIR$/../oc-bibliotheque-webapplication/bibliotheque-webapp/src/main/resources/templates/ouvrage/ouvrageList.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/LoginRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/LoginRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/contract/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/contract/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/LoginEndpoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/LoginEndpoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bibliotheque-webservice/src/main/resources/xsd/bibliotheque.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/bibliotheque-webservice/src/main/resources/xsd/bibliotheque.xsd" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -98,23 +109,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/LoginEndpoint.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bibliotheque-webservice/src/main/resources/xsd/bibliotheque.xsd">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="295">
+              <caret line="505" column="55" selection-start-line="505" selection-start-column="22" selection-end-line="505" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/LoginRepository.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/LoginEndpoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+            <state relative-caret-position="437">
+              <caret line="54" column="57" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -187,13 +195,13 @@
         <option value="$PROJECT_DIR$/bibliotheque-webservice/pom.xml" />
         <option value="$PROJECT_DIR$/bibliotheque-webservice/src/main/java/org/bibliotheque/config/WebServiceConfig.java" />
         <option value="$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/entity/CompteEntity.java" />
-        <option value="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/contract/LoginService.java" />
         <option value="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/LivreServiceImpl.java" />
         <option value="$PROJECT_DIR$/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/CompteEndpoint.java" />
         <option value="$PROJECT_DIR$/bibliotheque-webservice/src/main/resources/xsd/bibliotheque.xsd" />
+        <option value="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/LoginRepository.java" />
+        <option value="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/contract/LoginService.java" />
         <option value="$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/LoginServiceImpl.java" />
         <option value="$PROJECT_DIR$/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/LoginEndpoint.java" />
-        <option value="$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/LoginRepository.java" />
       </list>
     </option>
   </component>
@@ -234,93 +242,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="oc_bibliotheque_webservice" type="b2602c69:ProjectViewProjectNode" />
               <item name="oc_bibliotheque_webservice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="oc_bibliotheque_webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oc_bibliotheque_webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="bibliotheque-repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="oc_bibliotheque_webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oc_bibliotheque_webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="bibliotheque-repository" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="oc_bibliotheque_webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oc_bibliotheque_webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="bibliotheque-repository" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="oc_bibliotheque_webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oc_bibliotheque_webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="bibliotheque-repository" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="oc_bibliotheque_webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oc_bibliotheque_webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="bibliotheque-repository" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="oc_bibliotheque_webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oc_bibliotheque_webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="bibliotheque-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="oc_bibliotheque_webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oc_bibliotheque_webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="bibliotheque-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="oc_bibliotheque_webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oc_bibliotheque_webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="bibliotheque-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="oc_bibliotheque_webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oc_bibliotheque_webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="bibliotheque-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="oc_bibliotheque_webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oc_bibliotheque_webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="bibliotheque-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="oc_bibliotheque_webservice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="oc_bibliotheque_webservice" type="462c0819:PsiDirectoryNode" />
-              <item name="bibliotheque-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="oc_bibliotheque_webservice" type="b2602c69:ProjectViewProjectNode" />
@@ -377,11 +304,29 @@
               <item name="bibliotheque" type="462c0819:PsiDirectoryNode" />
               <item name="endpoint" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="oc_bibliotheque_webservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oc_bibliotheque_webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="bibliotheque-webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oc_bibliotheque_webservice" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oc_bibliotheque_webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="bibliotheque-webservice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="xsd" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -466,12 +411,16 @@
       <workItem from="1557421048973" duration="12000" />
       <workItem from="1557471065789" duration="7603000" />
       <workItem from="1557557811054" duration="8830000" />
-      <workItem from="1557726103080" duration="2642000" />
+      <workItem from="1557726103080" duration="3252000" />
+      <workItem from="1557816855612" duration="11016000" />
+      <workItem from="1557900266162" duration="1279000" />
+      <workItem from="1557907012678" duration="6383000" />
+      <workItem from="1557986287302" duration="1590000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="189304000" />
+    <option name="totallyTimeSpent" value="210182000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -483,10 +432,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17643923" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18283582" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -535,82 +484,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/ws/spring-ws-core/3.0.7.RELEASE/spring-ws-core-3.0.7.RELEASE.jar!/org/springframework/ws/server/endpoint/MethodEndpoint.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="78" selection-start-line="78" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bibliotheque-entity/src/main/java/org/bibliotheque/entity/LivreEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.1.6.RELEASE/spring-core-5.1.6.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="102" selection-start-line="102" selection-end-line="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.1.6.RELEASE/spring-aop-5.1.6.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="472" selection-start-line="472" selection-end-line="472" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.1.6.RELEASE/spring-aop-5.1.6.RELEASE.jar!/org/springframework/aop/framework/ReflectiveMethodInvocation.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/ch/qos/logback/classic/LoggerContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="208" selection-start-line="208" selection-end-line="208" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar!/ch/qos/logback/classic/Logger.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="480" selection-start-line="480" selection-end-line="480" />
-          <folding>
-            <element signature="e#17720#17721#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jcl/5.1.6.RELEASE/spring-jcl-5.1.6.RELEASE.jar!/org/apache/commons/logging/LogAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="365" selection-start-line="365" selection-end-line="365" />
-          <folding>
-            <element signature="e#12965#12966#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/5.1.6.RELEASE/spring-tx-5.1.6.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionAspectSupport.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="291" selection-start-line="291" selection-end-line="291" />
-          <folding>
-            <element signature="e#17620#17621#0" expanded="true" />
-            <element signature="e#17673#17674#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/5.1.6.RELEASE/spring-tx-5.1.6.RELEASE.jar!/org/springframework/transaction/support/TransactionSynchronizationManager.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="244">
@@ -831,13 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/contract/LivreService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/OuvrageServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -877,20 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/contract/LoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bibliotheque-webservice/src/main/resources/xsd/bibliotheque.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="498" column="75" selection-start-line="498" selection-start-column="75" selection-end-line="498" selection-end-column="75" />
         </state>
       </provider>
     </entry>
@@ -938,16 +790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/LoginServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="40" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/OuvrageEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="402">
@@ -958,20 +800,116 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/contract/LivreService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/5.1.6.RELEASE/spring-tx-5.1.6.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionAspectSupport.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="115" column="21" selection-start-line="115" selection-start-column="21" selection-end-line="115" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.1.6.RELEASE/spring-aop-5.1.6.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="484" column="22" selection-start-line="484" selection-start-column="22" selection-end-line="484" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/ws/spring-ws-core/3.0.7.RELEASE/spring-ws-core-3.0.7.RELEASE.jar!/org/springframework/ws/transport/support/WebServiceMessageReceiverObjectSupport.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/ws/spring-ws-core/3.0.7.RELEASE/spring-ws-core-3.0.7.RELEASE.jar!/org/springframework/ws/transport/http/MessageDispatcherServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="133" selection-start-line="133" selection-end-line="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.6.RELEASE/spring-webmvc-5.1.6.RELEASE.jar!/org/springframework/web/servlet/FrameworkServlet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="446" selection-start-line="446" selection-end-line="446" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/ws/spring-ws-core/3.0.7.RELEASE/spring-ws-core-3.0.7.RELEASE.jar!/org/springframework/ws/transport/http/WebServiceMessageReceiverHandlerAdapter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/ws/spring-ws-core/3.0.7.RELEASE/spring-ws-core-3.0.7.RELEASE.jar!/org/springframework/ws/server/MessageDispatcher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="106" selection-start-line="106" selection-end-line="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/ws/spring-ws-core/3.0.7.RELEASE/spring-ws-core-3.0.7.RELEASE.jar!/org/springframework/ws/server/endpoint/MethodEndpoint.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.1.6.RELEASE/spring-core-5.1.6.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bibliotheque-repository/src/main/java/org/bibliotheque/repository/LoginRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+        <state relative-caret-position="187">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/contract/LoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-service/src/main/java/org/bibliotheque/service/impl/LoginServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#919#920#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bibliotheque-webservice/src/main/resources/xsd/bibliotheque.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="505" column="55" selection-start-line="505" selection-start-column="22" selection-end-line="505" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bibliotheque-webservice/src/main/java/org/bibliotheque/endpoint/LoginEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        <state relative-caret-position="437">
+          <caret line="54" column="57" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -55,7 +55,8 @@ public class CompteService {
      * @param id @return message de confirmation
      * @see CompteClient#deleteCompte(Integer)
      */
-    public String delCompt(Integer id){
+    public String delCompte(Integer id){
         return repository.delCompte(id);
     }
+
 }

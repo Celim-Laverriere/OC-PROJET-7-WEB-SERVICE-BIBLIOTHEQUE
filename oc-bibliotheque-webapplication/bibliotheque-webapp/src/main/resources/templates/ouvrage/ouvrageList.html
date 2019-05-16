@@ -23,33 +23,50 @@
 <div layout:fragment = "content">
 
 
-    <div class="container" >
+    <div class="container-fluid" >
         <div class="row">
 
-            <div class="col col-md-12">
-                <h2>Livres</h2>
+            <div class="col col-md-2 stylLigneVerticaleDroite" style="height: 1000px">
+
+                <button class="btn btn-light navMenuCompte" href="#">MES INFOS PERSO</button>
+                <hr/>
+                <button class="btn btn-light navMenuCompte" href="#">MES EMPRUNTS</button>
+                <hr/>
+                <button class="btn btn-light navMenuCompte" href="#">Link</button>
+                <hr/>
             </div>
 
-            <th:block th:each="ouvrage : ${ouvrageList}">
-                <div id="vignette" class="col col-md-4">
-                    <div class="thumbnail">
-                        <div class="caption">
-                            <p th:text="${ouvrage.getTitre()}"></p>
-                            <p th:text="${ouvrage.getAuteur()}"></p>
-                            <th:block th:each="photo : ${ouvrage.getPhotos()}">
-                                <p>
-                                    <a class="nav-link" href="#" th:href="@{ouvrage(ouvrageId=${ouvrage.getId()})}">
-                                        <img id="imageVignette" th:alt="${photo.getNomPhoto()}" th:src="${photo.getUrlPhoto()}"/>
-                                    </a>
-                                </p>
-                            </th:block>
-                            <p><a class="nav-link" href="#" th:href="@{/ouvrage(ouvrageId=${ouvrage.getId()})}">Afficher détail</a></p>
+            <div class="col col-md-10">
+                <h2>Livres</h2>
+                <hr/>
+                <div class="row justify-content-start" style="margin-left: 15%">
+                    <th:block th:each="ouvrage : ${ouvrageList}">
+                        <div id="vignette" class="col col-md-3">
+                            <div class="thumbnail">
+                                <div class="caption">
+                                    <p th:text="${ouvrage.getTitre()}"></p>
+                                    <p th:text="${ouvrage.getAuteur()}"></p>
+                                    <th:block th:each="photo : ${ouvrage.getPhotos()}">
+                                        <p>
+                                            <a class="nav-link" href="#" th:href="@{ouvrage(ouvrageId=${ouvrage.getId()})}">
+                                                <img id="imageVignette" th:alt="${photo.getNomPhoto()}" th:src="${photo.getUrlPhoto()}"/>
+                                            </a>
+                                        </p>
+                                    </th:block>
+                                    <p style="text-align: center">
+                                        <a class="btn btn-light" href="#" th:href="@{/ouvrage(ouvrageId=${ouvrage.getId()})}">Afficher détail</a>
+                                    </p>
+                                </div>
+
+                            </div>
                         </div>
-                    </div>
+                    </th:block>
                 </div>
-            </th:block>
+            </div>
         </div>
+
     </div>
+</div>
 
 </div>
 

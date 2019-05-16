@@ -485,18 +485,35 @@
     <!-- ==== SERVICES LOGIN ===== -->
     <!-- ========================= -->
 
+<!-- ==== GET COMPTE BY MAIL AND PASSWORD FOR LOGIN ==== -->
     <xs:element name="loginRequest">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="mail" type="xs:string"/>
+                <xs:element name="password" type="xs:string"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
     <xs:element name="loginResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="compteType" type="tns:compteType"/>
                 <xs:element name="serviceStatus" type="tns:serviceStatus"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+<!-- ==== GET COMPTE AFTER LOGIN SUCCESS ==== -->
+    <xs:element name="getCompteAfterLoginSuccessRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="mail" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getCompteAfterLoginSuccessResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="compteType" type="tns:compteType"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>

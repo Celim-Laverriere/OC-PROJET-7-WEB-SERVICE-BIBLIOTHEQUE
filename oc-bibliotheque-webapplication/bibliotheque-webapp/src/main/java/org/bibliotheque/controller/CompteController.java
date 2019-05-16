@@ -10,6 +10,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -19,13 +21,9 @@ public class CompteController {
     @Autowired
     private CompteService compteService;
 
-    @RequestMapping(value = "compte", method = RequestMethod.GET)
-    public String getCompteById(final Model pModel){
-        CompteType compteType = new CompteType();
-        List<CompteType> compteList = compteService.compteList();
-        pModel.addAttribute("compteType", compteType);
-        pModel.addAttribute("comptes", compteList);
-        return "msg";
+    @RequestMapping(value = "/compte", method = RequestMethod.GET)
+    public String compte(){
+        return "/compte/compte";
     }
 
     @RequestMapping(value = "formCompte", method = RequestMethod.GET)
@@ -48,7 +46,7 @@ public class CompteController {
     @RequestMapping(value = "delCompte", method = RequestMethod.POST)
     public String delCompte (@Valid CompteType compteType,BindingResult bindingResult,
                              RedirectAttributes redirectAttributes){
-        String message = compteService.delCompt(compteType.getId());
+        String message = compteService.delCompte(compteType.getId());
         System.out.println(message);
         return "msg";
     }

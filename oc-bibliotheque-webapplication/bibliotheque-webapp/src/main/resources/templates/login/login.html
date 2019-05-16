@@ -22,17 +22,29 @@
 
 <div layout:fragment = "content">
 
-<form th:action="@{/login}" method="post">
-    <div>
-        <label>Username</label>
-        <input type="text" name="username"/>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div id="contenaireOuvrageDetail" class="col col-md-5">
+
+                <form th:action="@{/login}" method="post">
+
+                    <small th:if="${param.error}" id="emailHelp" class="red">Votre mot de passe ou votre email semble erroné...</small>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password"/>
+                    </div>
+
+                    <button type="submit" class="btn btn-dark" style="width: 100%">Submit</button>
+                </form>
+            </div>
+        </div>
     </div>
-    <div>
-        <label>Password</label>
-        <input type="password" name="password"/>
-    </div>
-    <input type="submit" value="Login"/>
-</form>
 
 </div>
 

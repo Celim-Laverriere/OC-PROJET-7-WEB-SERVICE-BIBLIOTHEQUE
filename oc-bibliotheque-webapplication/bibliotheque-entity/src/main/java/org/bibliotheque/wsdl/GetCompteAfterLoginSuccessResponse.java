@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="photoType" type="{http://www.webservice.org/bibliotheque-ws}photoType"/&gt;
+ *         &lt;element name="compteType" type="{http://www.webservice.org/bibliotheque-ws}compteType"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,36 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "photoType"
+    "compteType"
 })
-@XmlRootElement(name = "addPhotoRequest")
-public class AddPhotoRequest {
+@XmlRootElement(name = "getCompteAfterLoginSuccessResponse")
+public class GetCompteAfterLoginSuccessResponse {
 
     @XmlElement(required = true)
-    protected PhotoType photoType;
+    protected CompteType compteType;
 
     /**
-     * Obtient la valeur de la propriété photoType.
+     * Obtient la valeur de la propriété compteType.
      * 
      * @return
      *     possible object is
-     *     {@link PhotoType }
+     *     {@link CompteType }
      *     
      */
-    public PhotoType getPhotoType() {
-        return photoType;
+    public CompteType getCompteType() {
+        return compteType;
     }
 
     /**
-     * Définit la valeur de la propriété photoType.
+     * Définit la valeur de la propriété compteType.
      * 
      * @param value
      *     allowed object is
-     *     {@link PhotoType }
+     *     {@link CompteType }
      *     
      */
-    public void setPhotoType(PhotoType value) {
-        this.photoType = value;
+    public void setCompteType(CompteType value) {
+        this.compteType = value;
     }
 
 }

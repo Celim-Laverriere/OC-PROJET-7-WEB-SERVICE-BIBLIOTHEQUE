@@ -1,6 +1,7 @@
 package org.bibliotheque.controller;
 
 import org.bibliotheque.service.OuvrageService;
+import org.bibliotheque.wsdl.LivreType;
 import org.bibliotheque.wsdl.OuvrageType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Controller
@@ -29,10 +31,12 @@ public class OuvrageController {
         return "ouvrage/ouvrageList";
     }
 
-    @Secured(value = "ROLE_ADMIN")
+    @Secured(value = "ROLE_USER")
     @RequestMapping(value = "/ouvrage", method = RequestMethod.GET)
     public String ouvrageDetail(OuvrageType ouvrageType, Model model, @RequestParam(name = "ouvrageId") Integer ouvrageId){
         ouvrageType = ouvrageService.ouvrageById(ouvrageId);
+        List<LivreType> livreTypeListDispo = ouvrageService.nombreDeLivreDispo(ouvrageType.getLivres());
+        model.addAttribute("livreTypeListDispo", livreTypeListDispo);
         model.addAttribute("ouvrageDetail", ouvrageType);
         return "ouvrage/ouvrageDetail";
     }

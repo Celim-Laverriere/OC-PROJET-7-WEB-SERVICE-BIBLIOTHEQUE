@@ -1,9 +1,6 @@
 package org.bibliotheque.endpoint;
 
-import com.bibliotheque.gs_ws.CompteType;
-import com.bibliotheque.gs_ws.LoginRequest;
-import com.bibliotheque.gs_ws.LoginResponse;
-import com.bibliotheque.gs_ws.ServiceStatus;
+import com.bibliotheque.gs_ws.*;
 import lombok.NoArgsConstructor;
 import org.bibliotheque.entity.CompteEntity;
 import org.bibliotheque.service.contract.LoginService;
@@ -35,20 +32,28 @@ public class LoginEndpoint {
     public LoginResponse loginResponse(@RequestPayload LoginRequest request){
         LoginResponse response = new LoginResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
-        CompteEntity compteEntity = service.getCompteByMail(request.getMail());
-        CompteType compteType = new CompteType();
+        CompteEntity compteEntity = service.getCompteByMailAndPassword(request.getMail(), request.getPassword());
 
-        if (compteEntity == null){
+        if (!compteEntity.getMail().equals(request.getMail()) && !compteEntity.getMotDePasse().equals(request.getPassword())){
             serviceStatus.setStatusCode("CONFLICT");
-            serviceStatus.setMessage("Exception while search Entity");
         } else {
-            BeanUtils.copyProperties(compteEntity, compteType);
             serviceStatus.setStatusCode("SUCCESS");
-            serviceStatus.setMessage("Content search Successfully");
         }
 
-        response.setCompteType(compteType);
         response.setServiceStatus(serviceStatus);
+        return response;
+    }
+
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getCompteAfterLoginSuccessRequest")
+    @ResponsePayload
+    @Transactional
+    public GetCompteAfterLoginSuccessResponse getCompteAfterLoginSuccessResponse(@RequestPayload GetCompteAfterLoginSuccessRequest request){
+        GetCompteAfterLoginSuccessResponse response = new GetCompteAfterLoginSuccessResponse();
+        CompteType compteType = new CompteType();
+        CompteEntity compteEntity = service.getCompteByMail(request.getMail());
+
+        BeanUtils.copyProperties(compteEntity, compteType);
+        response.setCompteType(compteType);
         return response;
     }
 }

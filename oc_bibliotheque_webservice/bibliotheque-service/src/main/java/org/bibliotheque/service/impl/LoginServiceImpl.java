@@ -19,12 +19,17 @@ public class LoginServiceImpl implements LoginService {
     private LoginRepository repository;
 
     @Override
-    public CompteEntity getCompteByMail(String mail) {
+    public CompteEntity getCompteByMailAndPassword(String mail, String password) {
         try{
-            return repository.findByMail(mail);
+            return repository.findByMailAndMotDePasse(mail, password);
         } catch (Exception pEX){
             pEX.printStackTrace();
             return null;
         }
+    }
+
+    @Override
+    public CompteEntity getCompteByMail(String mail) {
+        return repository.findByMail(mail);
     }
 }

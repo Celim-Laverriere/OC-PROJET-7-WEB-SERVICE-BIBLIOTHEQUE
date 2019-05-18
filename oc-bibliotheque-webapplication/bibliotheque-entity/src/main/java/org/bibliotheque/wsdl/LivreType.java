@@ -2,7 +2,7 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.2.11 
 // Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2019.05.16 à 08:11:34 AM CEST 
+// Généré le : 2019.05.18 à 04:23:27 PM CEST 
 //
 
 
@@ -26,8 +26,8 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence&gt;
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="refBibliotheque" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
- *         &lt;element name="ouvrageId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="statut" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="ouvrageId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -40,17 +40,17 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "livreType", propOrder = {
     "id",
     "refBibliotheque",
-    "ouvrageId",
-    "statut"
+    "statut",
+    "ouvrageId"
 })
 public class LivreType {
 
     protected int id;
     @XmlElement(required = true)
     protected String refBibliotheque;
-    protected int ouvrageId;
     @XmlElement(required = true)
     protected String statut;
+    protected int ouvrageId;
 
     /**
      * Obtient la valeur de la propriété id.
@@ -93,22 +93,6 @@ public class LivreType {
     }
 
     /**
-     * Obtient la valeur de la propriété ouvrageId.
-     * 
-     */
-    public int getOuvrageId() {
-        return ouvrageId;
-    }
-
-    /**
-     * Définit la valeur de la propriété ouvrageId.
-     * 
-     */
-    public void setOuvrageId(int value) {
-        this.ouvrageId = value;
-    }
-
-    /**
      * Obtient la valeur de la propriété statut.
      * 
      * @return
@@ -130,6 +114,22 @@ public class LivreType {
      */
     public void setStatut(String value) {
         this.statut = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété ouvrageId.
+     * 
+     */
+    public int getOuvrageId() {
+        return ouvrageId;
+    }
+
+    /**
+     * Définit la valeur de la propriété ouvrageId.
+     * 
+     */
+    public void setOuvrageId(int value) {
+        this.ouvrageId = value;
     }
 
 }

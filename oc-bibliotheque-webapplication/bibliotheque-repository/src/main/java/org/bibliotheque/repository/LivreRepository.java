@@ -15,7 +15,7 @@ public class LivreRepository {
 
     /* ==== GET LIVRE BY ID ==== */
     public LivreType livreById(Integer id) {
-        GetLivresByIdResponse response = client.getLivreById(new Integer(id));
+        GetLivreByIdResponse response = client.getLivreById(id);
         return response.getLivreType();
     }
 

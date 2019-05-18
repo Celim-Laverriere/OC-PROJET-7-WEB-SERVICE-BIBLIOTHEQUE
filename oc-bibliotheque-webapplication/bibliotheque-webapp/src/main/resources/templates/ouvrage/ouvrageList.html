@@ -22,19 +22,10 @@
 
 <div layout:fragment = "content">
 
-
     <div class="container-fluid" >
         <div class="row">
 
-            <div class="col col-md-2 stylLigneVerticaleDroite" style="height: 1000px">
-
-                <button class="btn btn-light navMenuCompte" href="#">MES INFOS PERSO</button>
-                <hr/>
-                <button class="btn btn-light navMenuCompte" href="#">MES EMPRUNTS</button>
-                <hr/>
-                <button class="btn btn-light navMenuCompte" href="#">Link</button>
-                <hr/>
-            </div>
+            <div th:replace="/fragments/menuOuvrage :: menuOuvrage"></div>
 
             <div class="col col-md-10">
                 <h2>Livres</h2>

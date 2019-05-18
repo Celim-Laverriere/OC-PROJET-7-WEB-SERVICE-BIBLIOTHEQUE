@@ -8,6 +8,7 @@ public interface EmpruntService {
 
     EmpruntEntity getEmpruntById(Integer id);
     List<EmpruntEntity> getAllEmprunts();
+    List<EmpruntEntity> getAllEmpruntByCompteId(Integer id);
     EmpruntEntity addEmprunt(EmpruntEntity emprunt);
     boolean updateEmprunt(EmpruntEntity emprunt);
     boolean deleteEmprunt(Integer id);

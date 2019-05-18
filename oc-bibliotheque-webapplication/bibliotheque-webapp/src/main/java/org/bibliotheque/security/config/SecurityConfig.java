@@ -1,6 +1,6 @@
-package org.bibliotheque.config;
+package org.bibliotheque.security.config;
 
-import org.bibliotheque.service.CustomAuthenticationProvider;
+import org.bibliotheque.security.service.CustomAuthenticationProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -12,6 +12,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.authentication.Http403ForbiddenEntryPoint;
 
+
 @EnableWebSecurity
 @Configuration
 @EnableGlobalMethodSecurity(securedEnabled = true)
@@ -19,7 +20,9 @@ import org.springframework.security.web.authentication.Http403ForbiddenEntryPoin
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    CustomAuthenticationProvider customAuthenticationProvider;
+    private CustomAuthenticationProvider customAuthenticationProvider;
+
+
 
     @Autowired
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -36,7 +39,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         http
                 .authorizeRequests()
-                .antMatchers("/image/**", "/css/**", "/", "/ouvrages", "/webjars/**", "/login","/accueil")
+                .antMatchers("/image/**", "/css/**", "/", "/ouvrages", "/webjars/**", "/login","/accueil", "/ouvrage")
                 .permitAll()
                 .anyRequest()
                 .authenticated()

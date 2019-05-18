@@ -11,6 +11,7 @@ import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,13 +28,16 @@ public class LivreEndpoint {
         this.service = service;
     }
 
-    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getLivresByIdRequest")
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getLivreByIdRequest")
     @ResponsePayload
-    public GetLivresByIdResponse getLivreById(@RequestPayload GetLivresByIdRequest request){
-        GetLivresByIdResponse response = new GetLivresByIdResponse();
+    @Transactional
+    public GetLivreByIdResponse getLivreById(@RequestPayload GetLivreByIdRequest request){
+        GetLivreByIdResponse response = new GetLivreByIdResponse();
         LivreEntity livreEntity = service.getLivreById(request.getLivreId());
         LivreType livreType = new LivreType();
+
         BeanUtils.copyProperties(livreEntity, livreType);
+        System.out.println(livreType.getOuvrageId());
         response.setLivreType(livreType);
         return response;
     }

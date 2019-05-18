@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html   xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorator="layout"
+        lang="en">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"/>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <title>Emprunt</title>
+</head>
+
+<body>
+
+<th:block th:each="emprunt : ${empruntTypeList}">
+    <p th:text="${emprunt.dateDebut}"></p>
+</th:block>
+
+<div layout:fragment = "content">
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div th:replace="/fragments/menuCompte :: menuCompte"></div>
+
+            <div class="col col-md-10">
+
+                <div>
+                    <h3 class="styleTitre" style="color: #28a745">MES EMPRUNTS</h3>
+                </div>
+
+                <div class="row justify-content-center" style="margin-top: 2%">
+                    <div class="col col-md-11">
+                        <div th:each="empruntList : ${empruntTypeList}">
+                            <div th:each="livreList : ${livreTypeList}">
+                                <div th:each="ouvrageList : ${ouvrageTypeList}">
+                                    <div th:each="photo : ${ouvrageList.getPhotos()}">
+                                        <ul>
+                                            <li>
+                                                <img th:src="${photo.getUrlPhoto()}" class="rounded float-left" alt="...">
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,4 +1,4 @@
-package org.bibliotheque.config;
+package org.bibliotheque.security;
 
 import org.bibliotheque.client.*;
 import org.springframework.context.annotation.Bean;
@@ -56,6 +56,15 @@ public class SoapConfig {
     @Bean
     public LoginClient loginClient(Jaxb2Marshaller marshaller){
         LoginClient client = new LoginClient();
+        client.setDefaultUri("http://localhost:8088/ws/bibliotheque.wsdl");
+        client.setMarshaller(marshaller);
+        client.setUnmarshaller(marshaller);
+        return client;
+    }
+
+    @Bean
+    public EmpruntClient empruntClient(Jaxb2Marshaller marshaller){
+        EmpruntClient client = new EmpruntClient();
         client.setDefaultUri("http://localhost:8088/ws/bibliotheque.wsdl");
         client.setMarshaller(marshaller);
         client.setUnmarshaller(marshaller);

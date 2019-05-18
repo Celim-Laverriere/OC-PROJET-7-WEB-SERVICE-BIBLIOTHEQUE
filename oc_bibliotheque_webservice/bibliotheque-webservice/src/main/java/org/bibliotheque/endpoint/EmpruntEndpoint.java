@@ -11,7 +11,12 @@ import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 @Endpoint
@@ -27,6 +32,10 @@ public class EmpruntEndpoint  {
         this.service = service;
     }
 
+    /**
+     * @param request
+     * @return Un emprunt par son ID.
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getEmpruntByIdRequest")
     @ResponsePayload
     public GetEmpruntByIdResponse getEmpruntById(@RequestPayload GetEmpruntByIdRequest request){
@@ -39,6 +48,10 @@ public class EmpruntEndpoint  {
     }
 
 
+    /**
+     * @param request
+     * @return Tout les emprunts.
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllEmpruntRequest")
     @ResponsePayload
     public GetAllEmpruntResponse getAllEmprunt(@RequestPayload GetAllEmpruntRequest request){
@@ -49,6 +62,43 @@ public class EmpruntEndpoint  {
         for (EmpruntEntity entity : empruntEntityList){
             EmpruntType empruntType = new EmpruntType();
             BeanUtils.copyProperties(entity, empruntType);
+            empruntTypeList.add(empruntType);
+        }
+
+        response.getEmpruntType().addAll(empruntTypeList);
+        return response;
+    }
+
+
+    /**
+     * @param request id
+     * @return La liste des emprunts d'un compte.
+     */
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllEmpruntByCompteIdRequest")
+    @ResponsePayload
+    public GetAllEmpruntByCompteIdResponse getAllEmpruntByCompteId(@RequestPayload GetAllEmpruntByCompteIdRequest request) throws DatatypeConfigurationException {
+        GetAllEmpruntByCompteIdResponse response = new GetAllEmpruntByCompteIdResponse();
+        List<EmpruntEntity> empruntEntityList = service.getAllEmpruntByCompteId(request.getId());
+        List<EmpruntType> empruntTypeList = new ArrayList<>();
+
+        GregorianCalendar calendar = new GregorianCalendar();
+
+        for (EmpruntEntity entity : empruntEntityList){
+            EmpruntType empruntType = new EmpruntType();
+
+            calendar.setGregorianChange(entity.getDateDebut());
+            XMLGregorianCalendar dateDebut = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+
+            calendar.setGregorianChange(entity.getDateFin());
+            XMLGregorianCalendar dateFin = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+
+            empruntType.setId(entity.getId());
+            empruntType.setDateDebut(dateDebut);
+            empruntType.setDateFin(dateFin);
+            empruntType.setProlongation(entity.getProlongation());
+            empruntType.setCompteId(entity.getCompteId());
+            empruntType.setLivreId(entity.getLivreId());
+
             empruntTypeList.add(empruntType);
         }
 

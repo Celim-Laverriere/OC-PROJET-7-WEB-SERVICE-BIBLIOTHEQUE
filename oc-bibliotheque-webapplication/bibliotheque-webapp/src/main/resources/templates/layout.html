@@ -20,14 +20,14 @@
 <body>
 
 <header>
+    <hr/>
     <div class="container-fluid">
-        <hr/>
         <div class="row align-items-center">
             <div class="col col-md-2 stylLigneVerticaleDroite styleTitreDiv">
                 <h2 class="styleTitre">BIBLIOTHEQUE</h2>
                 <th:block th:if="${session.user != null}">
                     <hr style="width: 70%"/>
-                    <h6 class="styleAfficheNomUser" th:text="'Bonjour : ' + ${session.user.prenom}"></h6>
+                    <h6 class="styleAfficheNomUser" th:text="'Bonjour : ' + ${session.user.getUserPrenom()}"></h6>
                 </th:block>
             </div>
 

@@ -2,7 +2,7 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.2.11 
 // Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2019.05.16 à 08:11:34 AM CEST 
+// Généré le : 2019.05.18 à 04:23:27 PM CEST 
 //
 
 
@@ -10,6 +10,7 @@ package org.bibliotheque.wsdl;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -24,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="livreId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="livreType" type="{http://www.webservice.org/bibliotheque-ws}livreType"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -35,27 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "livreId"
+    "livreType"
 })
-@XmlRootElement(name = "getLivresByIdRequest")
-public class GetLivresByIdRequest {
+@XmlRootElement(name = "getLivreByIdResponse")
+public class GetLivreByIdResponse {
 
-    protected int livreId;
+    @XmlElement(required = true)
+    protected LivreType livreType;
 
     /**
-     * Obtient la valeur de la propriété livreId.
+     * Obtient la valeur de la propriété livreType.
      * 
+     * @return
+     *     possible object is
+     *     {@link LivreType }
+     *     
      */
-    public int getLivreId() {
-        return livreId;
+    public LivreType getLivreType() {
+        return livreType;
     }
 
     /**
-     * Définit la valeur de la propriété livreId.
+     * Définit la valeur de la propriété livreType.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link LivreType }
+     *     
      */
-    public void setLivreId(int value) {
-        this.livreId = value;
+    public void setLivreType(LivreType value) {
+        this.livreType = value;
     }
 
 }

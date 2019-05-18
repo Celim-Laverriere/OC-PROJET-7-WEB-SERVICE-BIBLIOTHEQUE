@@ -19,7 +19,7 @@ public class LivreService {
      * @param id @return LivreType
      * @see LivreClient#getLivreById(Integer)
      */
-    public LivreType LivreById(Integer id){
+    public LivreType livreById(Integer id){
         return repository.livreById(id);
     }
 

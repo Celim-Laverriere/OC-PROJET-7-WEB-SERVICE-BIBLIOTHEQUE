@@ -2,7 +2,7 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.2.11 
 // Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2019.05.16 à 08:11:34 AM CEST 
+// Généré le : 2019.05.18 à 04:23:27 PM CEST 
 //
 
 
@@ -30,6 +30,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="dateDebut" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
  *         &lt;element name="dateFin" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
  *         &lt;element name="prolongation" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="livreId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="compteId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -43,7 +45,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "id",
     "dateDebut",
     "dateFin",
-    "prolongation"
+    "prolongation",
+    "livreId",
+    "compteId"
 })
 public class EmpruntType {
 
@@ -55,6 +59,8 @@ public class EmpruntType {
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar dateFin;
     protected boolean prolongation;
+    protected int livreId;
+    protected int compteId;
 
     /**
      * Obtient la valeur de la propriété id.
@@ -134,6 +140,38 @@ public class EmpruntType {
      */
     public void setProlongation(boolean value) {
         this.prolongation = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété livreId.
+     * 
+     */
+    public int getLivreId() {
+        return livreId;
+    }
+
+    /**
+     * Définit la valeur de la propriété livreId.
+     * 
+     */
+    public void setLivreId(int value) {
+        this.livreId = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété compteId.
+     * 
+     */
+    public int getCompteId() {
+        return compteId;
+    }
+
+    /**
+     * Définit la valeur de la propriété compteId.
+     * 
+     */
+    public void setCompteId(int value) {
+        this.compteId = value;
     }
 
 }

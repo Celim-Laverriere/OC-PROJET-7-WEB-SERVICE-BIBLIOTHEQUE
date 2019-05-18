@@ -5,18 +5,18 @@
 Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.2.11 
 Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-Généré le : 2019.05.16 à 08:11:34 AM CEST 
+Généré le : 2019.05.18 à 04:23:27 PM CEST 
 
   -->
   <bindings xmlns:tns="http://www.webservice.org/bibliotheque-ws" if-exists="true" scd="x-schema::tns">
     <schemaBindings map="false">
       <package name="org.bibliotheque.wsdl"/>
     </schemaBindings>
-    <bindings if-exists="true" scd="tns:getLivresByIdRequest">
-      <class ref="org.bibliotheque.wsdl.GetLivresByIdRequest"/>
+    <bindings if-exists="true" scd="tns:getLivreByIdRequest">
+      <class ref="org.bibliotheque.wsdl.GetLivreByIdRequest"/>
     </bindings>
-    <bindings if-exists="true" scd="tns:getLivresByIdResponse">
-      <class ref="org.bibliotheque.wsdl.GetLivresByIdResponse"/>
+    <bindings if-exists="true" scd="tns:getLivreByIdResponse">
+      <class ref="org.bibliotheque.wsdl.GetLivreByIdResponse"/>
     </bindings>
     <bindings if-exists="true" scd="~tns:livreType">
       <class ref="org.bibliotheque.wsdl.LivreType"/>
@@ -161,6 +161,12 @@ Généré le : 2019.05.16 à 08:11:34 AM CEST
     </bindings>
     <bindings if-exists="true" scd="tns:getAllEmpruntResponse">
       <class ref="org.bibliotheque.wsdl.GetAllEmpruntResponse"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getAllEmpruntByCompteIdRequest">
+      <class ref="org.bibliotheque.wsdl.GetAllEmpruntByCompteIdRequest"/>
+    </bindings>
+    <bindings if-exists="true" scd="tns:getAllEmpruntByCompteIdResponse">
+      <class ref="org.bibliotheque.wsdl.GetAllEmpruntByCompteIdResponse"/>
     </bindings>
     <bindings if-exists="true" scd="tns:addEmpruntRequest">
       <class ref="org.bibliotheque.wsdl.AddEmpruntRequest"/>

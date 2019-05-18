@@ -4,6 +4,7 @@ package org.bibliotheque.controller;
 import org.bibliotheque.service.CompteService;
 import org.bibliotheque.wsdl.CompteType;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -21,6 +22,7 @@ public class CompteController {
     @Autowired
     private CompteService compteService;
 
+    @Secured(value = "ROLE_USER")
     @RequestMapping(value = "/compte", method = RequestMethod.GET)
     public String compte(){
         return "/compte/compte";
@@ -51,21 +53,22 @@ public class CompteController {
         return "msg";
     }
 
-    @RequestMapping(value = "fromUpCompte", method = RequestMethod.GET)
-    public String formUpCompte(CompteType compteType, Model model, @RequestParam(name = "compteId") Integer compteId){
+    @Secured(value = "ROLE_USER")
+    @RequestMapping(value = "/infoPerso", method = RequestMethod.GET)
+    public String formUpCompte(CompteType compteType, @RequestParam(name = "compteId") Integer compteId, Model model){
         compteType = compteService.compteById(compteId);
         model.addAttribute("compteType", compteType);
-        return "formUpCompte";
+        return "compte/infoPerso";
 
     }
 
-    @RequestMapping(value = "upCompte", method = RequestMethod.POST)
+    @Secured(value = "ROLE_USER")
+    @RequestMapping(value = "/upCompte", method = RequestMethod.POST)
     public String uuCompte(@Valid CompteType compteType, BindingResult bindingResult,
                            RedirectAttributes redirectAttributes){
-        System.out.println(compteType.getId());
         String message = compteService.upCompte(compteType);
         System.out.println(message);
-        return "formUpCompte";
+        return "compte/infoPerso";
     }
 
 }

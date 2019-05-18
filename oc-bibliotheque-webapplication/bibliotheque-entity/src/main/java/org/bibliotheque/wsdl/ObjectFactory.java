@@ -2,7 +2,7 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.2.11 
 // Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2019.05.16 à 08:11:34 AM CEST 
+// Généré le : 2019.05.18 à 04:23:27 PM CEST 
 //
 
 
@@ -37,19 +37,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetLivresByIdRequest }
+     * Create an instance of {@link GetLivreByIdRequest }
      * 
      */
-    public GetLivresByIdRequest createGetLivresByIdRequest() {
-        return new GetLivresByIdRequest();
+    public GetLivreByIdRequest createGetLivreByIdRequest() {
+        return new GetLivreByIdRequest();
     }
 
     /**
-     * Create an instance of {@link GetLivresByIdResponse }
+     * Create an instance of {@link GetLivreByIdResponse }
      * 
      */
-    public GetLivresByIdResponse createGetLivresByIdResponse() {
-        return new GetLivresByIdResponse();
+    public GetLivreByIdResponse createGetLivreByIdResponse() {
+        return new GetLivreByIdResponse();
     }
 
     /**
@@ -434,6 +434,22 @@ public class ObjectFactory {
      */
     public GetAllEmpruntResponse createGetAllEmpruntResponse() {
         return new GetAllEmpruntResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetAllEmpruntByCompteIdRequest }
+     * 
+     */
+    public GetAllEmpruntByCompteIdRequest createGetAllEmpruntByCompteIdRequest() {
+        return new GetAllEmpruntByCompteIdRequest();
+    }
+
+    /**
+     * Create an instance of {@link GetAllEmpruntByCompteIdResponse }
+     * 
+     */
+    public GetAllEmpruntByCompteIdResponse createGetAllEmpruntByCompteIdResponse() {
+        return new GetAllEmpruntByCompteIdResponse();
     }
 
     /**

@@ -3,15 +3,14 @@ package org.bibliotheque.client;
 import org.bibliotheque.wsdl.*;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 
-
 public class LivreClient extends WebServiceGatewaySupport {
 
 
     /* ==== GET LIVRE BY ID ==== */
-    public GetLivresByIdResponse getLivreById(Integer id) {
-        GetLivresByIdRequest request = new GetLivresByIdRequest();
+    public GetLivreByIdResponse getLivreById(Integer id) {
+        GetLivreByIdRequest request = new GetLivreByIdRequest();
         request.setLivreId(id);
-        return (GetLivresByIdResponse) getWebServiceTemplate().marshalSendAndReceive(request);
+        return (GetLivreByIdResponse) getWebServiceTemplate().marshalSendAndReceive(request);
     }
 
     /* ==== GET ALL LIVRES ==== */

@@ -67,4 +67,11 @@ public class EmpruntServiceImpl implements EmpruntService {
         }
 
     }
+
+    @Override
+    public List<EmpruntEntity> getAllEmpruntByCompteId(Integer id) {
+        List<EmpruntEntity> empruntEntityList = new ArrayList<>();
+        this.repository.findAllByCompteId(id).forEach(e -> empruntEntityList.add(e));
+        return empruntEntityList;
+    }
 }

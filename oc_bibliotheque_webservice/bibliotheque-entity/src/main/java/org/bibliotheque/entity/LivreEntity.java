@@ -19,6 +19,8 @@ public class LivreEntity implements Serializable {
     @Column(name = "ref_bibliotheque")
     private String refBibliotheque;
     private String statut;
+    @Column(name = "ouvrage_id", insertable = false, updatable = false)
+    private Integer ouvrageId;
 
     @ManyToOne
     @JoinColumn(name = "ouvrage_id")

@@ -2,7 +2,7 @@
 // Ce fichier a été généré par l'implémentation de référence JavaTM Architecture for XML Binding (JAXB), v2.2.11 
 // Voir <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2019.05.18 à 04:23:27 PM CEST 
+// Généré le : 2019.05.20 à 08:17:08 AM CEST 
 //
 
 
@@ -27,6 +27,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="urlPhoto" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *         &lt;element name="nomPhoto" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="ouvrageId" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *         &lt;element name="ouvrage" type="{http://www.webservice.org/bibliotheque-ws}ouvrageType"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
@@ -41,6 +42,7 @@ import javax.xml.bind.annotation.XmlType;
     "id",
     "urlPhoto",
     "nomPhoto",
+    "ouvrageId",
     "ouvrage"
 })
 public class PhotoType {
@@ -50,6 +52,7 @@ public class PhotoType {
     protected String urlPhoto;
     @XmlElement(required = true)
     protected String nomPhoto;
+    protected int ouvrageId;
     @XmlElement(required = true)
     protected OuvrageType ouvrage;
 
@@ -115,6 +118,22 @@ public class PhotoType {
      */
     public void setNomPhoto(String value) {
         this.nomPhoto = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété ouvrageId.
+     * 
+     */
+    public int getOuvrageId() {
+        return ouvrageId;
+    }
+
+    /**
+     * Définit la valeur de la propriété ouvrageId.
+     * 
+     */
+    public void setOuvrageId(int value) {
+        this.ouvrageId = value;
     }
 
     /**

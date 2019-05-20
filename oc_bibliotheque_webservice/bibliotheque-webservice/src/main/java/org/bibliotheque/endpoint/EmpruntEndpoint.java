@@ -14,8 +14,10 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 
@@ -38,10 +40,21 @@ public class EmpruntEndpoint  {
      */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getEmpruntByIdRequest")
     @ResponsePayload
-    public GetEmpruntByIdResponse getEmpruntById(@RequestPayload GetEmpruntByIdRequest request){
+    public GetEmpruntByIdResponse getEmpruntById(@RequestPayload GetEmpruntByIdRequest request) throws DatatypeConfigurationException {
         GetEmpruntByIdResponse response = new GetEmpruntByIdResponse();
         EmpruntEntity empruntEntity = service.getEmpruntById(request.getEmpruntId());
         EmpruntType empruntType = new EmpruntType();
+
+        GregorianCalendar calendar = new GregorianCalendar();
+
+        calendar.setTime(empruntEntity.getDateDebut());
+        XMLGregorianCalendar dateDebut = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+        empruntType.setDateDebut(dateDebut);
+
+        calendar.setTime(empruntEntity.getDateFin());
+        XMLGregorianCalendar dateFin = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+        empruntType.setDateFin(dateFin);
+
         BeanUtils.copyProperties(empruntEntity, empruntType);
         response.setEmpruntType(empruntType);
         return response;
@@ -76,20 +89,20 @@ public class EmpruntEndpoint  {
      */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllEmpruntByCompteIdRequest")
     @ResponsePayload
-    public GetAllEmpruntByCompteIdResponse getAllEmpruntByCompteId(@RequestPayload GetAllEmpruntByCompteIdRequest request) throws DatatypeConfigurationException {
+    public GetAllEmpruntByCompteIdResponse getAllEmpruntByCompteId(@RequestPayload GetAllEmpruntByCompteIdRequest request) throws DatatypeConfigurationException, ParseException {
         GetAllEmpruntByCompteIdResponse response = new GetAllEmpruntByCompteIdResponse();
         List<EmpruntEntity> empruntEntityList = service.getAllEmpruntByCompteId(request.getId());
         List<EmpruntType> empruntTypeList = new ArrayList<>();
 
-        GregorianCalendar calendar = new GregorianCalendar();
 
         for (EmpruntEntity entity : empruntEntityList){
             EmpruntType empruntType = new EmpruntType();
+            GregorianCalendar calendar = new GregorianCalendar();
 
-            calendar.setGregorianChange(entity.getDateDebut());
+            calendar.setTime(entity.getDateDebut());
             XMLGregorianCalendar dateDebut = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
 
-            calendar.setGregorianChange(entity.getDateFin());
+            calendar.setTime(entity.getDateFin());
             XMLGregorianCalendar dateFin = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
 
             empruntType.setId(entity.getId());
@@ -134,7 +147,7 @@ public class EmpruntEndpoint  {
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "updateEmpruntRequest")
     @ResponsePayload
-    public UpdateEmpruntResponse updateEmprunt(@RequestPayload UpdateEmpruntRequest request){
+    public UpdateEmpruntResponse updateEmprunt(@RequestPayload UpdateEmpruntRequest request) throws ParseException {
         UpdateEmpruntResponse response = new UpdateEmpruntResponse();
         ServiceStatus serviceStatus = new ServiceStatus();
 
@@ -147,6 +160,14 @@ public class EmpruntEndpoint  {
         } else {
 
             // 2. Obtenir les informations de l'emprunt à mettre à jour à partir de la requête
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
+            Date dateDebut = dateFormat.parse(request.getEmpruntType().getDateDebut().toString());
+            upEmprunt.setDateDebut(dateDebut);
+
+            Date dateFin = dateFormat.parse(request.getEmpruntType().getDateFin().toString());
+            upEmprunt.setDateFin(dateFin);
+
             BeanUtils.copyProperties(request.getEmpruntType(), upEmprunt);
 
             // 3. Mettre à jour l'emprunt dans la base de données

@@ -19,9 +19,11 @@ public class PhotoEntity implements Serializable {
     private String urlPhoto;
     @Column(name = "nom_photo")
     private String nomPhoto;
+    @Column(name = "ouvrage_id")
+    private Integer ouvrageId;
 
     @ManyToOne
-    @JoinColumn(name = "ouvrage_id")
+    @JoinColumn(name = "ouvrage_id", insertable = false, updatable = false)
     private OuvrageEntity ouvragePhoto;
 
 }

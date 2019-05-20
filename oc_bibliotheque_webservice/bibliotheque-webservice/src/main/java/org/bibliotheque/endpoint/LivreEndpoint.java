@@ -37,7 +37,6 @@ public class LivreEndpoint {
         LivreType livreType = new LivreType();
 
         BeanUtils.copyProperties(livreEntity, livreType);
-        System.out.println(livreType.getOuvrageId());
         response.setLivreType(livreType);
         return response;
     }

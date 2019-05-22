@@ -62,6 +62,8 @@ div hr {
     border-left: white;
     border-color: #DCDCDC;
     border-width: 1px;
+    opacity: 100%;
+
 }
 
 .styleNavLayout{
@@ -85,6 +87,10 @@ div hr {
 .styleGradientLayout{
     background-image: radial-gradient(circle at top left, white, #DCDCDC);
 }
+
+
+
+
 
 
 

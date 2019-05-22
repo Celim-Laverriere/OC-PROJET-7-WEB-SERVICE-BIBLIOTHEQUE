@@ -79,22 +79,11 @@ public class EmpruntService {
         return ouvrageTypeList;
     }
 
-//    public List<EmpruntType> formatDate(List<EmpruntType> empruntTypeList) throws DatatypeConfigurationException {
-//
-//        List<EmpruntType> empruntTypes = new ArrayList<>();
-//
-//        for (EmpruntType empruntType : empruntTypeList){
-//
-//        }
-//
-//        return empruntTypes;
-//    }
-
 
     /**
      * CETTE METHODE MET A JOUR LA DATE DE FIN D'UN EMPRUNT SUITE A UNE PROLONGATION DE CELUI-CI
      * @param empruntId
-     * @return
+     * @return UN STATUT CODE DE CONFIRMATION
      */
     public String upEmpruntProlongation(Integer empruntId) throws DatatypeConfigurationException, ParseException {
 

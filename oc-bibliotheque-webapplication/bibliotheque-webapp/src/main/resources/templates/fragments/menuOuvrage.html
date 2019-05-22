@@ -5,17 +5,9 @@
         layout:decorator="layout"
         lang="en">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"/>
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
 
 <head>
     <meta charset="UTF-8"/>
-    <link rel="stylesheet" th:href="@{/css/style.css}"/>
     <title>Menu ouvrage</title>
 </head>
 
@@ -23,12 +15,32 @@
 
 <div th:fragment="menuOuvrage" class="col col-md-2 stylLigneVerticaleDroite" style="height: 1000px">
 
-    <button class="btn btn-light navMenuCompte" href="#">GENRES</button>
+    <div class="dropdown dropright">
+        <button class="btn btn-light navMenuCompte dropdown-toggle dropdown-toggle-split " type="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">GENRES</button>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width: 100%">
+            <th:block th:each="genre : ${session.genreList}">
+            <a class="dropdown-item" href="#" th:href="@{/ouvragesByGenre(motCle=${genre})}" th:text="${genre}"></a>
+            </th:block>
+        </div>
+    </div>
     <hr/>
-    <button class="btn btn-light navMenuCompte" href="#">AUTEURS</button>
+    <div class="dropdown dropright">
+        <button class="btn btn-light navMenuCompte dropdown-toggle dropdown-toggle-split " type="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">AUTEURS</button>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width: 100%">
+            <th:block th:each="auteur : ${session.auteurList}">
+                <a class="dropdown-item" href="#" th:href="@{/ouvragesByGenre(motCle=${auteur})}" th:text="${auteur}"></a>
+            </th:block>
+        </div>
+    </div>
+
     <hr/>
     <button class="btn btn-light navMenuCompte" href="#">Link</button>
     <hr/>
+
 </div>
 
 </body>

@@ -69,15 +69,32 @@
                                             <p th:text="'Référence du livre : ' + ${livre.getRefBibliotheque()}"></p>
 
                                             <h6>DATES D'EMPRUNT</h6>
-                                            <p th:text="'Date de début : ' + ${emprunt.getDateDebut()} "></p>
-                                            <p th:text="'Date de fin : ' + ${emprunt.getDateFin()}"></p>
+                                            <p th:text="'Date de début : ' + ${dateFormat.format(dateFormat.parse(emprunt.getDateDebut().toString()))}"></p>
+                                            <p th:text="'Date de fin : ' + ${dateFormat.format((dateFormat.parse(emprunt.getDateFin().toString())))}"></p>
                                         </td>
                                     </th:block>
                                 </div>
-                                <td style="width: 30%">
-                                    <p><a class="btn btn-outline-primary" href="#" th:href="@{/prolongation(empruntId=${emprunt.getId()})}">PROLONGER</a></p>
-                                    <small>Attention vous pouvez polonger votre emprunt pour 4 semaines suplémentaire une seul fois !</small>
-                                </td>
+
+                                <th:block th:if="${!emprunt.isProlongation()}">
+                                    <td style="width: 30%">
+                                        <p><a class="btn btn-outline-primary" href="#" th:href="@{/prolongation(empruntId=${emprunt.getId()})}">PROLONGER</a></p>
+                                        <p>Attention vous pouvez polonger votre emprunt pour 4 semaines suplémentaire une seul fois !</p>
+                                    </td>
+                                </th:block>
+
+                                <th:block th:if="${statutCode == 'CONFLICT'}">
+                                    <td style="width: 30%">
+                                        <p><a class="btn btn-outline-primary" href="#" th:href="@{/prolongation(empruntId=${emprunt.getId()})}">PROLONGER</a></p>
+                                        <p class="red">une erreur inattendue s'est produite. veuillez réessayer ultérieurement !</p>
+                                    </td>
+                                </th:block>
+
+                                <th:block th:if="${emprunt.isProlongation()}">
+                                    <td style="width: 30%">
+                                        <p>Votre demande de prolongation a bien été prise en compte !</p>
+                                    </td>
+                                </th:block>
+
                                 </tbody>
                             </table>
                         </div>

@@ -28,30 +28,6 @@ public class CompteController {
         return "/compte/compte";
     }
 
-    @RequestMapping(value = "formCompte", method = RequestMethod.GET)
-    public String fromCompte(final Model pModel){
-        CompteType compteType = new CompteType();
-        pModel.addAttribute("compteType", compteType);
-        return "msg";
-    }
-
-
-    @RequestMapping(value = "addCompte", method = RequestMethod.POST)
-    public String addCompte (@Valid CompteType compteType, BindingResult bindingResult,
-                             RedirectAttributes redirectAttributes) {
-        String message = compteService.addCompte(compteType);
-        System.out.println(message);
-        return "msg";
-
-    }
-
-    @RequestMapping(value = "delCompte", method = RequestMethod.POST)
-    public String delCompte (@Valid CompteType compteType,BindingResult bindingResult,
-                             RedirectAttributes redirectAttributes){
-        String message = compteService.delCompte(compteType.getId());
-        System.out.println(message);
-        return "msg";
-    }
 
     @Secured(value = "ROLE_USER")
     @RequestMapping(value = "/infoPerso", method = RequestMethod.GET)
@@ -61,6 +37,7 @@ public class CompteController {
         return "compte/infoPerso";
 
     }
+
 
     @Secured(value = "ROLE_USER")
     @RequestMapping(value = "/upCompte", method = RequestMethod.POST)

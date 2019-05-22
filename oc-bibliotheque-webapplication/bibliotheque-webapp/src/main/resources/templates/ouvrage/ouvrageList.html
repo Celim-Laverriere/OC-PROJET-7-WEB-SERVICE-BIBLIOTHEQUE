@@ -5,13 +5,6 @@
         layout:decorator="layout"
         lang="en">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"/>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-
 <head>
     <meta charset="UTF-8"/>
     <link rel="stylesheet" th:href="@{/css/style.css}"/>
@@ -27,8 +20,9 @@
 
             <div th:replace="/fragments/menuOuvrage :: menuOuvrage"></div>
 
-            <div class="col col-md-10">
-                <h2>Livres</h2>
+            <div class="col col-md-10 ouvrageList">
+
+                <h2 class="rouge">Livres</h2>
                 <hr/>
                 <div class="row justify-content-start" style="margin-left: 15%">
                     <th:block th:each="ouvrage : ${ouvrageList}">
@@ -48,19 +42,14 @@
                                         <a class="btn btn-light" href="#" th:href="@{/ouvrage(ouvrageId=${ouvrage.getId()})}">Afficher détail</a>
                                     </p>
                                 </div>
-
                             </div>
                         </div>
                     </th:block>
                 </div>
             </div>
         </div>
-
     </div>
 </div>
-
-</div>
-
-
+<script th:src="@{/js/bibliotheque.js}"/>
 </body>
 </html>

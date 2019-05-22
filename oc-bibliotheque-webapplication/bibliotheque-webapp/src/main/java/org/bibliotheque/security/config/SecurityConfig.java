@@ -2,6 +2,7 @@ package org.bibliotheque.security.config;
 
 import org.bibliotheque.security.service.CustomAuthenticationProvider;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -10,6 +11,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.security.web.authentication.Http403ForbiddenEntryPoint;
 
 
@@ -39,7 +41,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         http
                 .authorizeRequests()
-                .antMatchers("/image/**", "/css/**", "/", "/ouvrages", "/webjars/**", "/login","/accueil", "/ouvrage")
+                .antMatchers("/image/**", "/css/**", "/js/**", "/", "/ouvrages", "/webjars/**", "/login",
+                        "/accueil", "/ouvrage", "/ouvragesByGenre")
                 .permitAll()
                 .anyRequest()
                 .authenticated()
@@ -52,12 +55,21 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .logout()
                 .invalidateHttpSession(true)
                 .logoutUrl("/logout")
-                .logoutSuccessUrl("/");
+                .logoutSuccessUrl("/")
+                .and()
+                .exceptionHandling()
+                .accessDeniedPage("/error");
 
         http
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED);
 
+
     }
+
+//    @Bean
+//    public AccessDeniedHandler accessDeniedHandler(){
+//        return new CustomAccessDeniedHandler();
+//    }
 
 }

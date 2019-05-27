@@ -1,6 +1,5 @@
 package org.bibliotheque.service;
 
-import com.sun.org.apache.xerces.internal.jaxp.datatype.XMLGregorianCalendarImpl;
 import org.bibliotheque.repository.EmpruntRepository;
 import org.bibliotheque.repository.LivreRepository;
 import org.bibliotheque.repository.OuvrageRepository;
@@ -19,8 +18,6 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-import static jdk.nashorn.internal.objects.NativeDate.setMonth;
-import static jdk.nashorn.internal.objects.NativeDate.setYear;
 
 @Service
 public class EmpruntService {
@@ -36,9 +33,10 @@ public class EmpruntService {
 
 
     /**
-     * GET ALL EMPRUNTS BY ID COMPTE
+     * ==== CETTE METHODE RECUPERER TOUS LES EMPRUNTS D'UN CLIENT ====
      * @param id
-     * @return Une liste des emprunts d'un compte
+     * @return LA LISTE DES EMPRUNTS D'UN COMPTE
+     * @see EmpruntRepository#getAllEmpruntByCompteId(Integer)
      */
     public List<EmpruntType> getAllEmpruntByCompteId(Integer id){
         return empruntRepository.getAllEmpruntByCompteId(id);
@@ -46,9 +44,10 @@ public class EmpruntService {
 
 
     /**
-     * CETTE METHODE RECUPERER TOUS LES LIVRES EMPRUNTES PAR UN CLIENT
+     * ==== CETTE METHODE RECUPERER TOUS LES LIVRES EMPRUNTES PAR UN CLIENT ====
      * @param empruntTypeList
      * @return UNE LISTE DE LIVRES
+     * @see LivreRepository#livreById(Integer)
      */
     public List<LivreType> livreTypeListEmprunter(List<EmpruntType> empruntTypeList){
 
@@ -63,9 +62,10 @@ public class EmpruntService {
     }
 
     /**
-     * CETTE METHODE RECUPERER TOUS LES OUVRAGES DES LIVRES EMPRUNTES PAR LE CLIENT
+     * ==== CETTE METHODE RECUPERER TOUS LES OUVRAGES DES LIVRES EMPRUNTES PAR LE CLIENT ====
      * @param livreTypeList
      * @return UNE LISTE D'OUVRAGES
+     * @see OuvrageRepository#ouvrageById(Integer)
      */
     public List<OuvrageType> ouvrageTypeListEmprunter(List<LivreType> livreTypeList){
 
@@ -81,9 +81,11 @@ public class EmpruntService {
 
 
     /**
-     * CETTE METHODE MET A JOUR LA DATE DE FIN D'UN EMPRUNT SUITE A UNE PROLONGATION DE CELUI-CI
+     * ==== CETTE METHODE MET A JOUR LA DATE DE FIN D'UN EMPRUNT SUITE A UNE PROLONGATION DE CELUI-CI ====
      * @param empruntId
-     * @return UN STATUT CODE DE CONFIRMATION
+     * @return UN STATUT-CODE DE CONFIRMATION
+     * @see EmpruntRepository#getEmpruntById(Integer)
+     * @see EmpruntRepository#upEmpruntType(EmpruntType)
      */
     public String upEmpruntProlongation(Integer empruntId) throws DatatypeConfigurationException, ParseException {
 

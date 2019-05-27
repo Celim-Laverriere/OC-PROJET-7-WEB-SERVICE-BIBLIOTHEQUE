@@ -14,23 +14,41 @@ import java.util.List;
 public class EmpruntRepository {
 
     @Autowired
-    private EmpruntClient client;
+    private EmpruntClient empruntClient;
 
-    /* ==== GET ALL EMPRUNTS BY ID COMPTE ==== */
+
+    /**
+     * ==== CETTE METHODE RECUPERER TOUS LES EMPRUNTS D'UN CLIENT ====
+     * @param id
+     * @return UNE LISTE DES EMPRUNTS D'UN COMPTE
+     * @see EmpruntClient#getAllEmpruntByCompteId(Integer)
+     */
     public List<EmpruntType> getAllEmpruntByCompteId(Integer id){
-        GetAllEmpruntByCompteIdResponse response = client.getAllEmpruntByCompteId(id);
+        GetAllEmpruntByCompteIdResponse response = empruntClient.getAllEmpruntByCompteId(id);
         return response.getEmpruntType();
     }
 
-    /* ==== GET EMPRUNT BY ID ==== */
+
+    /**
+     * ==== CETTE METHODE RECUPERER UN EMPRUNT PAR SON IDENTIFIANT ====
+     * @param id
+     * @return UN EMPRUNT
+     * @see EmpruntClient#getEmpruntById(Integer)
+     */
     public EmpruntType getEmpruntById(Integer id){
-        GetEmpruntByIdResponse response = client.getEmpruntById(id);
+        GetEmpruntByIdResponse response = empruntClient.getEmpruntById(id);
         return response.getEmpruntType();
     }
 
-    /* ==== UPDATE EMPRUNT ==== */
+
+    /**
+     * ==== CETTE METHODE MET A JOUR UN EMPRUNT POUR PROLONGER SA DUREE ====
+     * @param empruntType
+     * @return UN STATUT-CODE DE CONFIRMATION
+     * @see EmpruntClient#updateEmprunt(EmpruntType)
+     */
     public String upEmpruntType(EmpruntType empruntType){
-        UpdateEmpruntResponse response = client.updateEmprunt(empruntType);
+        UpdateEmpruntResponse response = empruntClient.updateEmprunt(empruntType);
         return response.getServiceStatus().getStatusCode();
     }
 }

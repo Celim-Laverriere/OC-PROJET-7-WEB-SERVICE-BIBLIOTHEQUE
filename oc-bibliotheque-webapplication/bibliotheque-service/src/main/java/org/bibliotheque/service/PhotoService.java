@@ -17,7 +17,8 @@ public class PhotoService {
 
     /**
      * GET PHOTO BY ID
-     * @param id @return PhotoType
+     * @param id
+     * @return PhotoType
      * @see PhotoClient#getPhotoById(Integer)
      */
     public PhotoType photoById(Integer id){

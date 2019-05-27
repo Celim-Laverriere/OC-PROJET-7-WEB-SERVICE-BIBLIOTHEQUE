@@ -13,6 +13,7 @@ public class LivreRepository {
     @Autowired
     private LivreClient client;
 
+
     /* ==== GET LIVRE BY ID ==== */
     public LivreType livreById(Integer id) {
         GetLivreByIdResponse response = client.getLivreById(id);

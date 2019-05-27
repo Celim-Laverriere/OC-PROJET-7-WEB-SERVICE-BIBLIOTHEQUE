@@ -15,9 +15,10 @@ public class CompteService {
     private CompteRepository repository;
 
     /**
-     * GET COMPTE BY ID
-     * @param id @return CompteType
-     * @see CompteClient#getCompteById(Integer)
+     * ==== CETTE METHODE RECUPERER UN COMPTE CLIENT PAR SON IDENTIFIANT ====
+     * @param id
+     * @return LES INFORMATIONS D'UN COMPTE
+     * @see CompteRepository#compteById(Integer)
      */
     public CompteType compteById(Integer id){
         return repository.compteById(id);

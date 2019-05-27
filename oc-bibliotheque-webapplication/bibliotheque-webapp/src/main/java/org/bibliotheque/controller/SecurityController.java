@@ -12,10 +12,12 @@ public class SecurityController {
         return "login/login";
     }
 
-    
+
     @RequestMapping(value = "/loginSuccess")
     public String afterLogin(){
         return "accueil";
     }
+
+
 
 }

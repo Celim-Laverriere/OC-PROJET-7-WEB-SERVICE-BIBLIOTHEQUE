@@ -32,9 +32,6 @@ public class OuvrageController {
         Set<String> genresSet = ouvrageService.ouvrageGenreList(ouvrageTypeList);
         Set<String> auteursSet = ouvrageService.ouvrageAuteurList(ouvrageTypeList);
 
-        logger.debug("Hello from Logback");
-        logger.info("Liste d'ourages : {}", ouvrageTypeList.size());
-
         session.setAttribute("genreList", genresSet);
         session.setAttribute("auteurList", auteursSet);
         model.addAttribute("ouvrageList", ouvrageTypeList);
@@ -46,13 +43,22 @@ public class OuvrageController {
     @RequestMapping(value = "/ouvrage", method = RequestMethod.GET)
     public String ouvrageDetail(Model model, @RequestParam(name = "ouvrageId") Integer ouvrageId){
 
-        OuvrageType ouvrageType = ouvrageService.ouvrageById(ouvrageId);
-        List<LivreType> livreTypeListDispo = ouvrageService.nombreDeLivreDispo(ouvrageType.getLivres());
+        String ouvrageReturn = null;
 
-        model.addAttribute("livreTypeListDispo", livreTypeListDispo);
-        model.addAttribute("ouvrageDetail", ouvrageType);
+        try{
+            OuvrageType ouvrageType = ouvrageService.ouvrageById(ouvrageId);
+            List<LivreType> livreTypeListDispo = ouvrageService.nombreDeLivreDispo(ouvrageType.getLivres());
 
-        return "ouvrage/ouvrageDetail";
+            model.addAttribute("livreTypeListDispo", livreTypeListDispo);
+            model.addAttribute("ouvrageDetail", ouvrageType);
+
+            ouvrageReturn = "ouvrage/ouvrageDetail";
+
+        } catch (NullPointerException pEX){
+            logger.error("/ouvrage : {}", pEX.toString());
+            ouvrageReturn = "error";
+        }
+        return ouvrageReturn;
     }
 
 

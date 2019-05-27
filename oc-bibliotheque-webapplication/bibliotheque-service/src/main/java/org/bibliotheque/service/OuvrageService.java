@@ -1,42 +1,50 @@
 package org.bibliotheque.service;
 
-import org.bibliotheque.client.OuvrageClient;
 import org.bibliotheque.repository.OuvrageRepository;
 import org.bibliotheque.wsdl.LivreType;
 import org.bibliotheque.wsdl.OuvrageType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
+
 
 @Service
 public class OuvrageService {
 
+
     @Autowired
     private OuvrageRepository repository;
 
+
     /**
      * GET OUVRAGE BY ID
-     * @param id @return OuvrageType
-     * @see OuvrageClient#getOuvrageById(Integer)
+     * @param id
+     * @return UN OUVRAGE
+     * @see OuvrageRepository#ouvrageById(Integer)
      */
     public OuvrageType ouvrageById(Integer id){
         return repository.ouvrageById(id);
     }
 
+
     /**
      * GET ALL OUVRAGES
-     * @return ouvrageTypeList
-     * @see OuvrageClient#getAllOuvrages()
+     * @return UNE LISTE D'OUVRAGES
+     * @see OuvrageRepository#ouvrageTypeList()
      */
     public List<OuvrageType> ouvrageTypeList(){
         return repository.ouvrageTypeList();
     }
 
+
+    /**
+     * CETTE METHODE TRIE LES LIVRES DISPONIBLES DES OUVRAGES
+     * @param livreTypeList
+     * @return LA LISTE DES LIVRES DISPONIBLE POUR CHAQUE OUVRAGE
+     */
     public List<LivreType> nombreDeLivreDispo(List<LivreType> livreTypeList){
 
         List<LivreType> livreTypeListDispo = new ArrayList<>();
@@ -50,13 +58,15 @@ public class OuvrageService {
         return livreTypeListDispo;
     }
 
+
     /**
      * CETTE METHODE RÉCUPÉRER TOUS LES OUVRAGES CORRESPONDANT AU GENRE SELECTIONNE
      * @param motCle
-     * @return UNE LISTE D'OUVRAGE TRIE PAR GENRE
+     * @return UNE LISTE D'OUVRAGE TRIEE PAR GENRE OU PAR AUTEURS
      */
     public List<OuvrageType> ouvragesByGenreList(String motCle){
 
+        /**@see OuvrageRepository#ouvrageTypeList()*/
         List<OuvrageType> ouvrageTypeList = repository.ouvrageTypeList();
         List<OuvrageType> ouvrageTypeListByGenre = new ArrayList<>();
 
@@ -69,6 +79,7 @@ public class OuvrageService {
 
         return ouvrageTypeListByGenre;
     }
+
 
     /**
      * CETTE METHODE RÉCUPÉRER LES GENRES DES OUVRAGES ET SUPPRIME LES DOUBLONS
@@ -85,6 +96,7 @@ public class OuvrageService {
 
         return genreSetList;
     }
+
 
     /**
      * CETTE METHODE RÉCUPÉRER LES AUTEURS DES OUVRAGES ET SUPPRIME LES DOUBLONS

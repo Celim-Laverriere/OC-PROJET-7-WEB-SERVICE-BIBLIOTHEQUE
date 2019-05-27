@@ -1,28 +1,79 @@
 package org.bibliotheque.client;
 
 import org.bibliotheque.wsdl.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
+import org.springframework.ws.soap.client.SoapFaultClientException;
 
 public class EmpruntClient extends WebServiceGatewaySupport {
 
-    /* ==== GET ALL EMPRUNTS BY ID COMPTE ==== */
+    private static final Logger logger = LoggerFactory.getLogger(OuvrageClient.class);
+
+
+    /**
+     * ==== CETTE METHODE RECUPERER TOUS LES EMPRUNTS D'UN CLIENT ====
+     * @param id
+     * @return UNE LISTE DES EMPRUNTS D'UN COMPTE
+     */
     public GetAllEmpruntByCompteIdResponse getAllEmpruntByCompteId(Integer id){
-        GetAllEmpruntByCompteIdRequest request = new GetAllEmpruntByCompteIdRequest();
-        request.setId(id);
-        return (GetAllEmpruntByCompteIdResponse) getWebServiceTemplate().marshalSendAndReceive(request);
+
+        GetAllEmpruntByCompteIdResponse response = new GetAllEmpruntByCompteIdResponse();
+
+        try{
+            GetAllEmpruntByCompteIdRequest request = new GetAllEmpruntByCompteIdRequest();
+            request.setId(id);
+            response = (GetAllEmpruntByCompteIdResponse) getWebServiceTemplate().marshalSendAndReceive(request);
+
+        } catch (SoapFaultClientException pEX){
+            logger.error("GetAllEmpruntByCompteIdResponse : {}", pEX.toString());
+        } catch (Exception pEX){
+
+        }
+
+        return response;
     }
 
-    /* ==== GET EMPRUNT BY ID ==== */
+
+    /**
+     * ==== CETTE METHODE RECUPERER UN EMPRUNT PAR SON IDENTIFIANT ====
+     * @param id
+     * @return UN EMPRUNT
+     */
     public GetEmpruntByIdResponse getEmpruntById(Integer id){
-        GetEmpruntByIdRequest request = new GetEmpruntByIdRequest();
-        request.setEmpruntId(id);
-        return (GetEmpruntByIdResponse) getWebServiceTemplate().marshalSendAndReceive(request);
+
+        GetEmpruntByIdResponse response = new GetEmpruntByIdResponse();
+
+        try{
+            GetEmpruntByIdRequest request = new GetEmpruntByIdRequest();
+            request.setEmpruntId(id);
+            response = (GetEmpruntByIdResponse) getWebServiceTemplate().marshalSendAndReceive(request);
+        } catch (SoapFaultClientException pEX){
+            logger.error("GetEmpruntByIdResponse : {}", pEX.toString());
+        }
+
+        return response;
     }
 
-    /* ==== UPDATE EMPRUNT ==== */
+
+    /**
+     * ==== CETTE METHODE MET A JOUR UN EMPRUNT POUR PROLONGER SA DUREE ====
+     * @param empruntType
+     * @return UN STATUT-CODE DE CONFIRMATION
+     */
     public UpdateEmpruntResponse updateEmprunt(EmpruntType empruntType){
-        UpdateEmpruntRequest request = new UpdateEmpruntRequest();
-        request.setEmpruntType(empruntType);
-        return (UpdateEmpruntResponse) getWebServiceTemplate().marshalSendAndReceive(request);
+
+        UpdateEmpruntResponse response = new UpdateEmpruntResponse();
+
+        try{
+            UpdateEmpruntRequest request = new UpdateEmpruntRequest();
+            request.setEmpruntType(empruntType);
+            response = (UpdateEmpruntResponse) getWebServiceTemplate().marshalSendAndReceive(request);
+
+        } catch (SoapFaultClientException pEX){
+            logger.error("UpdateEmpruntResponse : {}", pEX.toString());
+        }
+
+        return response;
     }
 }

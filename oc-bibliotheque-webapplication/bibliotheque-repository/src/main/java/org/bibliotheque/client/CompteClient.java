@@ -1,17 +1,35 @@
 package org.bibliotheque.client;
 
 import org.bibliotheque.wsdl.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
+import org.springframework.ws.soap.client.SoapFaultClientException;
 
 public class CompteClient extends WebServiceGatewaySupport {
 
+    private static final Logger logger = LoggerFactory.getLogger(OuvrageClient.class);
 
-    /* ==== GET COMPTE BY ID ==== */
+    /**
+     * ==== CETTE METHODE RECUPERER UN COMPTE CLIENT PAR SON IDENTIFIANT ====
+     * @param id
+     * @return LES INFORMATIONS D'UN COMPTE
+     */
     public GetCompteByIdResponse getCompteById(Integer id){
-        GetCompteByIdRequest request = new GetCompteByIdRequest();
-        request.setCompteId(id);
-        return (GetCompteByIdResponse) getWebServiceTemplate().marshalSendAndReceive(request);
+
+        GetCompteByIdResponse response = new GetCompteByIdResponse();
+
+        try{
+            GetCompteByIdRequest request = new GetCompteByIdRequest();
+            request.setCompteId(id);
+            response = (GetCompteByIdResponse) getWebServiceTemplate().marshalSendAndReceive(request);
+        } catch (SoapFaultClientException pEX){
+            logger.error("GetCompteByIdResponse : {}", pEX.toString());
+        }
+
+        return response;
     }
+
 
     /* ==== GET ALL COMPTES ==== */
     public GetAllComptesResponse getAllComptes(){

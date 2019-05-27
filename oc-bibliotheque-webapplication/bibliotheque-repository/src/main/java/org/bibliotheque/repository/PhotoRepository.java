@@ -16,13 +16,22 @@ public class PhotoRepository {
     @Autowired
     private PhotoClient client;
 
-    /* ==== GET PHOTO BY ID ==== */
+    /**
+     * ==== GET PHOTO BY ID ====
+     * @param id
+     * @return PhotoType
+     * @see PhotoClient#getPhotoById(Integer)
+     */
    public PhotoType photoById(Integer id){
        GetPhotoByIdResponse response = client.getPhotoById(id);
        return response.getPhotoType();
    }
 
-    /* ==== GET ALL PHOTOS ==== */
+    /**
+     * ==== GET ALL PHOTOS ====
+     * @return List PhotoType
+     * @see PhotoClient#getAllPhotos()
+     */
     public List<PhotoType> photoTypeList(){
         GetAllPhotosResponse response = client.getAllPhotos();
         return response.getPhotoType();

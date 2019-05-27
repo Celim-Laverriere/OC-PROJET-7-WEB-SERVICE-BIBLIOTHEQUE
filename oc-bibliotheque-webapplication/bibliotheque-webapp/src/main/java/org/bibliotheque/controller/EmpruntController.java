@@ -6,6 +6,7 @@ import org.bibliotheque.wsdl.EmpruntType;
 import org.bibliotheque.wsdl.LivreType;
 import org.bibliotheque.wsdl.OuvrageType;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,6 +26,7 @@ public class EmpruntController {
     private EmpruntService empruntService;
 
 
+    @Secured(value = "ROLE_USER")
     @RequestMapping(value = "/emprunt", method = RequestMethod.GET)
     public String getAllEmpruntByCompteId(HttpSession session, Model model, @RequestParam(name = "statutCode", required = false) String statutCode){
 

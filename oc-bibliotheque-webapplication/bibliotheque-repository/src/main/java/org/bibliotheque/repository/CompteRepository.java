@@ -13,11 +13,18 @@ public class CompteRepository {
     @Autowired
     private CompteClient client;
 
-    /* ==== GET COMPTE BY ID ==== */
+
+    /**
+     * ==== CETTE METHODE RECUPERER UN COMPTE CLIENT PAR SON IDENTIFIANT ====
+     * @param id
+     * @return LES INFORMATIONS D'UN COMPTE
+     * @see CompteClient#getCompteById(Integer)
+     */
     public CompteType compteById(Integer id){
         GetCompteByIdResponse response = client.getCompteById(new Integer(id));
         return response.getCompteType();
     }
+
 
     /* ==== GET ALL COMPTES ==== */
     public List<CompteType> compteList(){

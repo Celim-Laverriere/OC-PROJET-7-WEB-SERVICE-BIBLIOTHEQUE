@@ -14,9 +14,11 @@ public class LivreService {
     @Autowired
     private LivreRepository repository;
 
+
     /**
      * GET LIVRE BY ID
-     * @param id @return LivreType
+     * @param id
+     * @return LivreType
      * @see LivreClient#getLivreById(Integer)
      */
     public LivreType livreById(Integer id){
@@ -34,7 +36,8 @@ public class LivreService {
 
     /**
      * ADD LIVRE
-     * @param livreType @return message de confirmation
+     * @param livreType
+     * @return message de confirmation
      * @see LivreClient#addLivre(LivreType)
      */
     public String addLivre(LivreType livreType){
@@ -43,7 +46,8 @@ public class LivreService {
 
     /**
      * UPDATE LIVRE
-     * @param livreType @return message de confirmation
+     * @param livreType
+     * @return message de confirmation
      * @see LivreClient#updateLivre(LivreType)
      */
     public String upLivre(LivreType livreType){
@@ -52,7 +56,8 @@ public class LivreService {
 
     /**
      * DELETE LIVRE
-     * @param id @return message de confirmation
+     * @param id
+     * @return message de confirmation
      * @see LivreClient#deleteLivre(Integer)
      */
     public String delLivre(Integer id){

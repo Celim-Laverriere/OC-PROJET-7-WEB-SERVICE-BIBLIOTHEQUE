@@ -16,13 +16,23 @@ public class OuvrageRepository {
     @Autowired
     private OuvrageClient client;
 
-    /* ==== GET OUVRAGE BY ID ==== */
+
+    /**
+     * GET OUVRAGE BY ID
+     * @param id
+     * @return UN OUVRAGE
+     * @see OuvrageClient#getOuvrageById(Integer)
+     */
     public OuvrageType ouvrageById(Integer id){
         GetOuvrageByIdResponse response = client.getOuvrageById(id);
         return response.getOuvrageType();
     }
 
-    /* ==== GET ALL OUVRAGES ==== */
+    /**
+     * GET ALL OUVRAGES
+     * @return UNE LISTE D'OUVRAGES
+     * @see OuvrageClient#getAllOuvrages()
+     */
     public List<OuvrageType> ouvrageTypeList(){
         GetAllOuvragesResponse response = client.getAllOuvrages();
         return response.getOuvrageType();

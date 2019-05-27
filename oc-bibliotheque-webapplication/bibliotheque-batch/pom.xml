@@ -33,7 +33,17 @@
     <!-- =============================================================== -->
     <dependencies>
 
+        <!-- ===== Modules ===== -->
+        <dependency>
+            <groupId>org.webapplication</groupId>
+            <artifactId>bibliotheque-service</artifactId>
+        </dependency>
+
         <!-- ===== Bibliothèques tierces ===== -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-batch</artifactId>
+        </dependency>
 
     </dependencies>
 

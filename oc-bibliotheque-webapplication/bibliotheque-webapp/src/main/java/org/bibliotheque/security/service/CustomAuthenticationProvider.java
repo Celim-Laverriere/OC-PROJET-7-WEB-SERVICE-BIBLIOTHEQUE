@@ -36,6 +36,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         Optional<ServiceStatus> serviceStatus = loginRepository.loginCompte
                 (authentication.getName(), authentication.getCredentials().toString());
 
+
         if (serviceStatus.get().getStatusCode().equals("SUCCESS")){
 
             CompteType compteType = loginRepository.getCompteAfterLoginSuccess(authentication.getName());

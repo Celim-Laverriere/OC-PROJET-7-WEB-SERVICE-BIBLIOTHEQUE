@@ -34,15 +34,20 @@ public class LoginEndpoint {
         ServiceStatus serviceStatus = new ServiceStatus();
         CompteEntity compteEntity = service.getCompteByMailAndPassword(request.getMail(), request.getPassword());
 
-        if (!compteEntity.getMail().equals(request.getMail()) && !compteEntity.getMotDePasse().equals(request.getPassword())){
+        try{
+
+            if (compteEntity.getMail().equals(request.getMail()) && compteEntity.getMotDePasse().equals(request.getPassword())){
+                serviceStatus.setStatusCode("SUCCESS");
+            }
+
+        } catch (NullPointerException pEX){
             serviceStatus.setStatusCode("CONFLICT");
-        } else {
-            serviceStatus.setStatusCode("SUCCESS");
         }
 
         response.setServiceStatus(serviceStatus);
         return response;
     }
+
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getCompteAfterLoginSuccessRequest")
     @ResponsePayload

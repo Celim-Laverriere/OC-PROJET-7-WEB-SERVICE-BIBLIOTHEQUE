@@ -29,18 +29,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth.authenticationProvider(customAuthenticationProvider);
     }
 
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+
         http.csrf()
                 .disable()
-                .exceptionHandling()
-                .authenticationEntryPoint(new Http403ForbiddenEntryPoint() {
-                });
-
-        http
                 .authorizeRequests()
                 .antMatchers("/image/**", "/css/**", "/js/**", "/", "/ouvrages", "/webjars/**", "/login",
-                        "/accueil", "/ouvrage", "/ouvragesByGenre")
+                        "/accueil", "/ouvrage", "/ouvragesByGenre", "/search")
                 .permitAll()
                 .anyRequest()
                 .authenticated()
@@ -61,9 +58,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED);
-
-
     }
-
 
 }

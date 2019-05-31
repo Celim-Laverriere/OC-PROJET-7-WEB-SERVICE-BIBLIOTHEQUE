@@ -10,6 +10,22 @@ public class EmpruntClient extends WebServiceGatewaySupport {
 
     private static final Logger logger = LoggerFactory.getLogger(OuvrageClient.class);
 
+    /**
+     * ==== CETTE METHODE RECUPERER TOUS LES EMPRUNTS ====
+     * @return LA LISTE DES EMPRUNTS
+     */
+    public GetAllEmpruntResponse getAllEmprunt(){
+        GetAllEmpruntResponse response = new GetAllEmpruntResponse();
+
+        try{
+            GetAllEmpruntRequest request = new GetAllEmpruntRequest();
+            response = (GetAllEmpruntResponse) getWebServiceTemplate().marshalSendAndReceive(request);
+        } catch (SoapFaultClientException pEX){
+            logger.error("Methode GetAllEmpruntResponse : {}", pEX.toString());
+        }
+
+        return response;
+    }
 
     /**
      * ==== CETTE METHODE RECUPERER TOUS LES EMPRUNTS D'UN CLIENT ====

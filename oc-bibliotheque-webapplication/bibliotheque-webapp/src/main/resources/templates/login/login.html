@@ -2,7 +2,7 @@
 
 <html   xmlns:th="http://www.thymeleaf.org"
         xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-        layout:decorator="layout"
+        layout:decorate="layout"
         lang="en">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -28,7 +28,9 @@
 
                 <form th:action="@{/login}" method="post">
 
-                    <small th:if="${param.error}" id="emailHelp" class="red">Votre mot de passe ou votre email semble erroné...</small>
+                    <div th:if="${accessConflict == 'CONFLICT'}"  class="alert alert-danger" role="alert">
+                        Votre mot de passe ou votre email semble erroné...
+                    </div>
 
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>

@@ -66,4 +66,11 @@ public class OuvrageServiceImpl implements OuvrageService {
             return false;
         }
     }
+
+    @Override
+    public List<OuvrageEntity> getAllOuvagesByKeyword(String keyword) {
+        List<OuvrageEntity> ouvrageEntities = new ArrayList<>();
+        this.ouvrageRepository.findAllOuvragesByKeyword(keyword).forEach(e -> ouvrageEntities.add(e));
+        return ouvrageEntities;
+    }
 }

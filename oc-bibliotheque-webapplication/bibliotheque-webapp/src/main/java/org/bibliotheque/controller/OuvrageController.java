@@ -11,10 +11,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import javax.servlet.http.HttpSession;
 import java.util.List;
-import java.util.Set;
+
 
 @Controller
 public class OuvrageController {
@@ -26,14 +24,11 @@ public class OuvrageController {
 
 
     @RequestMapping(value = "/ouvrages", method = RequestMethod.GET)
-    public String ouvrages(final Model model, HttpSession session) {
+    public String ouvrages(final Model model) {
 
         List<OuvrageType> ouvrageTypeList = ouvrageService.ouvrageTypeList();
-        Set<String> genresSet = ouvrageService.ouvrageGenreList(ouvrageTypeList);
-        Set<String> auteursSet = ouvrageService.ouvrageAuteurList(ouvrageTypeList);
+        ouvrageTypeList = ouvrageService.LivresDispoForOuvrage(ouvrageTypeList);
 
-        session.setAttribute("genreList", genresSet);
-        session.setAttribute("auteurList", auteursSet);
         model.addAttribute("ouvrageList", ouvrageTypeList);
 
         return "ouvrage/ouvrageList";
@@ -66,9 +61,11 @@ public class OuvrageController {
     public String ouvragesByGenre(Model model, @RequestParam(name = "motCle") String motCle){
 
         List<OuvrageType> ouvrageTypeList = ouvrageService.ouvragesByGenreList(motCle);
+        ouvrageTypeList = ouvrageService.LivresDispoForOuvrage(ouvrageTypeList);
 
         model.addAttribute("ouvrageList", ouvrageTypeList);
 
         return "ouvrage/ouvrageList";
     }
+
 }

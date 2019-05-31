@@ -47,6 +47,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
             return new UsernamePasswordAuthenticationToken
                     (authentication.getName(), authentication.getCredentials().toString(), roles);
         } else {
+            session.setAttribute("loginError", serviceStatus.get().getStatusCode());
             throw new BadCredentialsException("Authentication failed");
         }
     }

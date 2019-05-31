@@ -66,19 +66,24 @@ public class OuvrageEndpoint {
         List<OuvrageEntity> ouvrageEntityList = service.getAllOuvrages();
 
         for (OuvrageEntity entity : ouvrageEntityList){
+            OuvrageType ouvrageType = new OuvrageType();
+
+            for (LivreEntity livreEntity : entity.getLivres()){
+                LivreType livreType = new LivreType();
+
+                BeanUtils.copyProperties(livreEntity, livreType);
+                ouvrageType.getLivres().add(livreType);
+            }
 
             for (PhotoEntity photoEntity : entity.getPhotos()){
-
-                OuvrageType ouvrageType = new OuvrageType();
                 PhotoType photoType = new PhotoType();
 
                 BeanUtils.copyProperties(photoEntity, photoType);
                 ouvrageType.getPhotos().add(photoType);
-
-                BeanUtils.copyProperties(entity, ouvrageType);
-                ouvrageTypeList.add(ouvrageType);
             }
 
+            BeanUtils.copyProperties(entity, ouvrageType);
+            ouvrageTypeList.add(ouvrageType);
         }
 
         response.getOuvrageType().addAll(ouvrageTypeList);
@@ -165,4 +170,53 @@ public class OuvrageEndpoint {
         response.setServiceStatus(serviceStatus);
         return response;
     }
+
+
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getSearchByKeywordRequest")
+    @ResponsePayload
+    @Transactional
+    public GetSearchByKeywordResponse getSearchByKeyword(@RequestPayload GetSearchByKeywordRequest request){
+        GetSearchByKeywordResponse response = new GetSearchByKeywordResponse();
+        List<OuvrageEntity> ouvrageEntityList = service.getAllOuvagesByKeyword("%" + request.getKeyword() + "%");
+        List<OuvrageType> ouvrageTypeList = new ArrayList<>();
+
+        for (OuvrageEntity entity : ouvrageEntityList){
+            OuvrageType ouvrageType = new OuvrageType();
+
+            for (LivreEntity livreEntity : entity.getLivres()){
+                LivreType livreType = new LivreType();
+
+                BeanUtils.copyProperties(livreEntity, livreType);
+                ouvrageType.getLivres().add(livreType);
+            }
+
+            for (PhotoEntity photoEntity : entity.getPhotos()){
+                PhotoType photoType = new PhotoType();
+
+                BeanUtils.copyProperties(photoEntity, photoType);
+                ouvrageType.getPhotos().add(photoType);
+            }
+
+            BeanUtils.copyProperties(entity, ouvrageType);
+            ouvrageTypeList.add(ouvrageType);
+        }
+
+        response.getOuvrageType().addAll(ouvrageTypeList);
+        return response;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

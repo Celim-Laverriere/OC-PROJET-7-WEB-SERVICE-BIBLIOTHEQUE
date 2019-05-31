@@ -33,6 +33,15 @@ public class EmpruntService {
 
 
     /**
+     * ==== CETTE METHODE RECUPERER TOUS LES EMPRUNTS ====
+     * @return LA LISTE DES EMPRUNTS
+     */
+    public List<EmpruntType> getAllEmprunt(){
+        return empruntRepository.getAllEmprunt();
+    }
+
+
+    /**
      * ==== CETTE METHODE RECUPERER TOUS LES EMPRUNTS D'UN CLIENT ====
      * @param id
      * @return LA LISTE DES EMPRUNTS D'UN COMPTE

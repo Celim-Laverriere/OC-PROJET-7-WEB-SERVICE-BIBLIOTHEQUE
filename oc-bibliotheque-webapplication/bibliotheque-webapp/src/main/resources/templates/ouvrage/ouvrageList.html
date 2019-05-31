@@ -38,6 +38,9 @@
                                             </a>
                                         </p>
                                     </th:block>
+
+                                    <p style="text-align: center" th:text="'Nombre de livre disponible : ' + ${ouvrage.getLivres().size()}"></p>
+
                                     <p style="text-align: center">
                                         <a class="btn btn-light" href="#" th:href="@{/ouvrage(ouvrageId=${ouvrage.getId()})}">Afficher détail</a>
                                     </p>

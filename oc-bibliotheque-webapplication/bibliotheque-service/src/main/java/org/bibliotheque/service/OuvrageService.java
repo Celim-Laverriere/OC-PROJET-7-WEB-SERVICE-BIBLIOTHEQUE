@@ -41,9 +41,9 @@ public class OuvrageService {
 
 
     /**
-     * CETTE METHODE TRIE LES LIVRES DISPONIBLES DES OUVRAGES
+     * CETTE METHODE TRIE LES LIVRES DISPONIBLES DE OUVRAGE
      * @param livreTypeList
-     * @return LA LISTE DES LIVRES DISPONIBLE POUR CHAQUE OUVRAGE
+     * @return LA LISTE DES LIVRES DISPONIBLE POUR UN OUVRAGE
      */
     public List<LivreType> nombreDeLivreDispo(List<LivreType> livreTypeList){
 
@@ -115,10 +115,21 @@ public class OuvrageService {
     }
 
 
+    /**
+     * CETTE METHODE TRIE LES LIVRES DISPONIBLES DES LISTE D'OUVRAGES
+     * @param ouvrageTypes
+     * @return LA LISTE DES LIVRES DISPONIBLE POUR CHAQUE OUVRAGE
+     */
+    public List<OuvrageType> LivresDispoForOuvrage(List<OuvrageType> ouvrageTypes){
 
+        for (OuvrageType ouvrageType : ouvrageTypes){
 
+            List<LivreType> livreTypeListDispo = nombreDeLivreDispo(ouvrageType.getLivres());
+            ouvrageType.getLivres().clear();
+            ouvrageType.getLivres().addAll(livreTypeListDispo);
+        }
 
-
-
+        return ouvrageTypes;
+    }
 
 }

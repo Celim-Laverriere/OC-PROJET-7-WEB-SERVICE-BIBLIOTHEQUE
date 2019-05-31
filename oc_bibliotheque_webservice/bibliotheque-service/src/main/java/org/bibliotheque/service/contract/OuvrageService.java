@@ -11,4 +11,5 @@ public interface OuvrageService {
     OuvrageEntity addOuvrage(OuvrageEntity ouvrage);
     boolean updateOuvrage(OuvrageEntity ouvrage);
     boolean deleteOuvrage(Integer id);
+    List<OuvrageEntity> getAllOuvagesByKeyword(String keyword);
 }

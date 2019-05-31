@@ -1,10 +1,7 @@
 package org.bibliotheque.repository;
 
 import org.bibliotheque.client.EmpruntClient;
-import org.bibliotheque.wsdl.EmpruntType;
-import org.bibliotheque.wsdl.GetAllEmpruntByCompteIdResponse;
-import org.bibliotheque.wsdl.GetEmpruntByIdResponse;
-import org.bibliotheque.wsdl.UpdateEmpruntResponse;
+import org.bibliotheque.wsdl.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -15,6 +12,16 @@ public class EmpruntRepository {
 
     @Autowired
     private EmpruntClient empruntClient;
+
+
+    /**
+     * ==== CETTE METHODE RECUPERER TOUS LES EMPRUNTS ====
+     * @return LA LISTE DES EMPRUNTS
+     */
+    public List<EmpruntType> getAllEmprunt(){
+        GetAllEmpruntResponse response = empruntClient.getAllEmprunt();
+        return response.getEmpruntType();
+    }
 
 
     /**

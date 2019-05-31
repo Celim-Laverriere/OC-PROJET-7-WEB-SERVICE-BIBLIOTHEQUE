@@ -14,7 +14,7 @@ public class OuvrageRepository {
 
 
     @Autowired
-    private OuvrageClient client;
+    private OuvrageClient ouvrageClient;
 
 
     /**
@@ -24,7 +24,7 @@ public class OuvrageRepository {
      * @see OuvrageClient#getOuvrageById(Integer)
      */
     public OuvrageType ouvrageById(Integer id){
-        GetOuvrageByIdResponse response = client.getOuvrageById(id);
+        GetOuvrageByIdResponse response = ouvrageClient.getOuvrageById(id);
         return response.getOuvrageType();
     }
 
@@ -34,7 +34,7 @@ public class OuvrageRepository {
      * @see OuvrageClient#getAllOuvrages()
      */
     public List<OuvrageType> ouvrageTypeList(){
-        GetAllOuvragesResponse response = client.getAllOuvrages();
+        GetAllOuvragesResponse response = ouvrageClient.getAllOuvrages();
         return response.getOuvrageType();
     }
 }

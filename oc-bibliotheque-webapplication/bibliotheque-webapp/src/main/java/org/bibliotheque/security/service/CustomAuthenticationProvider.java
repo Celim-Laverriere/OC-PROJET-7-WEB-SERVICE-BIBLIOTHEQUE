@@ -27,18 +27,21 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
     @Autowired
     private Users users;
 
+
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
 
         Collection<SimpleGrantedAuthority> roles = new ArrayList<>();
         roles.add(new SimpleGrantedAuthority(users.getUserRole()));
 
+        /**@see LoginRepository#loginCompte(String, String)*/
         Optional<ServiceStatus> serviceStatus = loginRepository.loginCompte
                 (authentication.getName(), authentication.getCredentials().toString());
 
 
         if (serviceStatus.get().getStatusCode().equals("SUCCESS")){
 
+            /**@see LoginRepository#getCompteAfterLoginSuccess(String)*/
             CompteType compteType = loginRepository.getCompteAfterLoginSuccess(authentication.getName());
             Users user = new Users(compteType.getId(), compteType.getPrenom());
 

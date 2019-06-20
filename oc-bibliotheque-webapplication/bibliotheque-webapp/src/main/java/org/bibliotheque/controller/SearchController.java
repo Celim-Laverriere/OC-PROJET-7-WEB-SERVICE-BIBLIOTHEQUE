@@ -2,10 +2,7 @@ package org.bibliotheque.controller;
 
 import org.bibliotheque.service.OuvrageService;
 import org.bibliotheque.service.SearchService;
-import org.bibliotheque.wsdl.LivreType;
 import org.bibliotheque.wsdl.OuvrageType;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,11 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
-
 @Controller
 public class SearchController {
-
-    private static final Logger logger = LoggerFactory.getLogger(OuvrageController.class);
 
     @Autowired
     private SearchService searchService;
@@ -30,8 +24,11 @@ public class SearchController {
     @RequestMapping(value = "/search", method = RequestMethod.GET)
     public String searchOuvrageByKeyword(Model model, @RequestParam(value = "keyword")String keyword){
 
+        /**@see SearchService#ouvrageTypeListByKeyword(String)*/
         List<OuvrageType> ouvrageTypeList = searchService.ouvrageTypeListByKeyword(keyword);
-        ouvrageTypeList = ouvrageService.LivresDispoForOuvrage(ouvrageTypeList);
+
+        /**@see OuvrageService#livresDispoForOuvrage(List)*/
+        ouvrageTypeList = ouvrageService.livresDispoForOuvrage(ouvrageTypeList);
 
         model.addAttribute("ouvrageList", ouvrageTypeList);
 

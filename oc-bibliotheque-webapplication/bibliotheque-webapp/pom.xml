@@ -91,7 +91,7 @@
 
     <build>
 
-        <finalName>bibliotheque-webservice</finalName>
+        <finalName>bibliotheque-webapp</finalName>
 
         <plugins>
 

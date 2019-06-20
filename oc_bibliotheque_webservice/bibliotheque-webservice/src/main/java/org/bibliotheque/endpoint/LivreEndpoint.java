@@ -10,7 +10,6 @@ import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
-
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,13 +20,15 @@ public class LivreEndpoint {
 
     public static final String NAMESPACE_URI = "http://www.webservice.org/bibliotheque-ws";
 
+    @Autowired
     private LivreService service;
 
-    @Autowired
-    public LivreEndpoint(LivreService service){
-        this.service = service;
-    }
 
+    /**
+     * Cette méthode récupère un livre par son identifiant
+     * @param request
+     * @return Un livre
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getLivreByIdRequest")
     @ResponsePayload
     @Transactional
@@ -41,6 +42,12 @@ public class LivreEndpoint {
         return response;
     }
 
+
+    /**
+     * Cette méthode récupère tous les livres
+     * @param request
+     * @return Liste de livres
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllLivresRequest")
     @ResponsePayload
     public GetAllLivresResponse getAllLivre(@RequestPayload GetAllLivresRequest request){
@@ -57,6 +64,12 @@ public class LivreEndpoint {
         return response;
     }
 
+
+    /**
+     * Cette méthode ajoute un livre
+     * @param request
+     * @return
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "addLivreRequest")
     @ResponsePayload
     public AddLivreResponse addLivre(@RequestPayload AddLivreRequest request) {
@@ -83,6 +96,12 @@ public class LivreEndpoint {
         return response;
     }
 
+
+    /**
+     * Cette méthode met à jour un livre
+     * @param request
+     * @return
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "updateLivreRequest")
     @ResponsePayload
     public UpdateLivreResponse updateLivre(@RequestPayload UpdateLivreRequest request){
@@ -116,6 +135,12 @@ public class LivreEndpoint {
         return response;
     }
 
+
+    /**
+     * Cette méthode supprime un livre
+     * @param request
+     * @return
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "deleteLivreRequest")
     @ResponsePayload
     public DeleteLivreResponse deleteLivre(@RequestPayload DeleteLivreRequest request){

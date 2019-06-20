@@ -6,19 +6,17 @@ import org.bibliotheque.wsdl.GetOuvrageByIdResponse;
 import org.bibliotheque.wsdl.OuvrageType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
 
 @Repository
 public class OuvrageRepository {
-
 
     @Autowired
     private OuvrageClient ouvrageClient;
 
 
     /**
-     * GET OUVRAGE BY ID
+     * ==== CETTE METHODE RECUPERER UN OUVRAGE PAR SON IDENTIFIANT ====
      * @param id
      * @return UN OUVRAGE
      * @see OuvrageClient#getOuvrageById(Integer)
@@ -28,8 +26,9 @@ public class OuvrageRepository {
         return response.getOuvrageType();
     }
 
+
     /**
-     * GET ALL OUVRAGES
+     * ==== CETTE METHODE RECUPERER TOUS LES OUVRAGES ====
      * @return UNE LISTE D'OUVRAGES
      * @see OuvrageClient#getAllOuvrages()
      */

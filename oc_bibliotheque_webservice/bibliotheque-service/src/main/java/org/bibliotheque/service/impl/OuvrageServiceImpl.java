@@ -6,7 +6,6 @@ import org.bibliotheque.repository.OuvrageRepository;
 import org.bibliotheque.service.contract.OuvrageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,12 +15,9 @@ import java.util.List;
 @NoArgsConstructor
 public class OuvrageServiceImpl implements OuvrageService {
 
+    @Autowired
     private OuvrageRepository ouvrageRepository;
 
-    @Autowired
-    public OuvrageServiceImpl(OuvrageRepository ouvrageRepository){
-        this.ouvrageRepository = ouvrageRepository;
-    }
 
     @Override
     public OuvrageEntity getOuvrageById(Integer id) {
@@ -73,4 +69,5 @@ public class OuvrageServiceImpl implements OuvrageService {
         this.ouvrageRepository.findAllOuvragesByKeyword(keyword).forEach(e -> ouvrageEntities.add(e));
         return ouvrageEntities;
     }
+
 }

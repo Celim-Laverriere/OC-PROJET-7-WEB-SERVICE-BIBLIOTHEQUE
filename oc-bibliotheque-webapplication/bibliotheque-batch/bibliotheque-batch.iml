@@ -2,7 +2,22 @@
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="Spring" name="Spring">
-      <configuration />
+      <configuration>
+        <fileset id="spring_boot_org.bibliotheque.LauncherBatch" name="LauncherBatch" removed="true">
+          <file>file://$MODULE_DIR$/src/main/java/org/bibliotheque/LauncherBatch.java</file>
+        </fileset>
+        <fileset id="spring-boot-dispatcherServletAutoConfiguration-mvc" name="LauncherBatch MVC" removed="true">
+          <file>file://$MODULE_DIR$/src/main/java/org/bibliotheque/LauncherBatch.java</file>
+        </fileset>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/main/java/org/bibliotheque/config/BatchConfiguration.java</file>
+          <file>file://$MODULE_DIR$/src/main/java/org/bibliotheque/LauncherBatch.java</file>
+          <file>file://$MODULE_DIR$/../bibliotheque-repository/src/main/java/org/bibliotheque/security/SoapConfig.java</file>
+          <file>jar://$MAVEN_REPOSITORY$/org/springframework/batch/spring-batch-core/4.1.2.RELEASE/spring-batch-core-4.1.2.RELEASE.jar!/beanRefContext.xml</file>
+          <file>jar://$MAVEN_REPOSITORY$/org/springframework/batch/spring-batch-core/4.1.2.RELEASE/spring-batch-core-4.1.2.RELEASE.jar!/jsrBaseContext.xml</file>
+          <file>file://$MAVEN_REPOSITORY$/org/springframework/batch/spring-batch-core/4.1.2.RELEASE/spring-batch-core-4.1.2.RELEASE.jar</file>
+        </fileset>
+      </configuration>
     </facet>
     <facet type="web" name="Web">
       <configuration>
@@ -50,8 +65,6 @@
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.1.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.1.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-logging:2.1.4.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.2.3" level="project" />
-    <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.2.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-to-slf4j:2.11.2" level="project" />
     <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.11.2" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:jul-to-slf4j:1.7.26" level="project" />
@@ -59,8 +72,6 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.yaml:snakeyaml:1.23" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-jdbc:2.1.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: com.zaxxer:HikariCP:3.2.0" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.26" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:5.1.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.batch:spring-batch-core:4.1.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.9.8" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.9.0" level="project" />
@@ -71,5 +82,16 @@
     <orderEntry type="library" name="Maven: org.springframework.retry:spring-retry:1.2.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.1.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:5.1.6.RELEASE" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.h2database:h2:1.4.199" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.batch:spring-batch-test:4.1.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: junit:junit:4.12" level="project" />
+    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:5.1.6.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-test:5.1.6.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: com.sun.mail:javax.mail:1.6.0" level="project" />
+    <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
+    <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.2.3" level="project" />
+    <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:1.2.3" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.26" level="project" />
   </component>
 </module>

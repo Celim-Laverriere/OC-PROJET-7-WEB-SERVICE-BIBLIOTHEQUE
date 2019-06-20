@@ -26,27 +26,16 @@ public class CompteRepository {
     }
 
 
-    /* ==== GET ALL COMPTES ==== */
-    public List<CompteType> compteList(){
-        GetAllComptesResponse response = client.getAllComptes();
-        return response.getCompteType();
-    }
-
-    /* ==== ADD COMPTE ==== */
-    public String addCompte(CompteType compteType){
-        AddCompteResponse response = client.addCompte(compteType);
-        return response.getServiceStatus().getMessage();
-    }
-
-    /* ==== UPDATE COMPTE ==== */
+    /**
+     * ==== CETTE METHODE MET A JOUR LE COMPTE UTILISATEUR ====
+     * @param compteType
+     * @return UN MESSAGE DE CONFIRMATION
+     * @see CompteClient#updateCompte(CompteType)
+     */
     public String upCompte(CompteType compteType){
         UpdateCompteResponse response = client.updateCompte(compteType);
-        return response.getServiceStatus().getMessage();
-    }
-
-    /* ==== DELETE COMPTE ==== */
-    public String delCompte(Integer id){
-        DeleteCompteResponse response = client.deleteCompte(id);
         return response.getServiceStatus().getStatusCode();
     }
+
+
 }

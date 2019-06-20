@@ -1,453 +1,565 @@
-31-05-2019 08:38:56.204 [main] INFO  o.b.BibliothequeApplication.logStarting - Starting BibliothequeApplication on DESKTOP-6UCL7NI with PID 9496 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D’INFORMATION DE LA BIBLIOTHEQUE D’UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
-31-05-2019 08:38:56.212 [main] INFO  o.b.BibliothequeApplication.logStartupProfileInfo - The following profiles are active: dev
-31-05-2019 08:38:57.155 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$de7ccd59] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-31-05-2019 08:38:57.181 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping.afterPropertiesSet - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-31-05-2019 08:38:57.410 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-31-05-2019 08:38:57.436 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-31-05-2019 08:38:57.437 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.17]
-31-05-2019 08:38:57.521 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-31-05-2019 08:38:57.522 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1016 ms
-31-05-2019 08:38:57.707 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 08:38:57.845 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 08:38:57.930 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 08:38:57.932 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 08:38:57.938 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 08:38:57.975 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 08:38:57.992 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 08:38:58.059 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53c68ce, org.springframework.security.web.context.SecurityContextPersistenceFilter@327c7bea, org.springframework.security.web.header.HeaderWriterFilter@5109e8cf, org.springframework.security.web.authentication.logout.LogoutFilter@4682eba5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@12aa4996, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6c65860d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@557286ad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6f9ad11c, org.springframework.security.web.session.SessionManagementFilter@78b41097, org.springframework.security.web.access.ExceptionTranslationFilter@351e414e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@43034809]
-31-05-2019 08:38:58.153 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
-31-05-2019 08:38:58.495 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-31-05-2019 08:38:58.498 [main] INFO  o.b.BibliothequeApplication.logStarted - Started BibliothequeApplication in 2.645 seconds (JVM running for 3.2)
-31-05-2019 08:39:10.269 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-31-05-2019 08:39:10.269 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-31-05-2019 08:39:10.276 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 6 ms
-31-05-2019 08:39:11.134 [http-nio-8080-exec-2] WARN  n.n.u.t.e.ExpressionProcessor.defaultCall - Fragment expression "layout" is being wrapped as a Thymeleaf 3 fragment expression (~{...}) for backwards compatibility purposes.  This wrapping will be dropped in the next major version of the expression processor, so please rewrite as a Thymeleaf 3 fragment expression to future-proof your code.  See https://github.com/thymeleaf/thymeleaf/issues/451 for more information.
-31-05-2019 08:39:16.235 [http-nio-8080-exec-6] ERROR o.b.controller.SecurityController.login - Methode login : java.lang.NullPointerException
-31-05-2019 08:39:16.239 [http-nio-8080-exec-6] WARN  n.n.u.t.d.DecoratorProcessor.defaultCall - The layout:decorator/data-layout-decorator processor has been deprecated and will be removed in the next major version of the layout dialect.  Please use layout:decorate/data-layout-decorate instead to future-proof your code.  See https://github.com/ultraq/thymeleaf-layout-dialect/issues/95 for more information.
-31-05-2019 10:40:03.239 [main] INFO  o.b.BibliothequeApplication.logStarting - Starting BibliothequeApplication on DESKTOP-6UCL7NI with PID 13508 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D’INFORMATION DE LA BIBLIOTHEQUE D’UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
-31-05-2019 10:40:03.243 [main] INFO  o.b.BibliothequeApplication.logStartupProfileInfo - The following profiles are active: dev
-31-05-2019 10:40:04.032 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$3b9533f8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-31-05-2019 10:40:04.056 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping.afterPropertiesSet - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-31-05-2019 10:40:04.279 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-31-05-2019 10:40:04.304 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-31-05-2019 10:40:04.304 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.17]
-31-05-2019 10:40:04.387 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-31-05-2019 10:40:04.387 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 922 ms
-31-05-2019 10:40:04.563 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 10:40:04.572 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 10:40:04.635 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 10:40:04.638 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 10:40:04.643 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 10:40:04.681 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 10:40:04.697 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 10:40:04.765 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@18eec010, org.springframework.security.web.context.SecurityContextPersistenceFilter@3910fe11, org.springframework.security.web.header.HeaderWriterFilter@d56aaa6, org.springframework.security.web.authentication.logout.LogoutFilter@74075134, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6eaa21d8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@351e414e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d000e80, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@67c119b7, org.springframework.security.web.session.SessionManagementFilter@57a48985, org.springframework.security.web.access.ExceptionTranslationFilter@3c904f1e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3cec79d3]
-31-05-2019 10:40:04.858 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
-31-05-2019 10:40:05.188 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-31-05-2019 10:40:05.191 [main] INFO  o.b.BibliothequeApplication.logStarted - Started BibliothequeApplication in 2.353 seconds (JVM running for 3.086)
-31-05-2019 11:18:23.327 [main] INFO  o.b.BibliothequeApplication.logStarting - Starting BibliothequeApplication on DESKTOP-6UCL7NI with PID 5936 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D’INFORMATION DE LA BIBLIOTHEQUE D’UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
-31-05-2019 11:18:23.330 [main] INFO  o.b.BibliothequeApplication.logStartupProfileInfo - The following profiles are active: dev
-31-05-2019 11:18:24.239 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$98768bc4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-31-05-2019 11:18:24.263 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping.afterPropertiesSet - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-31-05-2019 11:18:24.489 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-31-05-2019 11:18:24.510 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-31-05-2019 11:18:24.510 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.17]
-31-05-2019 11:18:24.590 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-31-05-2019 11:18:24.590 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 979 ms
-31-05-2019 11:18:24.768 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:18:24.776 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:18:24.838 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:18:24.840 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:18:24.846 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:18:24.882 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:18:24.898 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:18:24.967 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15ac59c2, org.springframework.security.web.context.SecurityContextPersistenceFilter@290aeb20, org.springframework.security.web.header.HeaderWriterFilter@344426bf, org.springframework.security.web.authentication.logout.LogoutFilter@5cbd159f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@58496dc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@69da0b12, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a52ca2e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7a7d1b47, org.springframework.security.web.session.SessionManagementFilter@50194e8d, org.springframework.security.web.access.ExceptionTranslationFilter@26a4551a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4682eba5]
-31-05-2019 11:18:25.061 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
-31-05-2019 11:18:25.393 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-31-05-2019 11:18:25.395 [main] INFO  o.b.BibliothequeApplication.logStarted - Started BibliothequeApplication in 2.435 seconds (JVM running for 2.917)
-31-05-2019 11:18:29.600 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-31-05-2019 11:18:29.601 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-31-05-2019 11:18:29.610 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 9 ms
-31-05-2019 11:18:30.059 [http-nio-8080-exec-1] WARN  n.n.u.t.e.ExpressionProcessor.defaultCall - Fragment expression "layout" is being wrapped as a Thymeleaf 3 fragment expression (~{...}) for backwards compatibility purposes.  This wrapping will be dropped in the next major version of the expression processor, so please rewrite as a Thymeleaf 3 fragment expression to future-proof your code.  See https://github.com/thymeleaf/thymeleaf/issues/451 for more information.
-31-05-2019 11:18:33.047 [http-nio-8080-exec-5] ERROR o.b.controller.SecurityController.login - Methode login : java.lang.NullPointerException
-31-05-2019 11:18:33.050 [http-nio-8080-exec-5] WARN  n.n.u.t.d.DecoratorProcessor.defaultCall - The layout:decorator/data-layout-decorator processor has been deprecated and will be removed in the next major version of the layout dialect.  Please use layout:decorate/data-layout-decorate instead to future-proof your code.  See https://github.com/ultraq/thymeleaf-layout-dialect/issues/95 for more information.
-31-05-2019 11:18:37.602 [http-nio-8080-exec-4] ERROR o.b.controller.SecurityController.login - Methode login : java.lang.NullPointerException
-31-05-2019 11:18:40.377 [http-nio-8080-exec-3] ERROR o.b.controller.SecurityController.login - Methode login : java.lang.NullPointerException
-31-05-2019 11:18:41.828 [http-nio-8080-exec-6] ERROR o.b.controller.SecurityController.login - Methode login : java.lang.NullPointerException
-31-05-2019 11:18:43.080 [http-nio-8080-exec-10] ERROR o.b.controller.SecurityController.login - Methode login : java.lang.NullPointerException
-31-05-2019 11:18:46.414 [http-nio-8080-exec-7] ERROR o.b.controller.SecurityController.login - Methode login : java.lang.NullPointerException
-31-05-2019 11:18:48.400 [http-nio-8080-exec-1] ERROR o.b.controller.SecurityController.login - Methode login : java.lang.NullPointerException
-31-05-2019 11:18:49.567 [http-nio-8080-exec-8] ERROR o.b.controller.SecurityController.login - Methode login : java.lang.NullPointerException
-31-05-2019 11:18:54.781 [http-nio-8080-exec-5] ERROR o.b.controller.SecurityController.login - Methode login : java.lang.NullPointerException
-31-05-2019 11:19:02.015 [http-nio-8080-exec-3] ERROR o.b.controller.SecurityController.login - Methode login : java.lang.NullPointerException
-31-05-2019 11:21:53.193 [main] INFO  o.b.BibliothequeApplication.logStarting - Starting BibliothequeApplication on DESKTOP-6UCL7NI with PID 13952 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D’INFORMATION DE LA BIBLIOTHEQUE D’UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
-31-05-2019 11:21:53.197 [main] INFO  o.b.BibliothequeApplication.logStartupProfileInfo - The following profiles are active: dev
-31-05-2019 11:21:54.090 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$1b6408b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-31-05-2019 11:21:54.122 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping.afterPropertiesSet - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-31-05-2019 11:21:54.342 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-31-05-2019 11:21:54.364 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-31-05-2019 11:21:54.365 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.17]
-31-05-2019 11:21:54.447 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-31-05-2019 11:21:54.447 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 977 ms
-31-05-2019 11:21:54.625 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:21:54.635 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:21:54.698 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:21:54.700 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:21:54.707 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:21:54.743 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:21:54.760 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:21:54.827 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3cec79d3, org.springframework.security.web.context.SecurityContextPersistenceFilter@5246a3b3, org.springframework.security.web.header.HeaderWriterFilter@7ce4de34, org.springframework.security.web.authentication.logout.LogoutFilter@327c7bea, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@76c548f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4c4f4365, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@57a48985, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@64b70919, org.springframework.security.web.session.SessionManagementFilter@67440de6, org.springframework.security.web.access.ExceptionTranslationFilter@49293b43, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@692fd26]
-31-05-2019 11:21:54.922 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
-31-05-2019 11:21:55.249 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-31-05-2019 11:21:55.251 [main] INFO  o.b.BibliothequeApplication.logStarted - Started BibliothequeApplication in 2.408 seconds (JVM running for 2.864)
-31-05-2019 11:21:57.707 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-31-05-2019 11:21:57.708 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-31-05-2019 11:21:57.712 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 4 ms
-31-05-2019 11:21:58.115 [http-nio-8080-exec-1] WARN  n.n.u.t.e.ExpressionProcessor.defaultCall - Fragment expression "layout" is being wrapped as a Thymeleaf 3 fragment expression (~{...}) for backwards compatibility purposes.  This wrapping will be dropped in the next major version of the expression processor, so please rewrite as a Thymeleaf 3 fragment expression to future-proof your code.  See https://github.com/thymeleaf/thymeleaf/issues/451 for more information.
-31-05-2019 11:21:58.782 [http-nio-8080-exec-10] ERROR o.b.controller.SecurityController.login - Methode login : java.lang.NullPointerException
-31-05-2019 11:21:58.787 [http-nio-8080-exec-10] WARN  n.n.u.t.d.DecoratorProcessor.defaultCall - The layout:decorator/data-layout-decorator processor has been deprecated and will be removed in the next major version of the layout dialect.  Please use layout:decorate/data-layout-decorate instead to future-proof your code.  See https://github.com/ultraq/thymeleaf-layout-dialect/issues/95 for more information.
-31-05-2019 11:22:08.553 [http-nio-8080-exec-8] ERROR o.b.controller.SecurityController.login - Methode login : java.lang.NullPointerException
-31-05-2019 11:23:08.772 [main] INFO  o.b.BibliothequeApplication.logStarting - Starting BibliothequeApplication on DESKTOP-6UCL7NI with PID 5712 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D’INFORMATION DE LA BIBLIOTHEQUE D’UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
-31-05-2019 11:23:08.776 [main] INFO  o.b.BibliothequeApplication.logStartupProfileInfo - The following profiles are active: dev
-31-05-2019 11:23:09.694 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$727087b0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-31-05-2019 11:23:09.718 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping.afterPropertiesSet - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-31-05-2019 11:23:09.941 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-31-05-2019 11:23:09.966 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-31-05-2019 11:23:09.967 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.17]
-31-05-2019 11:23:10.046 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-31-05-2019 11:23:10.046 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 997 ms
-31-05-2019 11:23:10.222 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:23:10.231 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:23:10.251 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:23:10.253 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:23:10.260 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:23:10.305 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:23:10.322 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:23:10.434 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d2a1da3, org.springframework.security.web.context.SecurityContextPersistenceFilter@bc4d5e1, org.springframework.security.web.header.HeaderWriterFilter@7918c7f8, org.springframework.security.web.authentication.logout.LogoutFilter@26a4551a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@78b41097, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2257fadf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b61a019, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@252f626c, org.springframework.security.web.session.SessionManagementFilter@1c504e66, org.springframework.security.web.access.ExceptionTranslationFilter@46d9aec8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@351e414e]
-31-05-2019 11:23:10.526 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
-31-05-2019 11:23:10.836 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-31-05-2019 11:23:10.838 [main] INFO  o.b.BibliothequeApplication.logStarted - Started BibliothequeApplication in 2.423 seconds (JVM running for 2.892)
-31-05-2019 11:23:15.330 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-31-05-2019 11:23:15.331 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-31-05-2019 11:23:15.336 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 5 ms
-31-05-2019 11:23:15.750 [http-nio-8080-exec-1] WARN  n.n.u.t.e.ExpressionProcessor.defaultCall - Fragment expression "layout" is being wrapped as a Thymeleaf 3 fragment expression (~{...}) for backwards compatibility purposes.  This wrapping will be dropped in the next major version of the expression processor, so please rewrite as a Thymeleaf 3 fragment expression to future-proof your code.  See https://github.com/thymeleaf/thymeleaf/issues/451 for more information.
-31-05-2019 11:23:16.355 [http-nio-8080-exec-9] ERROR o.b.controller.SecurityController.login - Methode login : java.lang.NullPointerException
-31-05-2019 11:23:16.359 [http-nio-8080-exec-9] WARN  n.n.u.t.d.DecoratorProcessor.defaultCall - The layout:decorator/data-layout-decorator processor has been deprecated and will be removed in the next major version of the layout dialect.  Please use layout:decorate/data-layout-decorate instead to future-proof your code.  See https://github.com/ultraq/thymeleaf-layout-dialect/issues/95 for more information.
-31-05-2019 11:25:15.510 [main] INFO  o.b.BibliothequeApplication.logStarting - Starting BibliothequeApplication on DESKTOP-6UCL7NI with PID 2796 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D’INFORMATION DE LA BIBLIOTHEQUE D’UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
-31-05-2019 11:25:15.514 [main] INFO  o.b.BibliothequeApplication.logStartupProfileInfo - The following profiles are active: dev
-31-05-2019 11:25:16.571 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$c5e53ef] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-31-05-2019 11:25:16.595 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping.afterPropertiesSet - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-31-05-2019 11:25:16.828 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-31-05-2019 11:25:16.850 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-31-05-2019 11:25:16.850 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.17]
-31-05-2019 11:25:16.935 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-31-05-2019 11:25:16.935 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1077 ms
-31-05-2019 11:25:17.119 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:25:17.128 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:25:17.212 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:25:17.214 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:25:17.221 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:25:17.260 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:25:17.277 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:25:17.348 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53c68ce, org.springframework.security.web.context.SecurityContextPersistenceFilter@327c7bea, org.springframework.security.web.header.HeaderWriterFilter@5109e8cf, org.springframework.security.web.authentication.logout.LogoutFilter@4682eba5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@12aa4996, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6c65860d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@557286ad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6f9ad11c, org.springframework.security.web.session.SessionManagementFilter@78b41097, org.springframework.security.web.access.ExceptionTranslationFilter@351e414e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@43034809]
-31-05-2019 11:25:17.445 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
-31-05-2019 11:25:17.779 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-31-05-2019 11:25:17.782 [main] INFO  o.b.BibliothequeApplication.logStarted - Started BibliothequeApplication in 2.646 seconds (JVM running for 3.117)
-31-05-2019 11:25:20.030 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-31-05-2019 11:25:20.030 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-31-05-2019 11:25:20.037 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 7 ms
-31-05-2019 11:25:20.458 [http-nio-8080-exec-1] WARN  n.n.u.t.e.ExpressionProcessor.defaultCall - Fragment expression "layout" is being wrapped as a Thymeleaf 3 fragment expression (~{...}) for backwards compatibility purposes.  This wrapping will be dropped in the next major version of the expression processor, so please rewrite as a Thymeleaf 3 fragment expression to future-proof your code.  See https://github.com/thymeleaf/thymeleaf/issues/451 for more information.
-31-05-2019 11:25:21.011 [http-nio-8080-exec-5] ERROR o.b.controller.SecurityController.login - Methode login : java.lang.NullPointerException
-31-05-2019 11:25:21.015 [http-nio-8080-exec-5] WARN  n.n.u.t.d.DecoratorProcessor.defaultCall - The layout:decorator/data-layout-decorator processor has been deprecated and will be removed in the next major version of the layout dialect.  Please use layout:decorate/data-layout-decorate instead to future-proof your code.  See https://github.com/ultraq/thymeleaf-layout-dialect/issues/95 for more information.
-31-05-2019 11:25:25.500 [http-nio-8080-exec-4] ERROR o.b.controller.SecurityController.login - Methode login : java.lang.NullPointerException
-31-05-2019 11:26:43.932 [main] INFO  o.b.BibliothequeApplication.logStarting - Starting BibliothequeApplication on DESKTOP-6UCL7NI with PID 14144 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D’INFORMATION DE LA BIBLIOTHEQUE D’UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
-31-05-2019 11:26:43.945 [main] INFO  o.b.BibliothequeApplication.logStartupProfileInfo - The following profiles are active: dev
-31-05-2019 11:26:44.844 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$c0b2d50] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-31-05-2019 11:26:44.868 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping.afterPropertiesSet - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-31-05-2019 11:26:45.094 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-31-05-2019 11:26:45.116 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-31-05-2019 11:26:45.117 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.17]
-31-05-2019 11:26:45.197 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-31-05-2019 11:26:45.197 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 993 ms
-31-05-2019 11:26:45.374 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:26:45.383 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:26:45.451 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:26:45.454 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:26:45.460 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:26:45.497 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:26:45.513 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:26:45.582 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@21422231, org.springframework.security.web.context.SecurityContextPersistenceFilter@1f6d27cc, org.springframework.security.web.header.HeaderWriterFilter@a52ca2e, org.springframework.security.web.authentication.logout.LogoutFilter@7ce7e83c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@f2ce6b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@314c8b4a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5ff60a8c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@10ee04df, org.springframework.security.web.session.SessionManagementFilter@45d6ef73, org.springframework.security.web.access.ExceptionTranslationFilter@76c52298, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6eb82908]
-31-05-2019 11:26:45.675 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
-31-05-2019 11:26:46.004 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-31-05-2019 11:26:46.006 [main] INFO  o.b.BibliothequeApplication.logStarted - Started BibliothequeApplication in 2.401 seconds (JVM running for 2.874)
-31-05-2019 11:26:47.439 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-31-05-2019 11:26:47.440 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-31-05-2019 11:26:47.444 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 4 ms
-31-05-2019 11:26:47.917 [http-nio-8080-exec-1] WARN  n.n.u.t.e.ExpressionProcessor.defaultCall - Fragment expression "layout" is being wrapped as a Thymeleaf 3 fragment expression (~{...}) for backwards compatibility purposes.  This wrapping will be dropped in the next major version of the expression processor, so please rewrite as a Thymeleaf 3 fragment expression to future-proof your code.  See https://github.com/thymeleaf/thymeleaf/issues/451 for more information.
-31-05-2019 11:26:48.483 [http-nio-8080-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet].log - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
-java.lang.NullPointerException: null
-	at org.bibliotheque.controller.SecurityController.login(SecurityController.java:24)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
-	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
-	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-31-05-2019 11:26:51.576 [http-nio-8080-exec-4] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet].log - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
-java.lang.NullPointerException: null
-	at org.bibliotheque.controller.SecurityController.login(SecurityController.java:24)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:189)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
-	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
-	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-31-05-2019 11:27:18.652 [main] INFO  o.b.BibliothequeApplication.logStarting - Starting BibliothequeApplication on DESKTOP-6UCL7NI with PID 14240 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D’INFORMATION DE LA BIBLIOTHEQUE D’UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
-31-05-2019 11:27:18.657 [main] INFO  o.b.BibliothequeApplication.logStartupProfileInfo - The following profiles are active: dev
-31-05-2019 11:27:19.708 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$ffb6a9d3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-31-05-2019 11:27:19.733 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping.afterPropertiesSet - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-31-05-2019 11:27:19.998 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-31-05-2019 11:27:20.024 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-31-05-2019 11:27:20.025 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.17]
-31-05-2019 11:27:20.112 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-31-05-2019 11:27:20.112 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1135 ms
-31-05-2019 11:27:20.319 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:27:20.327 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:27:20.349 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:27:20.351 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:27:20.356 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:27:20.392 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:27:20.409 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:27:20.517 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@327c7bea, org.springframework.security.web.context.SecurityContextPersistenceFilter@14bf57b2, org.springframework.security.web.header.HeaderWriterFilter@16073fa8, org.springframework.security.web.authentication.logout.LogoutFilter@4992613f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1ab6718, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@14379273, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c82cd4f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@348d18a3, org.springframework.security.web.session.SessionManagementFilter@cfbc8e8, org.springframework.security.web.access.ExceptionTranslationFilter@3cd59ef5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4eb30d44]
-31-05-2019 11:27:20.609 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
-31-05-2019 11:27:20.922 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-31-05-2019 11:27:20.924 [main] INFO  o.b.BibliothequeApplication.logStarted - Started BibliothequeApplication in 2.668 seconds (JVM running for 3.135)
-31-05-2019 11:27:24.469 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-31-05-2019 11:27:24.469 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-31-05-2019 11:27:24.475 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 5 ms
-31-05-2019 11:27:24.854 [http-nio-8080-exec-1] WARN  n.n.u.t.e.ExpressionProcessor.defaultCall - Fragment expression "layout" is being wrapped as a Thymeleaf 3 fragment expression (~{...}) for backwards compatibility purposes.  This wrapping will be dropped in the next major version of the expression processor, so please rewrite as a Thymeleaf 3 fragment expression to future-proof your code.  See https://github.com/thymeleaf/thymeleaf/issues/451 for more information.
-31-05-2019 11:27:25.376 [http-nio-8080-exec-6] WARN  n.n.u.t.d.DecoratorProcessor.defaultCall - The layout:decorator/data-layout-decorator processor has been deprecated and will be removed in the next major version of the layout dialect.  Please use layout:decorate/data-layout-decorate instead to future-proof your code.  See https://github.com/ultraq/thymeleaf-layout-dialect/issues/95 for more information.
-31-05-2019 11:27:56.007 [http-nio-8080-exec-5] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : SUCCESS
-31-05-2019 11:28:23.098 [http-nio-8080-exec-3] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : SUCCESS
-31-05-2019 11:30:48.168 [main] INFO  o.b.BibliothequeApplication.logStarting - Starting BibliothequeApplication on DESKTOP-6UCL7NI with PID 8632 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D’INFORMATION DE LA BIBLIOTHEQUE D’UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
-31-05-2019 11:30:48.172 [main] INFO  o.b.BibliothequeApplication.logStartupProfileInfo - The following profiles are active: dev
-31-05-2019 11:30:49.124 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$79401432] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-31-05-2019 11:30:49.156 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping.afterPropertiesSet - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-31-05-2019 11:30:49.378 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-31-05-2019 11:30:49.400 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-31-05-2019 11:30:49.401 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.17]
-31-05-2019 11:30:49.481 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-31-05-2019 11:30:49.481 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1031 ms
-31-05-2019 11:30:49.663 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:30:49.672 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:30:49.737 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:30:49.739 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:30:49.744 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:30:49.780 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:30:49.797 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:30:49.864 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6de0f580, org.springframework.security.web.context.SecurityContextPersistenceFilter@3f672204, org.springframework.security.web.header.HeaderWriterFilter@460510aa, org.springframework.security.web.authentication.logout.LogoutFilter@68c87fc3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@39e67516, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2c2db130, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@252f626c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6e495b48, org.springframework.security.web.session.SessionManagementFilter@6fd77352, org.springframework.security.web.access.ExceptionTranslationFilter@1ab6718, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@328902d5]
-31-05-2019 11:30:49.969 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
-31-05-2019 11:30:50.310 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-31-05-2019 11:30:50.313 [main] INFO  o.b.BibliothequeApplication.logStarted - Started BibliothequeApplication in 2.483 seconds (JVM running for 2.939)
-31-05-2019 11:30:52.233 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-31-05-2019 11:30:52.233 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-31-05-2019 11:30:52.239 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 6 ms
-31-05-2019 11:30:52.650 [http-nio-8080-exec-1] WARN  n.n.u.t.e.ExpressionProcessor.defaultCall - Fragment expression "layout" is being wrapped as a Thymeleaf 3 fragment expression (~{...}) for backwards compatibility purposes.  This wrapping will be dropped in the next major version of the expression processor, so please rewrite as a Thymeleaf 3 fragment expression to future-proof your code.  See https://github.com/thymeleaf/thymeleaf/issues/451 for more information.
-31-05-2019 11:31:01.164 [http-nio-8080-exec-2] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : SUCCESS
-31-05-2019 11:31:11.591 [http-nio-8080-exec-10] WARN  n.n.u.t.d.DecoratorProcessor.defaultCall - The layout:decorator/data-layout-decorator processor has been deprecated and will be removed in the next major version of the layout dialect.  Please use layout:decorate/data-layout-decorate instead to future-proof your code.  See https://github.com/ultraq/thymeleaf-layout-dialect/issues/95 for more information.
-31-05-2019 11:33:09.995 [main] INFO  o.b.BibliothequeApplication.logStarting - Starting BibliothequeApplication on DESKTOP-6UCL7NI with PID 11848 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D’INFORMATION DE LA BIBLIOTHEQUE D’UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
-31-05-2019 11:33:10.001 [main] INFO  o.b.BibliothequeApplication.logStartupProfileInfo - The following profiles are active: dev
-31-05-2019 11:33:10.877 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$2c392e8f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-31-05-2019 11:33:10.903 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping.afterPropertiesSet - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
-31-05-2019 11:33:11.135 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
-31-05-2019 11:33:11.157 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
-31-05-2019 11:33:11.157 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.17]
-31-05-2019 11:33:11.236 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
-31-05-2019 11:33:11.236 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 976 ms
-31-05-2019 11:33:11.416 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:33:11.425 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:33:11.489 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:33:11.491 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:33:11.497 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:33:11.534 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:33:11.552 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
-31-05-2019 11:33:11.621 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@10ee04df, org.springframework.security.web.context.SecurityContextPersistenceFilter@4393593c, org.springframework.security.web.header.HeaderWriterFilter@1ad8df52, org.springframework.security.web.authentication.logout.LogoutFilter@4a05d8ae, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@25c53f74, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@26d820eb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ce4de34, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7186333e, org.springframework.security.web.session.SessionManagementFilter@3f29e26, org.springframework.security.web.access.ExceptionTranslationFilter@bb9ab64, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4a8df3e2]
-31-05-2019 11:33:11.715 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
-31-05-2019 11:33:12.057 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
-31-05-2019 11:33:12.059 [main] INFO  o.b.BibliothequeApplication.logStarted - Started BibliothequeApplication in 2.413 seconds (JVM running for 2.883)
-31-05-2019 11:33:16.384 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-31-05-2019 11:33:16.385 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
-31-05-2019 11:33:16.391 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 6 ms
-31-05-2019 11:33:16.785 [http-nio-8080-exec-1] WARN  n.n.u.t.e.ExpressionProcessor.defaultCall - Fragment expression "layout" is being wrapped as a Thymeleaf 3 fragment expression (~{...}) for backwards compatibility purposes.  This wrapping will be dropped in the next major version of the expression processor, so please rewrite as a Thymeleaf 3 fragment expression to future-proof your code.  See https://github.com/thymeleaf/thymeleaf/issues/451 for more information.
-31-05-2019 11:33:23.052 [http-nio-8080-exec-9] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : SUCCESS
-31-05-2019 11:33:26.603 [http-nio-8080-exec-6] WARN  n.n.u.t.d.DecoratorProcessor.defaultCall - The layout:decorator/data-layout-decorator processor has been deprecated and will be removed in the next major version of the layout dialect.  Please use layout:decorate/data-layout-decorate instead to future-proof your code.  See https://github.com/ultraq/thymeleaf-layout-dialect/issues/95 for more information.
-31-05-2019 11:33:35.324 [http-nio-8080-exec-9] ERROR o.b.controller.SecurityController.login - Methode login : error 403 !
-31-05-2019 11:33:41.224 [http-nio-8080-exec-6] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : SUCCESS
-31-05-2019 11:35:59.995 [http-nio-8080-exec-1] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : CONFLICT
-31-05-2019 11:36:39.531 [http-nio-8080-exec-6] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : CONFLICT
-31-05-2019 11:36:41.791 [http-nio-8080-exec-10] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : SUCCESS
-31-05-2019 11:36:53.871 [http-nio-8080-exec-8] ERROR o.b.controller.SecurityController.login - Methode login : error 403 !
-31-05-2019 11:36:54.622 [http-nio-8080-exec-1] ERROR o.b.controller.SecurityController.login - Methode login : error 403 !
-31-05-2019 11:37:05.850 [http-nio-8080-exec-7] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : SUCCESS
-31-05-2019 11:37:13.625 [http-nio-8080-exec-10] ERROR o.b.controller.SecurityController.login - Methode login : error 403 !
-31-05-2019 11:37:40.559 [http-nio-8080-exec-3] ERROR o.b.controller.SecurityController.login - Methode login : error 403 !
-31-05-2019 11:37:43.777 [http-nio-8080-exec-1] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : SUCCESS
+20-06-2019 08:55:54.202 [main] INFO  o.b.BibliothequeApplication.logStarting - Starting BibliothequeApplication on DESKTOP-6UCL7NI with PID 14604 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
+20-06-2019 08:55:54.213 [main] INFO  o.b.BibliothequeApplication.logStartupProfileInfo - The following profiles are active: dev
+20-06-2019 08:55:55.236 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$8ca7ffae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20-06-2019 08:55:55.263 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping.afterPropertiesSet - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+20-06-2019 08:55:55.501 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+20-06-2019 08:55:55.524 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-06-2019 08:55:55.524 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.17]
+20-06-2019 08:55:55.616 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20-06-2019 08:55:55.617 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1098 ms
+20-06-2019 08:55:55.808 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 08:55:55.908 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 08:55:55.950 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 08:55:55.953 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 08:55:55.963 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 08:55:56.101 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 08:55:56.193 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@43034809, org.springframework.security.web.context.SecurityContextPersistenceFilter@3c904f1e, org.springframework.security.web.header.HeaderWriterFilter@acf859d, org.springframework.security.web.authentication.logout.LogoutFilter@4d2a1da3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@61e3cf4d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d56aaa6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3f672204, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@39e67516, org.springframework.security.web.session.SessionManagementFilter@7ce7e83c, org.springframework.security.web.access.ExceptionTranslationFilter@ba354ca, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@627d8516]
+20-06-2019 08:55:56.285 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+20-06-2019 08:55:56.613 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+20-06-2019 08:55:56.615 [main] INFO  o.b.BibliothequeApplication.logStarted - Started BibliothequeApplication in 2.889 seconds (JVM running for 3.489)
+20-06-2019 08:55:58.582 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20-06-2019 08:55:58.583 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+20-06-2019 08:55:58.591 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 8 ms
+20-06-2019 08:55:59.496 [http-nio-8080-exec-1] WARN  n.n.u.t.e.ExpressionProcessor.defaultCall - Fragment expression "layout" is being wrapped as a Thymeleaf 3 fragment expression (~{...}) for backwards compatibility purposes.  This wrapping will be dropped in the next major version of the expression processor, so please rewrite as a Thymeleaf 3 fragment expression to future-proof your code.  See https://github.com/thymeleaf/thymeleaf/issues/451 for more information.
+20-06-2019 08:56:01.785 [http-nio-8080-exec-7] WARN  n.n.u.t.d.DecoratorProcessor.defaultCall - The layout:decorator/data-layout-decorator processor has been deprecated and will be removed in the next major version of the layout dialect.  Please use layout:decorate/data-layout-decorate instead to future-proof your code.  See https://github.com/ultraq/thymeleaf-layout-dialect/issues/95 for more information.
+20-06-2019 08:56:46.845 [http-nio-8080-exec-6] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : SUCCESS
+20-06-2019 08:57:44.868 [http-nio-8080-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+20-06-2019 08:58:04.581 [http-nio-8080-exec-6] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+20-06-2019 08:59:06.326 [main] INFO  o.b.BibliothequeApplication.logStarting - Starting BibliothequeApplication on DESKTOP-6UCL7NI with PID 992 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
+20-06-2019 08:59:06.330 [main] INFO  o.b.BibliothequeApplication.logStartupProfileInfo - The following profiles are active: dev
+20-06-2019 08:59:07.431 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$34736078] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20-06-2019 08:59:07.456 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping.afterPropertiesSet - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+20-06-2019 08:59:07.720 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+20-06-2019 08:59:07.748 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-06-2019 08:59:07.749 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.17]
+20-06-2019 08:59:07.847 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20-06-2019 08:59:07.847 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1177 ms
+20-06-2019 08:59:08.061 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 08:59:08.071 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 08:59:08.097 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 08:59:08.100 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 08:59:08.106 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 08:59:08.206 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 08:59:08.299 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@24361cfc, org.springframework.security.web.context.SecurityContextPersistenceFilter@5411dd90, org.springframework.security.web.header.HeaderWriterFilter@5136207f, org.springframework.security.web.authentication.logout.LogoutFilter@26d820eb, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@61fafb74, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3cee53dc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6aef4eb8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34e20e6b, org.springframework.security.web.session.SessionManagementFilter@3fdecce, org.springframework.security.web.access.ExceptionTranslationFilter@17b64941, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@bc0f53b]
+20-06-2019 08:59:08.394 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+20-06-2019 08:59:08.769 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+20-06-2019 08:59:08.772 [main] INFO  o.b.BibliothequeApplication.logStarted - Started BibliothequeApplication in 2.878 seconds (JVM running for 3.452)
+20-06-2019 08:59:17.790 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20-06-2019 08:59:17.791 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+20-06-2019 08:59:17.798 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 7 ms
+20-06-2019 08:59:18.240 [http-nio-8080-exec-1] WARN  n.n.u.t.e.ExpressionProcessor.defaultCall - Fragment expression "layout" is being wrapped as a Thymeleaf 3 fragment expression (~{...}) for backwards compatibility purposes.  This wrapping will be dropped in the next major version of the expression processor, so please rewrite as a Thymeleaf 3 fragment expression to future-proof your code.  See https://github.com/thymeleaf/thymeleaf/issues/451 for more information.
+20-06-2019 08:59:25.563 [http-nio-8080-exec-8] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : SUCCESS
+20-06-2019 08:59:31.805 [http-nio-8080-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+20-06-2019 08:59:31.817 [http-nio-8080-exec-5] WARN  n.n.u.t.d.DecoratorProcessor.defaultCall - The layout:decorator/data-layout-decorator processor has been deprecated and will be removed in the next major version of the layout dialect.  Please use layout:decorate/data-layout-decorate instead to future-proof your code.  See https://github.com/ultraq/thymeleaf-layout-dialect/issues/95 for more information.
+20-06-2019 09:02:10.215 [main] INFO  o.b.BibliothequeApplication.logStarting - Starting BibliothequeApplication on DESKTOP-6UCL7NI with PID 10828 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
+20-06-2019 09:02:10.220 [main] INFO  o.b.BibliothequeApplication.logStartupProfileInfo - The following profiles are active: dev
+20-06-2019 09:02:11.170 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$2db5067a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20-06-2019 09:02:11.197 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping.afterPropertiesSet - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+20-06-2019 09:02:11.449 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+20-06-2019 09:02:11.474 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-06-2019 09:02:11.475 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.17]
+20-06-2019 09:02:11.561 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20-06-2019 09:02:11.561 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1062 ms
+20-06-2019 09:02:11.750 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:02:11.759 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:02:11.781 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:02:11.783 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:02:11.789 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:02:11.873 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:02:11.960 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c1812b3, org.springframework.security.web.context.SecurityContextPersistenceFilter@4a05d8ae, org.springframework.security.web.header.HeaderWriterFilter@4c4f4365, org.springframework.security.web.authentication.logout.LogoutFilter@60737b23, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6f38a289, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4eb30d44, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5109e8cf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@43034809, org.springframework.security.web.session.SessionManagementFilter@6df3e44c, org.springframework.security.web.access.ExceptionTranslationFilter@5246a3b3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7d0614f]
+20-06-2019 09:02:12.060 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+20-06-2019 09:02:12.428 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+20-06-2019 09:02:12.431 [main] INFO  o.b.BibliothequeApplication.logStarted - Started BibliothequeApplication in 2.595 seconds (JVM running for 3.111)
+20-06-2019 09:02:24.837 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20-06-2019 09:02:24.837 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+20-06-2019 09:02:24.842 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 5 ms
+20-06-2019 09:02:25.306 [http-nio-8080-exec-1] WARN  n.n.u.t.e.ExpressionProcessor.defaultCall - Fragment expression "layout" is being wrapped as a Thymeleaf 3 fragment expression (~{...}) for backwards compatibility purposes.  This wrapping will be dropped in the next major version of the expression processor, so please rewrite as a Thymeleaf 3 fragment expression to future-proof your code.  See https://github.com/thymeleaf/thymeleaf/issues/451 for more information.
+20-06-2019 09:02:28.026 [http-nio-8080-exec-8] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : SUCCESS
+20-06-2019 09:02:31.875 [http-nio-8080-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+20-06-2019 09:02:31.898 [http-nio-8080-exec-5] WARN  n.n.u.t.d.DecoratorProcessor.defaultCall - The layout:decorator/data-layout-decorator processor has been deprecated and will be removed in the next major version of the layout dialect.  Please use layout:decorate/data-layout-decorate instead to future-proof your code.  See https://github.com/ultraq/thymeleaf-layout-dialect/issues/95 for more information.
+20-06-2019 09:02:47.355 [http-nio-8080-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+20-06-2019 09:04:09.147 [main] INFO  o.b.BibliothequeApplication.logStarting - Starting BibliothequeApplication on DESKTOP-6UCL7NI with PID 14644 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
+20-06-2019 09:04:09.152 [main] INFO  o.b.BibliothequeApplication.logStartupProfileInfo - The following profiles are active: dev
+20-06-2019 09:04:10.218 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$2ac12f03] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20-06-2019 09:04:10.246 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping.afterPropertiesSet - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+20-06-2019 09:04:10.486 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+20-06-2019 09:04:10.508 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-06-2019 09:04:10.508 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.17]
+20-06-2019 09:04:10.593 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20-06-2019 09:04:10.593 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1087 ms
+20-06-2019 09:04:10.780 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:04:10.789 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:04:10.810 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:04:10.812 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:04:10.818 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:04:10.907 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:04:10.994 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57a48985, org.springframework.security.web.context.SecurityContextPersistenceFilter@592238c5, org.springframework.security.web.header.HeaderWriterFilter@79d743e6, org.springframework.security.web.authentication.logout.LogoutFilter@7144655b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4c4f4365, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a20b94b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@14bf57b2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1ab6718, org.springframework.security.web.session.SessionManagementFilter@64c4c01, org.springframework.security.web.access.ExceptionTranslationFilter@f3fcd59, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@67440de6]
+20-06-2019 09:04:11.096 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+20-06-2019 09:04:11.442 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+20-06-2019 09:04:11.445 [main] INFO  o.b.BibliothequeApplication.logStarted - Started BibliothequeApplication in 2.716 seconds (JVM running for 3.251)
+20-06-2019 09:04:13.727 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20-06-2019 09:04:13.728 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+20-06-2019 09:04:13.736 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 8 ms
+20-06-2019 09:04:14.214 [http-nio-8080-exec-1] WARN  n.n.u.t.e.ExpressionProcessor.defaultCall - Fragment expression "layout" is being wrapped as a Thymeleaf 3 fragment expression (~{...}) for backwards compatibility purposes.  This wrapping will be dropped in the next major version of the expression processor, so please rewrite as a Thymeleaf 3 fragment expression to future-proof your code.  See https://github.com/thymeleaf/thymeleaf/issues/451 for more information.
+20-06-2019 09:04:16.598 [http-nio-8080-exec-8] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : SUCCESS
+20-06-2019 09:04:24.574 [http-nio-8080-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+20-06-2019 09:04:24.589 [http-nio-8080-exec-5] WARN  n.n.u.t.d.DecoratorProcessor.defaultCall - The layout:decorator/data-layout-decorator processor has been deprecated and will be removed in the next major version of the layout dialect.  Please use layout:decorate/data-layout-decorate instead to future-proof your code.  See https://github.com/ultraq/thymeleaf-layout-dialect/issues/95 for more information.
+20-06-2019 09:05:00.873 [http-nio-8080-exec-10] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+20-06-2019 09:05:57.446 [main] INFO  o.b.BibliothequeApplication.logStarting - Starting BibliothequeApplication on DESKTOP-6UCL7NI with PID 1452 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
+20-06-2019 09:05:57.450 [main] INFO  o.b.BibliothequeApplication.logStartupProfileInfo - The following profiles are active: dev
+20-06-2019 09:05:58.329 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$74829ce2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20-06-2019 09:05:58.355 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping.afterPropertiesSet - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+20-06-2019 09:05:58.586 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+20-06-2019 09:05:58.611 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-06-2019 09:05:58.611 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.17]
+20-06-2019 09:05:58.692 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20-06-2019 09:05:58.693 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 984 ms
+20-06-2019 09:05:58.873 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:05:58.882 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:05:58.904 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:05:58.906 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:05:58.911 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:05:58.993 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:05:59.081 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2ca5f1ed, org.springframework.security.web.context.SecurityContextPersistenceFilter@460510aa, org.springframework.security.web.header.HeaderWriterFilter@6972c30a, org.springframework.security.web.authentication.logout.LogoutFilter@7e4d2287, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@72e789cb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6fd77352, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7cf283e1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6c03fb16, org.springframework.security.web.session.SessionManagementFilter@1ab6718, org.springframework.security.web.access.ExceptionTranslationFilter@4eb30d44, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4e31c3ec]
+20-06-2019 09:05:59.181 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+20-06-2019 09:05:59.510 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+20-06-2019 09:05:59.512 [main] INFO  o.b.BibliothequeApplication.logStarted - Started BibliothequeApplication in 2.425 seconds (JVM running for 2.926)
+20-06-2019 09:06:02.776 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20-06-2019 09:06:02.776 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+20-06-2019 09:06:02.784 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 8 ms
+20-06-2019 09:06:03.278 [http-nio-8080-exec-1] WARN  n.n.u.t.e.ExpressionProcessor.defaultCall - Fragment expression "layout" is being wrapped as a Thymeleaf 3 fragment expression (~{...}) for backwards compatibility purposes.  This wrapping will be dropped in the next major version of the expression processor, so please rewrite as a Thymeleaf 3 fragment expression to future-proof your code.  See https://github.com/thymeleaf/thymeleaf/issues/451 for more information.
+20-06-2019 09:06:07.097 [http-nio-8080-exec-8] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : SUCCESS
+20-06-2019 09:06:55.354 [http-nio-8080-exec-10] WARN  n.n.u.t.d.DecoratorProcessor.defaultCall - The layout:decorator/data-layout-decorator processor has been deprecated and will be removed in the next major version of the layout dialect.  Please use layout:decorate/data-layout-decorate instead to future-proof your code.  See https://github.com/ultraq/thymeleaf-layout-dialect/issues/95 for more information.
+20-06-2019 09:07:06.115 [main] INFO  o.b.BibliothequeApplication.logStarting - Starting BibliothequeApplication on DESKTOP-6UCL7NI with PID 8268 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
+20-06-2019 09:07:06.128 [main] INFO  o.b.BibliothequeApplication.logStartupProfileInfo - The following profiles are active: dev
+20-06-2019 09:07:07.078 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$cf8443c6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20-06-2019 09:07:07.102 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping.afterPropertiesSet - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+20-06-2019 09:07:07.328 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+20-06-2019 09:07:07.352 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-06-2019 09:07:07.352 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.17]
+20-06-2019 09:07:07.433 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20-06-2019 09:07:07.433 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1022 ms
+20-06-2019 09:07:07.633 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:07:07.647 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:07:07.718 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:07:07.720 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:07:07.726 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:07:07.765 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:07:07.848 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@12aa4996, org.springframework.security.web.context.SecurityContextPersistenceFilter@57a48985, org.springframework.security.web.header.HeaderWriterFilter@3c904f1e, org.springframework.security.web.authentication.logout.LogoutFilter@557286ad, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3157e4c0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3910fe11, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@348d18a3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@18eec010, org.springframework.security.web.session.SessionManagementFilter@d56aaa6, org.springframework.security.web.access.ExceptionTranslationFilter@7ce7e83c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@61e3cf4d]
+20-06-2019 09:07:07.940 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+20-06-2019 09:07:08.284 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+20-06-2019 09:07:08.287 [main] INFO  o.b.BibliothequeApplication.logStarted - Started BibliothequeApplication in 2.501 seconds (JVM running for 3.058)
+20-06-2019 09:07:40.205 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20-06-2019 09:07:40.205 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+20-06-2019 09:07:40.210 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 5 ms
+20-06-2019 09:07:40.605 [http-nio-8080-exec-1] WARN  n.n.u.t.e.ExpressionProcessor.defaultCall - Fragment expression "layout" is being wrapped as a Thymeleaf 3 fragment expression (~{...}) for backwards compatibility purposes.  This wrapping will be dropped in the next major version of the expression processor, so please rewrite as a Thymeleaf 3 fragment expression to future-proof your code.  See https://github.com/thymeleaf/thymeleaf/issues/451 for more information.
+20-06-2019 09:07:52.937 [http-nio-8080-exec-1] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : SUCCESS
+20-06-2019 09:08:03.409 [http-nio-8080-exec-3] WARN  n.n.u.t.d.DecoratorProcessor.defaultCall - The layout:decorator/data-layout-decorator processor has been deprecated and will be removed in the next major version of the layout dialect.  Please use layout:decorate/data-layout-decorate instead to future-proof your code.  See https://github.com/ultraq/thymeleaf-layout-dialect/issues/95 for more information.
+20-06-2019 09:25:36.326 [main] INFO  o.b.BibliothequeApplication.logStarting - Starting BibliothequeApplication on DESKTOP-6UCL7NI with PID 6976 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
+20-06-2019 09:25:36.338 [main] INFO  o.b.BibliothequeApplication.logStartupProfileInfo - The following profiles are active: dev
+20-06-2019 09:25:37.293 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$95414afc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20-06-2019 09:25:37.320 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping.afterPropertiesSet - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+20-06-2019 09:25:37.556 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+20-06-2019 09:25:37.580 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-06-2019 09:25:37.580 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.17]
+20-06-2019 09:25:37.662 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20-06-2019 09:25:37.662 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1055 ms
+20-06-2019 09:25:37.842 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:25:37.850 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:25:37.872 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:25:37.874 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:25:37.879 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:25:37.961 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:25:38.045 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@8bffb8b, org.springframework.security.web.context.SecurityContextPersistenceFilter@45d6ef73, org.springframework.security.web.header.HeaderWriterFilter@76c52298, org.springframework.security.web.authentication.logout.LogoutFilter@acf859d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2f2d52ef, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1f6d27cc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d0cc890, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@21422231, org.springframework.security.web.session.SessionManagementFilter@a52ca2e, org.springframework.security.web.access.ExceptionTranslationFilter@787f32b7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7a7d1b47]
+20-06-2019 09:25:38.157 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+20-06-2019 09:25:38.496 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+20-06-2019 09:25:38.498 [main] INFO  o.b.BibliothequeApplication.logStarted - Started BibliothequeApplication in 2.515 seconds (JVM running for 3.033)
+20-06-2019 09:25:53.549 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20-06-2019 09:25:53.550 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+20-06-2019 09:25:53.557 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 7 ms
+20-06-2019 09:25:54.012 [http-nio-8080-exec-1] WARN  n.n.u.t.e.ExpressionProcessor.defaultCall - Fragment expression "layout" is being wrapped as a Thymeleaf 3 fragment expression (~{...}) for backwards compatibility purposes.  This wrapping will be dropped in the next major version of the expression processor, so please rewrite as a Thymeleaf 3 fragment expression to future-proof your code.  See https://github.com/thymeleaf/thymeleaf/issues/451 for more information.
+20-06-2019 09:26:06.629 [http-nio-8080-exec-8] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : SUCCESS
+20-06-2019 09:26:07.611 [http-nio-8080-exec-1] WARN  n.n.u.t.d.DecoratorProcessor.defaultCall - The layout:decorator/data-layout-decorator processor has been deprecated and will be removed in the next major version of the layout dialect.  Please use layout:decorate/data-layout-decorate instead to future-proof your code.  See https://github.com/ultraq/thymeleaf-layout-dialect/issues/95 for more information.
+20-06-2019 09:39:57.298 [main] INFO  org.bibliotheque.LauncherBatch.logStarting - Starting LauncherBatch on DESKTOP-6UCL7NI with PID 14248 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
+20-06-2019 09:39:57.301 [main] INFO  org.bibliotheque.LauncherBatch.logStartupProfileInfo - The following profiles are active: dev
+20-06-2019 09:39:58.273 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:39:58.292 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:39:58.297 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:39:58.301 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:39:58.326 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:39:58.330 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:39:58.378 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-06-2019 09:39:58.452 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-06-2019 09:39:58.458 [main] INFO  o.s.b.c.r.s.JobRepositoryFactoryBean.afterPropertiesSet - No database type set, using meta data indicating: H2
+20-06-2019 09:39:58.474 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.afterPropertiesSet - No TaskExecutor has been set, defaulting to synchronous executor.
+20-06-2019 09:39:58.630 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler.initialize - Initializing ExecutorService 'taskScheduler'
+20-06-2019 09:39:58.666 [main] INFO  org.bibliotheque.LauncherBatch.logStarted - Started LauncherBatch in 1.723 seconds (JVM running for 2.263)
+20-06-2019 09:39:58.668 [main] INFO  o.s.b.a.b.JobLauncherCommandLineRunner.run - Running default command line with: []
+20-06-2019 09:39:58.716 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{run.id=1}]
+20-06-2019 09:39:58.731 [main] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 09:39:58.882 [main] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 09:39:59.007 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561016399001}]
+20-06-2019 09:39:59.014 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 09:39:59.059 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 09:40:17.079 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{run.id=1}] and the following status: [COMPLETED]
+20-06-2019 09:40:17.639 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561016399001}] and the following status: [COMPLETED]
+20-06-2019 09:40:18.016 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561016418001}]
+20-06-2019 09:40:18.030 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 09:40:18.089 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 09:40:30.010 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561016418001}] and the following status: [COMPLETED]
+20-06-2019 09:40:31.014 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561016431001}]
+20-06-2019 09:40:31.027 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 09:40:31.089 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 09:40:48.347 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561016431001}] and the following status: [COMPLETED]
+20-06-2019 09:40:49.009 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561016449001}]
+20-06-2019 09:40:49.016 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 09:40:49.091 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 09:41:22.421 [main] INFO  org.bibliotheque.LauncherBatch.logStarting - Starting LauncherBatch on DESKTOP-6UCL7NI with PID 7748 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
+20-06-2019 09:41:22.426 [main] INFO  org.bibliotheque.LauncherBatch.logStartupProfileInfo - The following profiles are active: dev
+20-06-2019 09:41:23.444 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:41:23.464 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:41:23.468 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:41:23.474 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:41:23.497 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:41:23.501 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:41:23.549 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-06-2019 09:41:23.620 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-06-2019 09:41:23.627 [main] INFO  o.s.b.c.r.s.JobRepositoryFactoryBean.afterPropertiesSet - No database type set, using meta data indicating: H2
+20-06-2019 09:41:23.642 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.afterPropertiesSet - No TaskExecutor has been set, defaulting to synchronous executor.
+20-06-2019 09:41:23.787 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler.initialize - Initializing ExecutorService 'taskScheduler'
+20-06-2019 09:41:23.818 [main] INFO  org.bibliotheque.LauncherBatch.logStarted - Started LauncherBatch in 1.739 seconds (JVM running for 2.297)
+20-06-2019 09:41:23.819 [main] INFO  o.s.b.a.b.JobLauncherCommandLineRunner.run - Running default command line with: []
+20-06-2019 09:41:23.866 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{run.id=1}]
+20-06-2019 09:41:23.881 [main] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 09:41:24.005 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561016484001}]
+20-06-2019 09:41:24.009 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 09:41:24.024 [main] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 09:41:24.054 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 09:41:35.929 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{run.id=1}] and the following status: [COMPLETED]
+20-06-2019 09:41:36.357 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561016484001}] and the following status: [COMPLETED]
+20-06-2019 09:41:37.013 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561016497002}]
+20-06-2019 09:41:37.028 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 09:41:37.083 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 09:41:49.746 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561016497002}] and the following status: [COMPLETED]
+20-06-2019 09:41:50.009 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561016510002}]
+20-06-2019 09:41:50.016 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 09:41:50.061 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 09:42:01.067 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561016510002}] and the following status: [COMPLETED]
+20-06-2019 09:42:02.013 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561016522002}]
+20-06-2019 09:42:02.025 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 09:42:02.079 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 09:42:30.253 [main] INFO  org.bibliotheque.LauncherBatch.logStarting - Starting LauncherBatch on DESKTOP-6UCL7NI with PID 9548 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
+20-06-2019 09:42:30.256 [main] INFO  org.bibliotheque.LauncherBatch.logStartupProfileInfo - The following profiles are active: dev
+20-06-2019 09:42:31.183 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:42:31.202 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:42:31.207 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:42:31.213 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:42:31.238 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:42:31.242 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:42:31.290 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-06-2019 09:42:31.360 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-06-2019 09:42:31.366 [main] INFO  o.s.b.c.r.s.JobRepositoryFactoryBean.afterPropertiesSet - No database type set, using meta data indicating: H2
+20-06-2019 09:42:31.381 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.afterPropertiesSet - No TaskExecutor has been set, defaulting to synchronous executor.
+20-06-2019 09:42:31.524 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler.initialize - Initializing ExecutorService 'taskScheduler'
+20-06-2019 09:42:31.555 [main] INFO  org.bibliotheque.LauncherBatch.logStarted - Started LauncherBatch in 1.613 seconds (JVM running for 2.103)
+20-06-2019 09:42:31.556 [main] INFO  o.s.b.a.b.JobLauncherCommandLineRunner.run - Running default command line with: []
+20-06-2019 09:42:31.602 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{run.id=1}]
+20-06-2019 09:42:31.616 [main] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 09:42:31.756 [main] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 09:42:43.984 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{run.id=1}] and the following status: [COMPLETED]
+20-06-2019 09:50:01.338 [main] INFO  org.bibliotheque.LauncherBatch.logStarting - Starting LauncherBatch on DESKTOP-6UCL7NI with PID 7768 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
+20-06-2019 09:50:01.342 [main] INFO  org.bibliotheque.LauncherBatch.logStartupProfileInfo - The following profiles are active: dev
+20-06-2019 09:50:02.315 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:50:02.334 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:50:02.338 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:50:02.344 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:50:02.367 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:50:02.371 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:50:02.420 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-06-2019 09:50:02.492 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-06-2019 09:50:02.498 [main] INFO  o.s.b.c.r.s.JobRepositoryFactoryBean.afterPropertiesSet - No database type set, using meta data indicating: H2
+20-06-2019 09:50:02.514 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.afterPropertiesSet - No TaskExecutor has been set, defaulting to synchronous executor.
+20-06-2019 09:50:02.672 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler.initialize - Initializing ExecutorService 'taskScheduler'
+20-06-2019 09:50:02.703 [main] INFO  org.bibliotheque.LauncherBatch.logStarted - Started LauncherBatch in 1.695 seconds (JVM running for 2.237)
+20-06-2019 09:50:02.704 [main] INFO  o.s.b.a.b.JobLauncherCommandLineRunner.run - Running default command line with: []
+20-06-2019 09:50:02.751 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{run.id=1}]
+20-06-2019 09:50:02.765 [main] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 09:50:02.907 [main] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 09:50:03.018 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561017003001}]
+20-06-2019 09:50:03.034 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 09:50:03.099 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 09:50:15.401 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{run.id=1}] and the following status: [COMPLETED]
+20-06-2019 09:50:15.702 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561017003001}] and the following status: [COMPLETED]
+20-06-2019 09:50:16.016 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561017016002}]
+20-06-2019 09:50:16.030 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 09:50:16.084 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 09:50:27.637 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561017016002}] and the following status: [COMPLETED]
+20-06-2019 09:50:28.014 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561017028001}]
+20-06-2019 09:50:28.028 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 09:50:28.083 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 09:50:44.135 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561017028001}] and the following status: [COMPLETED]
+20-06-2019 09:50:45.009 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561017045002}]
+20-06-2019 09:50:45.014 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 09:50:45.064 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 09:51:01.834 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561017045002}] and the following status: [COMPLETED]
+20-06-2019 09:51:33.647 [main] INFO  o.b.BibliothequeApplication.logStarting - Starting BibliothequeApplication on DESKTOP-6UCL7NI with PID 5488 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
+20-06-2019 09:51:33.651 [main] INFO  o.b.BibliothequeApplication.logStartupProfileInfo - The following profiles are active: dev
+20-06-2019 09:51:34.570 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$b6590bde] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20-06-2019 09:51:34.597 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping.afterPropertiesSet - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+20-06-2019 09:51:34.824 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+20-06-2019 09:51:34.849 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-06-2019 09:51:34.849 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.17]
+20-06-2019 09:51:34.930 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20-06-2019 09:51:34.931 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1007 ms
+20-06-2019 09:51:35.121 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:51:35.130 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:51:35.192 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:51:35.194 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:51:35.200 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:51:35.238 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:51:35.321 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@557286ad, org.springframework.security.web.context.SecurityContextPersistenceFilter@7144655b, org.springframework.security.web.header.HeaderWriterFilter@345cf395, org.springframework.security.web.authentication.logout.LogoutFilter@5411dd90, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6c65860d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@35835e65, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4992613f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@b10a26d, org.springframework.security.web.session.SessionManagementFilter@3c6aa04a, org.springframework.security.web.access.ExceptionTranslationFilter@17740dae, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@78b41097]
+20-06-2019 09:51:35.417 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+20-06-2019 09:51:35.762 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+20-06-2019 09:51:35.764 [main] INFO  o.b.BibliothequeApplication.logStarted - Started BibliothequeApplication in 2.463 seconds (JVM running for 2.994)
+20-06-2019 09:51:40.982 [main] INFO  org.bibliotheque.LauncherBatch.logStarting - Starting LauncherBatch on DESKTOP-6UCL7NI with PID 9296 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
+20-06-2019 09:51:40.986 [main] INFO  org.bibliotheque.LauncherBatch.logStartupProfileInfo - The following profiles are active: dev
+20-06-2019 09:51:41.967 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:51:41.986 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:51:41.990 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:51:41.996 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:51:42.020 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:51:42.023 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 09:51:42.074 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-06-2019 09:51:42.146 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-06-2019 09:51:42.152 [main] INFO  o.s.b.c.r.s.JobRepositoryFactoryBean.afterPropertiesSet - No database type set, using meta data indicating: H2
+20-06-2019 09:51:42.167 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.afterPropertiesSet - No TaskExecutor has been set, defaulting to synchronous executor.
+20-06-2019 09:51:42.316 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler.initialize - Initializing ExecutorService 'taskScheduler'
+20-06-2019 09:51:42.347 [main] INFO  org.bibliotheque.LauncherBatch.logStarted - Started LauncherBatch in 1.693 seconds (JVM running for 2.209)
+20-06-2019 09:51:42.349 [main] INFO  o.s.b.a.b.JobLauncherCommandLineRunner.run - Running default command line with: []
+20-06-2019 09:51:42.395 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{run.id=1}]
+20-06-2019 09:51:42.409 [main] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 09:51:42.547 [main] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 09:51:54.263 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{run.id=1}] and the following status: [COMPLETED]
+20-06-2019 09:55:00.023 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561017300002}]
+20-06-2019 09:55:00.040 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 09:55:00.099 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 09:55:11.939 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561017300002}] and the following status: [COMPLETED]
+20-06-2019 09:55:35.000 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20-06-2019 09:55:35.000 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+20-06-2019 09:55:35.006 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 5 ms
+20-06-2019 09:55:35.444 [http-nio-8080-exec-1] WARN  n.n.u.t.e.ExpressionProcessor.defaultCall - Fragment expression "layout" is being wrapped as a Thymeleaf 3 fragment expression (~{...}) for backwards compatibility purposes.  This wrapping will be dropped in the next major version of the expression processor, so please rewrite as a Thymeleaf 3 fragment expression to future-proof your code.  See https://github.com/thymeleaf/thymeleaf/issues/451 for more information.
+20-06-2019 11:24:21.352 [main] INFO  o.b.BibliothequeApplication.logStarting - Starting BibliothequeApplication on DESKTOP-6UCL7NI with PID 14280 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
+20-06-2019 11:24:21.356 [main] INFO  o.b.BibliothequeApplication.logStartupProfileInfo - The following profiles are active: dev
+20-06-2019 11:24:22.328 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$61083d55] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20-06-2019 11:24:22.354 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping.afterPropertiesSet - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+20-06-2019 11:24:22.609 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+20-06-2019 11:24:22.632 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-06-2019 11:24:22.633 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.17]
+20-06-2019 11:24:22.714 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20-06-2019 11:24:22.714 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1037 ms
+20-06-2019 11:24:22.905 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 11:24:22.915 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 11:24:22.941 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 11:24:22.943 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 11:24:22.995 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 11:24:23.036 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 11:24:23.128 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6c65860d, org.springframework.security.web.context.SecurityContextPersistenceFilter@46d9aec8, org.springframework.security.web.header.HeaderWriterFilter@1cc9cfb2, org.springframework.security.web.authentication.logout.LogoutFilter@6fd5717c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@460510aa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7918c7f8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@35835e65, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2d000e80, org.springframework.security.web.session.SessionManagementFilter@3bead518, org.springframework.security.web.access.ExceptionTranslationFilter@33b082c5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6972c30a]
+20-06-2019 11:24:23.256 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+20-06-2019 11:24:23.707 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+20-06-2019 11:24:23.710 [main] INFO  o.b.BibliothequeApplication.logStarted - Started BibliothequeApplication in 2.743 seconds (JVM running for 3.279)
+20-06-2019 11:24:33.540 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20-06-2019 11:24:33.541 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+20-06-2019 11:24:33.548 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 7 ms
+20-06-2019 11:24:34.306 [http-nio-8080-exec-1] WARN  n.n.u.t.e.ExpressionProcessor.defaultCall - Fragment expression "layout" is being wrapped as a Thymeleaf 3 fragment expression (~{...}) for backwards compatibility purposes.  This wrapping will be dropped in the next major version of the expression processor, so please rewrite as a Thymeleaf 3 fragment expression to future-proof your code.  See https://github.com/thymeleaf/thymeleaf/issues/451 for more information.
+20-06-2019 11:25:03.849 [http-nio-8080-exec-5] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : SUCCESS
+20-06-2019 11:25:04.984 [http-nio-8080-exec-9] WARN  n.n.u.t.d.DecoratorProcessor.defaultCall - The layout:decorator/data-layout-decorator processor has been deprecated and will be removed in the next major version of the layout dialect.  Please use layout:decorate/data-layout-decorate instead to future-proof your code.  See https://github.com/ultraq/thymeleaf-layout-dialect/issues/95 for more information.
+20-06-2019 11:26:09.760 [main] INFO  org.bibliotheque.LauncherBatch.logStarting - Starting LauncherBatch on DESKTOP-6UCL7NI with PID 14976 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
+20-06-2019 11:26:09.762 [main] INFO  org.bibliotheque.LauncherBatch.logStartupProfileInfo - The following profiles are active: dev
+20-06-2019 11:26:10.725 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 11:26:10.743 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 11:26:10.747 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 11:26:10.752 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 11:26:10.775 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 11:26:10.779 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 11:26:10.826 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-06-2019 11:26:10.895 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-06-2019 11:26:10.901 [main] INFO  o.s.b.c.r.s.JobRepositoryFactoryBean.afterPropertiesSet - No database type set, using meta data indicating: H2
+20-06-2019 11:26:10.915 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.afterPropertiesSet - No TaskExecutor has been set, defaulting to synchronous executor.
+20-06-2019 11:26:11.063 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler.initialize - Initializing ExecutorService 'taskScheduler'
+20-06-2019 11:26:11.096 [main] INFO  org.bibliotheque.LauncherBatch.logStarted - Started LauncherBatch in 1.632 seconds (JVM running for 2.14)
+20-06-2019 11:26:11.097 [main] INFO  o.s.b.a.b.JobLauncherCommandLineRunner.run - Running default command line with: []
+20-06-2019 11:26:11.146 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{run.id=1}]
+20-06-2019 11:26:11.161 [main] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 11:26:11.305 [main] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 11:26:24.018 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561022784002}]
+20-06-2019 11:26:24.033 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 11:26:24.108 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 11:26:29.075 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{run.id=1}] and the following status: [COMPLETED]
+20-06-2019 11:26:35.843 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561022784002}] and the following status: [COMPLETED]
+20-06-2019 11:26:48.014 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561022808000}]
+20-06-2019 11:26:48.027 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 11:26:48.090 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 11:26:59.732 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561022808000}] and the following status: [COMPLETED]
+20-06-2019 11:27:00.010 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561022820001}]
+20-06-2019 11:27:00.018 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 11:27:00.054 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 11:27:16.281 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561022820001}] and the following status: [COMPLETED]
+20-06-2019 11:27:24.008 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561022844001}]
+20-06-2019 11:27:24.015 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 11:27:24.094 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 11:28:30.841 [main] INFO  org.bibliotheque.LauncherBatch.logStarting - Starting LauncherBatch on DESKTOP-6UCL7NI with PID 16108 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
+20-06-2019 11:28:30.845 [main] INFO  org.bibliotheque.LauncherBatch.logStartupProfileInfo - The following profiles are active: dev
+20-06-2019 11:28:31.947 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 11:28:31.965 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 11:28:31.969 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 11:28:31.974 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 11:28:31.998 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 11:28:32.001 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 11:28:32.049 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-06-2019 11:28:32.119 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-06-2019 11:28:32.125 [main] INFO  o.s.b.c.r.s.JobRepositoryFactoryBean.afterPropertiesSet - No database type set, using meta data indicating: H2
+20-06-2019 11:28:32.140 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.afterPropertiesSet - No TaskExecutor has been set, defaulting to synchronous executor.
+20-06-2019 11:28:32.299 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler.initialize - Initializing ExecutorService 'taskScheduler'
+20-06-2019 11:28:32.334 [main] INFO  org.bibliotheque.LauncherBatch.logStarted - Started LauncherBatch in 1.828 seconds (JVM running for 2.373)
+20-06-2019 11:28:32.335 [main] INFO  o.s.b.a.b.JobLauncherCommandLineRunner.run - Running default command line with: []
+20-06-2019 11:28:32.384 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{run.id=1}]
+20-06-2019 11:28:32.398 [main] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 11:28:32.544 [main] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 11:28:48.849 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{run.id=1}] and the following status: [COMPLETED]
+20-06-2019 11:30:00.022 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561023000001}]
+20-06-2019 11:30:00.033 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 11:30:00.075 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 11:30:16.702 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561023000001}] and the following status: [COMPLETED]
+20-06-2019 11:30:17.015 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561023017002}]
+20-06-2019 11:30:17.027 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 11:30:17.089 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 11:30:28.635 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561023017002}] and the following status: [COMPLETED]
+20-06-2019 11:30:29.013 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561023029000}]
+20-06-2019 11:30:29.025 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 11:30:29.082 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 11:30:40.359 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561023029000}] and the following status: [COMPLETED]
+20-06-2019 11:30:41.013 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561023041001}]
+20-06-2019 11:30:41.026 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 11:30:41.099 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 11:30:52.814 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561023041001}] and the following status: [COMPLETED]
+20-06-2019 11:30:53.012 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561023053001}]
+20-06-2019 11:30:53.026 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 11:30:53.078 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 11:31:09.531 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561023053001}] and the following status: [COMPLETED]
+20-06-2019 11:32:26.335 [main] INFO  org.bibliotheque.LauncherBatch.logStarting - Starting LauncherBatch on DESKTOP-6UCL7NI with PID 572 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
+20-06-2019 11:32:26.339 [main] INFO  org.bibliotheque.LauncherBatch.logStartupProfileInfo - The following profiles are active: dev
+20-06-2019 11:32:27.275 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 11:32:27.294 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 11:32:27.298 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 11:32:27.304 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 11:32:27.328 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 11:32:27.331 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 11:32:27.379 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-06-2019 11:32:27.450 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-06-2019 11:32:27.456 [main] INFO  o.s.b.c.r.s.JobRepositoryFactoryBean.afterPropertiesSet - No database type set, using meta data indicating: H2
+20-06-2019 11:32:27.471 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.afterPropertiesSet - No TaskExecutor has been set, defaulting to synchronous executor.
+20-06-2019 11:32:27.621 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler.initialize - Initializing ExecutorService 'taskScheduler'
+20-06-2019 11:32:27.653 [main] INFO  org.bibliotheque.LauncherBatch.logStarted - Started LauncherBatch in 1.636 seconds (JVM running for 2.163)
+20-06-2019 11:32:27.654 [main] INFO  o.s.b.a.b.JobLauncherCommandLineRunner.run - Running default command line with: []
+20-06-2019 11:32:27.702 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{run.id=1}]
+20-06-2019 11:32:27.716 [main] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 11:32:27.854 [main] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 11:32:44.754 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{run.id=1}] and the following status: [COMPLETED]
+20-06-2019 11:35:00.027 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561023300002}]
+20-06-2019 11:35:00.037 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 11:35:00.091 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 11:35:17.670 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561023300002}] and the following status: [COMPLETED]
+20-06-2019 11:40:00.010 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561023600001}]
+20-06-2019 11:40:00.018 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 11:40:00.065 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 11:40:16.635 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561023600001}] and the following status: [COMPLETED]
+20-06-2019 11:45:00.008 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561023900002}]
+20-06-2019 11:45:00.015 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 11:45:00.065 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 11:45:12.200 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561023900002}] and the following status: [COMPLETED]
+20-06-2019 11:50:00.008 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561024200001}]
+20-06-2019 11:50:00.012 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 11:50:00.055 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 11:50:15.942 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561024200001}] and the following status: [COMPLETED]
+20-06-2019 11:55:00.018 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561024500002}]
+20-06-2019 11:55:00.036 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 11:55:00.097 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-04 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 11:55:16.294 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561024500002}] and the following status: [COMPLETED]
+20-06-2019 12:07:42.497 [main] INFO  o.b.BibliothequeApplication.logStarting - Starting BibliothequeApplication on DESKTOP-6UCL7NI with PID 11472 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
+20-06-2019 12:07:42.503 [main] INFO  o.b.BibliothequeApplication.logStartupProfileInfo - The following profiles are active: dev
+20-06-2019 12:07:43.562 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization - Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$4a7972d1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+20-06-2019 12:07:43.590 [main] INFO  o.s.w.s.a.s.AnnotationActionEndpointMapping.afterPropertiesSet - Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+20-06-2019 12:07:43.831 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+20-06-2019 12:07:43.852 [main] INFO  o.a.catalina.core.StandardService.log - Starting service [Tomcat]
+20-06-2019 12:07:43.853 [main] INFO  o.a.catalina.core.StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.17]
+20-06-2019 12:07:43.938 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring embedded WebApplicationContext
+20-06-2019 12:07:43.938 [main] INFO  o.s.web.context.ContextLoader.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1100 ms
+20-06-2019 12:07:44.136 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 12:07:44.146 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 12:07:44.172 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 12:07:44.174 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 12:07:44.181 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 12:07:44.272 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 12:07:44.360 [main] INFO  o.s.s.web.DefaultSecurityFilterChain.<init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1bd0b0e5, org.springframework.security.web.context.SecurityContextPersistenceFilter@6aef4eb8, org.springframework.security.web.header.HeaderWriterFilter@59496961, org.springframework.security.web.authentication.logout.LogoutFilter@67440de6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@15ac59c2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@bb9ab64, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@507d20bb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@dc7b462, org.springframework.security.web.session.SessionManagementFilter@79b08632, org.springframework.security.web.access.ExceptionTranslationFilter@69da0b12, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7a5b769b]
+20-06-2019 12:07:44.461 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor.initialize - Initializing ExecutorService 'applicationTaskExecutor'
+20-06-2019 12:07:44.845 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+20-06-2019 12:07:44.848 [main] INFO  o.b.BibliothequeApplication.logStarted - Started BibliothequeApplication in 2.832 seconds (JVM running for 3.435)
+20-06-2019 12:07:51.788 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+20-06-2019 12:07:51.789 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+20-06-2019 12:07:51.797 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet.initServletBean - Completed initialization in 8 ms
+20-06-2019 12:07:52.597 [http-nio-8080-exec-1] WARN  n.n.u.t.e.ExpressionProcessor.defaultCall - Fragment expression "layout" is being wrapped as a Thymeleaf 3 fragment expression (~{...}) for backwards compatibility purposes.  This wrapping will be dropped in the next major version of the expression processor, so please rewrite as a Thymeleaf 3 fragment expression to future-proof your code.  See https://github.com/thymeleaf/thymeleaf/issues/451 for more information.
+20-06-2019 12:08:21.815 [http-nio-8080-exec-3] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : SUCCESS
+20-06-2019 12:08:23.174 [http-nio-8080-exec-8] WARN  n.n.u.t.d.DecoratorProcessor.defaultCall - The layout:decorator/data-layout-decorator processor has been deprecated and will be removed in the next major version of the layout dialect.  Please use layout:decorate/data-layout-decorate instead to future-proof your code.  See https://github.com/ultraq/thymeleaf-layout-dialect/issues/95 for more information.
+20-06-2019 12:09:42.930 [http-nio-8080-exec-8] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : SUCCESS
+20-06-2019 12:09:42.948 [http-nio-8080-exec-9] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver.logException - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+20-06-2019 12:10:16.793 [http-nio-8080-exec-6] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : SUCCESS
+20-06-2019 12:10:30.424 [http-nio-8080-exec-3] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : SUCCESS
+20-06-2019 12:10:37.058 [http-nio-8080-exec-2] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : CONFLICT
+20-06-2019 12:11:54.206 [http-nio-8080-exec-7] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : SUCCESS
+20-06-2019 12:13:08.506 [main] INFO  org.bibliotheque.LauncherBatch.logStarting - Starting LauncherBatch on DESKTOP-6UCL7NI with PID 9012 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
+20-06-2019 12:13:08.510 [main] INFO  org.bibliotheque.LauncherBatch.logStartupProfileInfo - The following profiles are active: dev
+20-06-2019 12:13:09.391 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 12:13:09.409 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 12:13:09.413 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 12:13:09.418 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 12:13:09.441 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 12:13:09.445 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 12:13:09.493 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-06-2019 12:13:09.561 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-06-2019 12:13:09.567 [main] INFO  o.s.b.c.r.s.JobRepositoryFactoryBean.afterPropertiesSet - No database type set, using meta data indicating: H2
+20-06-2019 12:13:09.582 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.afterPropertiesSet - No TaskExecutor has been set, defaulting to synchronous executor.
+20-06-2019 12:13:09.726 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler.initialize - Initializing ExecutorService 'taskScheduler'
+20-06-2019 12:13:09.757 [main] INFO  org.bibliotheque.LauncherBatch.logStarted - Started LauncherBatch in 1.555 seconds (JVM running for 2.081)
+20-06-2019 12:13:09.758 [main] INFO  o.s.b.a.b.JobLauncherCommandLineRunner.run - Running default command line with: []
+20-06-2019 12:13:09.803 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{run.id=1}]
+20-06-2019 12:13:09.817 [main] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 12:13:09.958 [main] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-16 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 12:13:21.882 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{run.id=1}] and the following status: [COMPLETED]
+20-06-2019 12:15:00.024 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561025700002}]
+20-06-2019 12:15:00.041 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 12:15:00.101 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-16 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 12:15:11.607 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561025700002}] and the following status: [COMPLETED]
+20-06-2019 12:17:21.933 [http-nio-8080-exec-10] INFO  o.bibliotheque.client.OuvrageClient.login - LoginResponse : SUCCESS
+20-06-2019 12:20:00.016 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{=1561026000001}]
+20-06-2019 12:20:00.030 [scheduling-1] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 12:20:00.093 [scheduling-1] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-16 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 12:20:16.479 [scheduling-1] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{=1561026000001}] and the following status: [COMPLETED]
+20-06-2019 12:22:43.988 [main] INFO  org.bibliotheque.LauncherBatch.logStarting - Starting LauncherBatch on DESKTOP-6UCL7NI with PID 6016 (started by CELIM in F:\PARCOURS DÉVELOPPEUR D'APPLICATION JAVA\PROJET 7 - DEVELOPPEZ LE NOUVEAU SYSTEME D'INFORMATION DE LA BIBLIOTHEQUE D'UNE GRANDE VILLE\OC-PROJET-7-WEB-SERVICE-BIBLIOTHEQUE\oc-bibliotheque-webapplication)
+20-06-2019 12:22:43.992 [main] INFO  org.bibliotheque.LauncherBatch.logStartupProfileInfo - The following profiles are active: dev
+20-06-2019 12:22:44.940 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 12:22:44.959 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 12:22:44.964 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 12:22:44.969 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 12:22:44.994 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 12:22:44.997 [main] INFO  o.s.w.s.saaj.SaajSoapMessageFactory.afterPropertiesSet - Creating SAAJ 1.3 MessageFactory with SOAP 1.1 Protocol
+20-06-2019 12:22:45.043 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Starting...
+20-06-2019 12:22:45.115 [main] INFO  com.zaxxer.hikari.HikariDataSource.getConnection - HikariPool-1 - Start completed.
+20-06-2019 12:22:45.122 [main] INFO  o.s.b.c.r.s.JobRepositoryFactoryBean.afterPropertiesSet - No database type set, using meta data indicating: H2
+20-06-2019 12:22:45.137 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.afterPropertiesSet - No TaskExecutor has been set, defaulting to synchronous executor.
+20-06-2019 12:22:45.284 [main] INFO  o.s.s.c.ThreadPoolTaskScheduler.initialize - Initializing ExecutorService 'taskScheduler'
+20-06-2019 12:22:45.317 [main] INFO  org.bibliotheque.LauncherBatch.logStarted - Started LauncherBatch in 1.657 seconds (JVM running for 2.151)
+20-06-2019 12:22:45.318 [main] INFO  o.s.b.a.b.JobLauncherCommandLineRunner.run - Running default command line with: []
+20-06-2019 12:22:45.366 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] launched with the following parameters: [{run.id=1}]
+20-06-2019 12:22:45.379 [main] INFO  o.s.batch.core.job.SimpleStepHandler.handleStep - Executing step: [mailItemProcessor]
+20-06-2019 12:22:45.519 [main] WARN  o.b.batch.MailItemProcessor.execute - E-mail de relance : Date de fin d'emprunt : 2019-06-16 - Référence du livre : TISFIAFLCDFT1N001
+20-06-2019 12:22:57.370 [main] INFO  o.s.b.c.l.support.SimpleJobLauncher.run - Job: [SimpleJob: [name=mailJob]] completed with the following parameters: [{run.id=1}] and the following status: [COMPLETED]

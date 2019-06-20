@@ -6,7 +6,6 @@ import org.bibliotheque.repository.PhotoRepository;
 import org.bibliotheque.service.contract.PhotoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,12 +15,9 @@ import java.util.List;
 @NoArgsConstructor
 public class PhotoServiceImpl implements PhotoService {
 
+    @Autowired
     private PhotoRepository photoRepository;
 
-    @Autowired
-    public PhotoServiceImpl(PhotoRepository photoRepository){
-        this.photoRepository = photoRepository;
-    }
 
     @Override
     public PhotoEntity getPhotoById(Integer id) {
@@ -66,4 +62,5 @@ public class PhotoServiceImpl implements PhotoService {
             return false;
         }
     }
+
 }

@@ -10,7 +10,6 @@ import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
-
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
@@ -27,16 +26,14 @@ public class EmpruntEndpoint  {
 
     public static final String NAMESPACE_URI = "http://www.webservice.org/bibliotheque-ws";
 
+    @Autowired
     private EmpruntService service;
 
-    @Autowired
-    public EmpruntEndpoint(EmpruntService service) {
-        this.service = service;
-    }
 
     /**
+     * Cette méthode récupère emprunt par son identifiant
      * @param request
-     * @return Un emprunt par son ID.
+     * @return Un emprunt
      */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getEmpruntByIdRequest")
     @ResponsePayload
@@ -62,19 +59,34 @@ public class EmpruntEndpoint  {
 
 
     /**
+     * Cette méthode récupère tous emprunts
      * @param request
-     * @return Tout les emprunts.
+     * @return Liste d'emprunts
      */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllEmpruntRequest")
     @ResponsePayload
-    public GetAllEmpruntResponse getAllEmprunt(@RequestPayload GetAllEmpruntRequest request){
+    public GetAllEmpruntResponse getAllEmprunt(@RequestPayload GetAllEmpruntRequest request) throws DatatypeConfigurationException {
         GetAllEmpruntResponse response = new GetAllEmpruntResponse();
         List<EmpruntType> empruntTypeList = new ArrayList<>();
         List<EmpruntEntity> empruntEntityList = service.getAllEmprunts();
 
         for (EmpruntEntity entity : empruntEntityList){
             EmpruntType empruntType = new EmpruntType();
-            BeanUtils.copyProperties(entity, empruntType);
+            GregorianCalendar calendar = new GregorianCalendar();
+
+            calendar.setTime(entity.getDateDebut());
+            XMLGregorianCalendar dateDebut = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+
+            calendar.setTime(entity.getDateFin());
+            XMLGregorianCalendar dateFin = DatatypeFactory.newInstance().newXMLGregorianCalendar(calendar);
+
+            empruntType.setId(entity.getId());
+            empruntType.setDateDebut(dateDebut);
+            empruntType.setDateFin(dateFin);
+            empruntType.setProlongation(entity.getProlongation());
+            empruntType.setCompteId(entity.getCompteId());
+            empruntType.setLivreId(entity.getLivreId());
+
             empruntTypeList.add(empruntType);
         }
 
@@ -84,8 +96,9 @@ public class EmpruntEndpoint  {
 
 
     /**
+     * Cette méthode récupère tous les emprunts liés à un compte client
      * @param request id
-     * @return La liste des emprunts d'un compte.
+     * @return Liste d'emprunts
      */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllEmpruntByCompteIdRequest")
     @ResponsePayload
@@ -119,6 +132,12 @@ public class EmpruntEndpoint  {
         return response;
     }
 
+
+    /**
+     * Cette méthode ajoute un emprunt
+     * @param request
+     * @return
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "addEmpruntRequest")
     @ResponsePayload
     public AddEmpruntResponse addEmprunt(@RequestPayload AddEmpruntRequest request){
@@ -145,6 +164,13 @@ public class EmpruntEndpoint  {
         return response;
     }
 
+
+    /**
+     * Cette méthode met à jour un emprunt
+     * @param request
+     * @return
+     * @throws ParseException
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "updateEmpruntRequest")
     @ResponsePayload
     public UpdateEmpruntResponse updateEmprunt(@RequestPayload UpdateEmpruntRequest request) throws ParseException {
@@ -186,6 +212,12 @@ public class EmpruntEndpoint  {
         return response;
     }
 
+
+    /**
+     * Cette méthode supprime un emprunt
+     * @param request
+     * @return
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "deleteEmpruntRequest")
     @ResponsePayload
     public DeleteEmpruntResponse deleteEmprunt(@RequestPayload DeleteEmpruntRequest request){

@@ -6,7 +6,6 @@ import org.bibliotheque.repository.LivreRepository;
 import org.bibliotheque.service.contract.LivreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +17,7 @@ public class LivreServiceImpl implements LivreService {
 
     @Autowired
     private LivreRepository repository;
+
 
     @Override
     public LivreEntity getLivreById(Integer id) {
@@ -62,6 +62,5 @@ public class LivreServiceImpl implements LivreService {
             return false;
         }
     }
-
 
 }

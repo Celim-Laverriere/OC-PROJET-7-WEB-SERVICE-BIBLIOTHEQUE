@@ -4,7 +4,6 @@ import org.bibliotheque.repository.SearchRepository;
 import org.bibliotheque.wsdl.OuvrageType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -15,7 +14,7 @@ public class SearchService {
 
 
     /**
-     * ==== GET OUVRAGES BY KEYWORD ====
+     * ==== CETTE METHODE RECUPERER UN OU UNE LISTE D'OUVRAGE(S) PAR MOT-CLE ====
      * @param keyword
      * @return UNE LISTE D'OUVRAGES
      */

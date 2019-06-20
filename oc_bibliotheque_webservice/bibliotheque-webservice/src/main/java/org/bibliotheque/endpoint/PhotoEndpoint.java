@@ -10,7 +10,6 @@ import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,13 +19,15 @@ public class PhotoEndpoint {
 
     public static final String NAMESPACE_URI = "http://www.webservice.org/bibliotheque-ws";
 
+    @Autowired
     private PhotoService service;
 
-    @Autowired
-    public PhotoEndpoint(PhotoService service){
-        this.service = service;
-    }
 
+    /**
+     * Cette méthode récupère une photo par son identifiant
+     * @param request
+     * @return
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getPhotoByIdRequest")
     @ResponsePayload
     public GetPhotoByIdResponse getPhotoById(@RequestPayload GetPhotoByIdRequest request){
@@ -38,6 +39,12 @@ public class PhotoEndpoint {
         return response;
     }
 
+
+    /**
+     * Cette méthode récupère toutes les photos
+     * @param request
+     * @return
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllPhotosRequest")
     @ResponsePayload
     public GetAllPhotosResponse getAllPhotos(@RequestPayload GetAllPhotosRequest request){
@@ -55,6 +62,12 @@ public class PhotoEndpoint {
         return response;
     }
 
+
+    /**
+     * Cette méthode ajoute une photo
+     * @param request
+     * @return
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "addPhotoRequest")
     @ResponsePayload
     public AddPhotoResponse addPhoto(@RequestPayload AddPhotoRequest request){
@@ -81,6 +94,12 @@ public class PhotoEndpoint {
         return response;
     }
 
+
+    /**
+     * Cette méthode met à jour une photo
+     * @param request
+     * @return
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "updatePhotoRequest")
     @ResponsePayload
     public UpdatePhotoResponse updatePhoto(@RequestPayload UpdatePhotoRequest request){
@@ -114,6 +133,12 @@ public class PhotoEndpoint {
         return response;
     }
 
+
+    /**
+     * Cette méthode suppprime une photo
+     * @param request
+     * @return
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "deletePhotoRequest")
     @ResponsePayload
     public DeletePhotoResponse deletePhoto(@RequestPayload DeletePhotoRequest request){

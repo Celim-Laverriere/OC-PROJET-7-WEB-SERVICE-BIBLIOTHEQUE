@@ -10,7 +10,6 @@ import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,6 +22,12 @@ public class CompteEndpoint {
     @Autowired
     private CompteService service;
 
+
+    /**
+     * Cette méthode récupère un compte utilisateur par son identifiant
+     * @param request
+     * @return Un compte
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getCompteByIdRequest")
     @ResponsePayload
     public GetCompteByIdResponse getCompteById(@RequestPayload GetCompteByIdRequest request){
@@ -34,6 +39,12 @@ public class CompteEndpoint {
         return response;
     }
 
+
+    /**
+     * Cette méthode récupère tous les comptes utilisateurs
+     * @param request
+     * @return Liste de comptes
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllComptesRequest")
     @ResponsePayload
     public GetAllComptesResponse getAllComptes(@RequestPayload GetAllComptesRequest request){
@@ -51,6 +62,12 @@ public class CompteEndpoint {
         return response;
     }
 
+
+    /**
+     * Cette méthode ajoute un compte client
+     * @param request
+     * @return
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "addCompteRequest")
     @ResponsePayload
     public AddCompteResponse addCompte(@RequestPayload AddCompteRequest request){
@@ -77,6 +94,12 @@ public class CompteEndpoint {
         return response;
     }
 
+
+    /**
+     * Cette méthode met à jour un compte client
+     * @param request
+     * @return
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "updateCompteRequest")
     @ResponsePayload
     public UpdateCompteResponse updateCompte(@RequestPayload UpdateCompteRequest request){
@@ -112,6 +135,12 @@ public class CompteEndpoint {
         return response;
     }
 
+
+    /**
+     * Cette méthode supprime un compte client
+     * @param request
+     * @return
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "deleteCompteRequest")
     @ResponsePayload
     public DeleteCompteResponse deleteCompte(@RequestPayload DeleteCompteRequest request){
@@ -131,4 +160,5 @@ public class CompteEndpoint {
         response.setServiceStatus(serviceStatus);
         return response;
     }
+
 }

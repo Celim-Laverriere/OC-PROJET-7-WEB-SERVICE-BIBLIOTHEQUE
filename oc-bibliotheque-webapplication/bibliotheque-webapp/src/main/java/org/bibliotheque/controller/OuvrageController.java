@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
-
 @Controller
 public class OuvrageController {
 
@@ -24,24 +23,30 @@ public class OuvrageController {
 
 
     @RequestMapping(value = "/ouvrages", method = RequestMethod.GET)
-    public String ouvrages(final Model model) {
+    public String ouvrages(final Model model){
 
+        /**@see OuvrageService#ouvrageTypeList()*/
         List<OuvrageType> ouvrageTypeList = ouvrageService.ouvrageTypeList();
-        ouvrageTypeList = ouvrageService.LivresDispoForOuvrage(ouvrageTypeList);
+
+        /**@see OuvrageService#livresDispoForOuvrage(List)*/
+        ouvrageTypeList = ouvrageService.livresDispoForOuvrage(ouvrageTypeList);
 
         model.addAttribute("ouvrageList", ouvrageTypeList);
 
-        return "ouvrage/ouvrageList";
+            return "ouvrage/ouvrageList";
     }
 
 
     @RequestMapping(value = "/ouvrage", method = RequestMethod.GET)
     public String ouvrageDetail(Model model, @RequestParam(name = "ouvrageId") Integer ouvrageId){
 
-        String ouvrageReturn = null;
+        String ouvrageReturn;
 
         try{
+            /**@see OuvrageService#ouvrageById(Integer)*/
             OuvrageType ouvrageType = ouvrageService.ouvrageById(ouvrageId);
+
+            /**@see OuvrageService#nombreDeLivreDispo(List)*/
             List<LivreType> livreTypeListDispo = ouvrageService.nombreDeLivreDispo(ouvrageType.getLivres());
 
             model.addAttribute("livreTypeListDispo", livreTypeListDispo);
@@ -60,8 +65,11 @@ public class OuvrageController {
     @RequestMapping(value = "/ouvragesByGenre", method = RequestMethod.GET)
     public String ouvragesByGenre(Model model, @RequestParam(name = "motCle") String motCle){
 
+        /**@see OuvrageService#ouvragesByGenreList(String)*/
         List<OuvrageType> ouvrageTypeList = ouvrageService.ouvragesByGenreList(motCle);
-        ouvrageTypeList = ouvrageService.LivresDispoForOuvrage(ouvrageTypeList);
+
+        /**@see OuvrageService#livresDispoForOuvrage(List)*/
+        ouvrageTypeList = ouvrageService.livresDispoForOuvrage(ouvrageTypeList);
 
         model.addAttribute("ouvrageList", ouvrageTypeList);
 

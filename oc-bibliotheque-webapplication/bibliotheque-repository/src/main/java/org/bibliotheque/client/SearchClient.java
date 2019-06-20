@@ -12,11 +12,12 @@ public class SearchClient extends WebServiceGatewaySupport {
     private static final Logger logger = LoggerFactory.getLogger(OuvrageClient.class);
 
     /**
-     * ==== GET OUVRAGE BY KEYWORD ====
+     * ==== CETTE METHODE RECUPERER UN OU UNE LISTE D'OUVRAGE(S) PAR MOT-CLE ====
      * @param keyword
      * @return GetSearchByKeywordResponse
      */
     public GetSearchByKeywordResponse getSearchByKeyword(String keyword){
+
         GetSearchByKeywordResponse response = new GetSearchByKeywordResponse();
 
         try{

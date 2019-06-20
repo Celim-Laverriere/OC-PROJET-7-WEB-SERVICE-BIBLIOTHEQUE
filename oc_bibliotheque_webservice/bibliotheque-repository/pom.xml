@@ -39,6 +39,7 @@
             <artifactId>bibliotheque-entity</artifactId>
         </dependency>
 
+        <!-- ===== Bibliothèques tierces ===== -->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>

@@ -34,12 +34,12 @@
                                     <th:block th:each="photo : ${ouvrage.getPhotos()}">
                                         <p>
                                             <a class="nav-link" href="#" th:href="@{ouvrage(ouvrageId=${ouvrage.getId()})}">
-                                                <img id="imageVignette" th:alt="${photo.getNomPhoto()}" th:src="${photo.getUrlPhoto()}"/>
+                                                <img id="imageVignette" th:alt="${photo.getNomPhoto()}" th:src="@{'/image/' + ${photo.getUrlPhoto()}}"/>
                                             </a>
                                         </p>
                                     </th:block>
 
-                                    <p style="text-align: center" th:text="'Nombre de livre disponible : ' + ${ouvrage.getLivres().size()}"></p>
+                                    <p style="text-align: center" th:text="'Nombre de livre(s) disponible(s) : ' + ${ouvrage.getLivres().size()}"></p>
 
                                     <p style="text-align: center">
                                         <a class="btn btn-light" href="#" th:href="@{/ouvrage(ouvrageId=${ouvrage.getId()})}">Afficher détail</a>
@@ -53,6 +53,6 @@
         </div>
     </div>
 </div>
-<script th:src="@{/js/bibliotheque.js}"/>
+
 </body>
 </html>

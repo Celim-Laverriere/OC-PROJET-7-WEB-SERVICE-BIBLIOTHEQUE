@@ -1,8 +1,8 @@
 package org.bibliotheque.controller;
 
-import org.bibliotheque.wsdl.ServiceStatus;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +16,8 @@ public class SecurityController {
 
 
     @RequestMapping(value = "/login")
-    public String login(Model model, HttpSession session, @RequestParam(value = "actionUser", defaultValue = "noActionUser") String actionUser){
+    public String login(Model model, HttpSession session, @RequestParam(value = "actionUser",
+                            defaultValue = "noActionUser") String actionUser){
 
         String returnLogin;
         String serviceStatus = (String) session.getAttribute("loginError");
@@ -36,8 +37,8 @@ public class SecurityController {
                 session.setAttribute("loginError", serviceStatus);
 
                 returnLogin = "login/login";
+
             } else {
-                logger.error("Methode login : error 403 !");
                 returnLogin = "error/403";
             }
         }
@@ -46,9 +47,10 @@ public class SecurityController {
     }
 
 
+    @Secured(value = "ROLE_USER")
     @RequestMapping(value = "/loginSuccess")
     public String afterLogin(){
-        return "accueil";
+        return "/compte/compte";
     }
 
 

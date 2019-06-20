@@ -6,7 +6,6 @@ import org.bibliotheque.repository.CompteRepository;
 import org.bibliotheque.service.contract.CompteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,12 +15,9 @@ import java.util.List;
 @NoArgsConstructor
 public class CompteServiceImpl implements CompteService {
 
+    @Autowired
     private CompteRepository repository;
 
-    @Autowired
-    public CompteServiceImpl(CompteRepository repository){
-        this.repository = repository;
-    }
 
     @Override
     public CompteEntity getCompteById(Integer id) {
@@ -66,4 +62,5 @@ public class CompteServiceImpl implements CompteService {
             return false;
         }
     }
+
 }

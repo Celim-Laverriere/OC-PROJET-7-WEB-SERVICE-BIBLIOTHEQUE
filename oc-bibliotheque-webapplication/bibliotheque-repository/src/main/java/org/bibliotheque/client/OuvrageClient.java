@@ -10,8 +10,9 @@ public class OuvrageClient extends WebServiceGatewaySupport {
 
     private static final Logger logger = LoggerFactory.getLogger(OuvrageClient.class);
 
+
     /**
-     * ==== GET OUVRAGE BY ID ====
+     * ==== CETTE METHODE RECUPERER UN OUVRAGE PAR SON IDENTIFIANT ====
      * @param id
      * @return GetOuvrageByIdResponse
      */
@@ -33,7 +34,7 @@ public class OuvrageClient extends WebServiceGatewaySupport {
 
 
     /**
-     * ==== GET ALL OUVRAGES ====
+     * ==== CETTE METHODE RECUPERER TOUS LES OUVRAGES ====
      * @return GetAllOuvragesResponse
      */
     public GetAllOuvragesResponse getAllOuvrages(){
@@ -51,25 +52,4 @@ public class OuvrageClient extends WebServiceGatewaySupport {
         return response;
     }
 
-
-    /* ==== ADD OUVRAGE ==== */
-    public AddOuvrageResponse addOuvrage(OuvrageType ouvrageType){
-        AddOuvrageRequest request = new AddOuvrageRequest();
-        request.setOuvrageType(ouvrageType);
-        return (AddOuvrageResponse) getWebServiceTemplate().marshalSendAndReceive(request);
-    }
-
-    /* ==== UPDATE OUVRAGE ==== */
-    public UpdateOuvrageResponse updateOuvrage(OuvrageType ouvrageType){
-        UpdateOuvrageRequest request = new UpdateOuvrageRequest();
-        request.setOuvrageType(ouvrageType);
-        return (UpdateOuvrageResponse) getWebServiceTemplate().marshalSendAndReceive(request);
-    }
-
-    /* ==== DELETE OUVRAGE ==== */
-    public DeleteOuvrageResponse deleteOuvrage(Integer id){
-        DeleteOuvrageRequest request = new DeleteOuvrageRequest();
-        request.setOuvrageId(id);
-        return (DeleteOuvrageResponse) getWebServiceTemplate().marshalSendAndReceive(request);
-    }
 }

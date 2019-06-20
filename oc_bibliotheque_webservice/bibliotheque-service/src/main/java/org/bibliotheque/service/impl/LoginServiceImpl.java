@@ -6,7 +6,6 @@ import org.bibliotheque.repository.LoginRepository;
 import org.bibliotheque.service.contract.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import javax.transaction.Transactional;
 
 @Service
@@ -14,9 +13,9 @@ import javax.transaction.Transactional;
 @NoArgsConstructor
 public class LoginServiceImpl implements LoginService {
 
-
     @Autowired
     private LoginRepository repository;
+
 
     @Override
     public CompteEntity getCompteByMailAndPassword(String mail, String password) {
@@ -32,4 +31,5 @@ public class LoginServiceImpl implements LoginService {
     public CompteEntity getCompteByMail(String mail) {
         return repository.findByMail(mail);
     }
+
 }

@@ -10,6 +10,7 @@ public class EmpruntClient extends WebServiceGatewaySupport {
 
     private static final Logger logger = LoggerFactory.getLogger(OuvrageClient.class);
 
+
     /**
      * ==== CETTE METHODE RECUPERER TOUS LES EMPRUNTS ====
      * @return LA LISTE DES EMPRUNTS

@@ -52,6 +52,50 @@
             <artifactId>spring-boot-starter-batch</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.batch</groupId>
+            <artifactId>spring-batch-test</artifactId>
+            <version>4.1.2.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.6.0</version>
+        </dependency>
+
+        <!-- ==== https://mvnrepository.com/artifact/ch.qos.logback/logback-classic ==== -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+
     </dependencies>
+
+    <!-- =============================================================== -->
+    <!-- ============================= Build  ========================== -->
+    <!-- =============================================================== -->
+
+    <build>
+
+        <finalName>bibliotheque-batch</finalName>
+
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>org.bibliotheque.LauncherBatch</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

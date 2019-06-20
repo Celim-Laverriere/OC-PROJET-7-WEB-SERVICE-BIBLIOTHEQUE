@@ -45,7 +45,7 @@
                                             <th:block th:if="${photo.getOuvrageId() == ouvrage.getId()
                                                     && livre.getOuvrageId() == ouvrage.getId() && emprunt.getLivreId() == livre.getId()}">
                                                 <td style="width: 10%">
-                                                    <img th:src="${photo.getUrlPhoto()}" style="width: 150px; height: 200px" class="rounded float-left" alt="...">
+                                                    <img th:src="@{'/image/' + ${photo.getUrlPhoto()}}" style="width: 150px; height: 200px" class="rounded float-left" alt="...">
                                                 </td>
                                             </th:block>
                                         </div>

@@ -6,8 +6,6 @@ import org.bibliotheque.wsdl.LivreType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 public class LivreService {
 
@@ -16,7 +14,7 @@ public class LivreService {
 
 
     /**
-     * GET LIVRE BY ID
+     * ==== CETTE METHODE RECUPERER UN LIVRE PAR SON IDENTIFIANT ====
      * @param id
      * @return LivreType
      * @see LivreClient#getLivreById(Integer)
@@ -25,42 +23,4 @@ public class LivreService {
         return repository.livreById(id);
     }
 
-    /**
-     * GET ALL LIVRES
-     * @return livreTypeList
-     * @see LivreClient#getAllLivres()
-     */
-    public List<LivreType> livreTypeList(){
-        return repository.livreTypeList();
-    }
-
-    /**
-     * ADD LIVRE
-     * @param livreType
-     * @return message de confirmation
-     * @see LivreClient#addLivre(LivreType)
-     */
-    public String addLivre(LivreType livreType){
-        return repository.addLivre(livreType);
-    }
-
-    /**
-     * UPDATE LIVRE
-     * @param livreType
-     * @return message de confirmation
-     * @see LivreClient#updateLivre(LivreType)
-     */
-    public String upLivre(LivreType livreType){
-        return repository.upLivre(livreType);
-    }
-
-    /**
-     * DELETE LIVRE
-     * @param id
-     * @return message de confirmation
-     * @see LivreClient#deleteLivre(Integer)
-     */
-    public String delLivre(Integer id){
-        return repository.delLivre(id);
-    }
 }

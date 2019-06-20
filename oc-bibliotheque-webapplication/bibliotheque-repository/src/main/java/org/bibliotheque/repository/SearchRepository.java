@@ -5,18 +5,17 @@ import org.bibliotheque.wsdl.GetSearchByKeywordResponse;
 import org.bibliotheque.wsdl.OuvrageType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
 
 @Repository
 public class SearchRepository {
 
-
     @Autowired
     private SearchClient searchClient;
 
+
     /**
-     * ==== GET OUVRAGES BY KEYWORD ====
+     * ==== CETTE METHODE RECUPERER UN OU UNE LISTE D'OUVRAGE(S) PAR MOT-CLE ====
      * @param keyword
      * @return UNE LISTE D'OUVRAGES
      */

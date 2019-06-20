@@ -10,17 +10,15 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-
 @Service
 public class OuvrageService {
-
 
     @Autowired
     private OuvrageRepository repository;
 
 
     /**
-     * GET OUVRAGE BY ID
+     * ==== CETTE METHODE RECUPERER UN OUVRAGE PAR SON IDENTIFIANT ====
      * @param id
      * @return UN OUVRAGE
      * @see OuvrageRepository#ouvrageById(Integer)
@@ -31,7 +29,7 @@ public class OuvrageService {
 
 
     /**
-     * GET ALL OUVRAGES
+     * ==== CETTE METHODE RECUPERER TOUS LES OUVRAGES ====
      * @return UNE LISTE D'OUVRAGES
      * @see OuvrageRepository#ouvrageTypeList()
      */
@@ -120,7 +118,7 @@ public class OuvrageService {
      * @param ouvrageTypes
      * @return LA LISTE DES LIVRES DISPONIBLE POUR CHAQUE OUVRAGE
      */
-    public List<OuvrageType> LivresDispoForOuvrage(List<OuvrageType> ouvrageTypes){
+    public List<OuvrageType> livresDispoForOuvrage(List<OuvrageType> ouvrageTypes){
 
         for (OuvrageType ouvrageType : ouvrageTypes){
 

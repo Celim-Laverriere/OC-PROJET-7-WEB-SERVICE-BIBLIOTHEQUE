@@ -12,7 +12,6 @@ import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
-
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,13 +22,15 @@ public class OuvrageEndpoint {
 
     public static final String NAMESPACE_URI = "http://www.webservice.org/bibliotheque-ws";
 
+    @Autowired
     private OuvrageService service;
 
-    @Autowired
-    public OuvrageEndpoint(OuvrageService service){
-        this.service = service;
-    }
 
+    /**
+     * Cette méthode récupère un ouvrage par son identifiant
+     * @param request
+     * @return Un ouvrage
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getOuvrageByIdRequest")
     @ResponsePayload
     @Transactional
@@ -57,6 +58,11 @@ public class OuvrageEndpoint {
         return response;
     }
 
+    /**
+     * Cette méthode récupère tous les ouvrages
+     * @param request
+     * @return Une liste d'ouvrages
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllOuvragesRequest")
     @ResponsePayload
     @Transactional
@@ -90,6 +96,12 @@ public class OuvrageEndpoint {
         return response;
     }
 
+
+    /**
+     * Cette méthode ajoute un ouvrage
+     * @param request
+     * @return
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "addOuvrageRequest")
     @ResponsePayload
     public AddOuvrageResponse addOuvrage(@RequestPayload AddOuvrageRequest request){
@@ -116,6 +128,12 @@ public class OuvrageEndpoint {
         return response;
     }
 
+
+    /**
+     * Cette méthode met à jour un ouvrage
+     * @param request
+     * @return
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "updateOuvrageRequest")
     @ResponsePayload
     public UpdateOuvrageResponse updateOuvrage(@RequestPayload UpdateOuvrageRequest request){
@@ -151,6 +169,12 @@ public class OuvrageEndpoint {
         return response;
     }
 
+
+    /**
+     * Cette méthode suppprime un ouvrage
+     * @param request
+     * @return
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "deleteOuvrageRequest")
     @ResponsePayload
     public DeleteOuvrageResponse deleteOuvrage(@RequestPayload DeleteOuvrageRequest request){
@@ -172,6 +196,11 @@ public class OuvrageEndpoint {
     }
 
 
+    /**
+     * Cette méthode récupère un ou des ouvrages par mot-clé transmis par l'utilisateur
+     * @param request
+     * @return
+     */
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getSearchByKeywordRequest")
     @ResponsePayload
     @Transactional

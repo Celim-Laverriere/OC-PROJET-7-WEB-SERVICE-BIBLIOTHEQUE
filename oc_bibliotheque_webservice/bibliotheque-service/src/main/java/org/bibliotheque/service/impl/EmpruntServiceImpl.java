@@ -6,7 +6,6 @@ import org.bibliotheque.repository.EmpruntRepository;
 import org.bibliotheque.service.contract.EmpruntService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,12 +15,9 @@ import java.util.List;
 @NoArgsConstructor
 public class EmpruntServiceImpl implements EmpruntService {
 
+    @Autowired
     private EmpruntRepository repository;
 
-    @Autowired
-    public EmpruntServiceImpl(EmpruntRepository repository) {
-        this.repository = repository;
-    }
 
     @Override
     public EmpruntEntity getEmpruntById(Integer id) {
@@ -74,4 +70,5 @@ public class EmpruntServiceImpl implements EmpruntService {
         this.repository.findAllByCompteId(id).forEach(e -> empruntEntityList.add(e));
         return empruntEntityList;
     }
+
 }

@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="bibliotheque-webservice.war">
+    <root id="archive" name="bibliotheque-webapp.war">
       <element id="artifact" artifact-name="bibliotheque-webapp:war exploded" />
     </root>
   </artifact>

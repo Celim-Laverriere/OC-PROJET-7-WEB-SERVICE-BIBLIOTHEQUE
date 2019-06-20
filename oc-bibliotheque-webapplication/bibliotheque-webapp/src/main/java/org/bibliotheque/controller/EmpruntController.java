@@ -21,21 +21,26 @@ import java.util.List;
 @Controller
 public class EmpruntController {
 
-
     @Autowired
     private EmpruntService empruntService;
 
 
     @Secured(value = "ROLE_USER")
     @RequestMapping(value = "/emprunt", method = RequestMethod.GET)
-    public String getAllEmpruntByCompteId(HttpSession session, Model model, @RequestParam(name = "statutCode", required = false) String statutCode){
+    public String getAllEmpruntByCompteId(HttpSession session, Model model, @RequestParam(name = "statutCode",
+                                            required = false) String statutCode){
 
         Users user = (Users) session.getAttribute("user");
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         model.addAttribute("dateFormat", dateFormat);
 
+        /**@see EmpruntService#getAllEmpruntByCompteId(Integer)*/
         List<EmpruntType> empruntTypeList = empruntService.getAllEmpruntByCompteId(user.getUserId());
+
+        /**@see EmpruntService#livreTypeListEmprunter(List)*/
         List<LivreType> livreTypeList = empruntService.livreTypeListEmprunter(empruntTypeList);
+
+        /**@see EmpruntService#ouvrageTypeListEmprunter(List)*/
         List<OuvrageType> ouvrageTypeList = empruntService.ouvrageTypeListEmprunter(livreTypeList);
 
         if (statutCode != null){
@@ -50,9 +55,12 @@ public class EmpruntController {
     }
 
 
+    @Secured(value = "ROLE_USER")
     @RequestMapping(value = "/prolongation", method = RequestMethod.GET)
-    public String upEmpruntProlongation(@RequestParam(name = "empruntId")Integer empruntId, HttpSession session) throws DatatypeConfigurationException, ParseException {
+    public String upEmpruntProlongation(@RequestParam(name = "empruntId")Integer empruntId,
+                                            HttpSession session) throws DatatypeConfigurationException, ParseException {
 
+        /**@see EmpruntService#upEmpruntProlongation(Integer)*/
         String statusCode = empruntService.upEmpruntProlongation(empruntId);
 
         return "redirect:/emprunt?statutCode=" + statusCode;

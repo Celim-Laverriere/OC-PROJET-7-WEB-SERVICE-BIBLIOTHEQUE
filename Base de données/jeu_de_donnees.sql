@@ -1,8 +1,7 @@
 /**** OpenClassrooms - Projet 7 ****/
 /**** Développez le nouveau système d’information de la bibliothèque d’une grande ville ****/
 
-/* ('#NOM#', '#PRENOM#', '#RAND[1,100]# #RUE#', #CP#, '#VILLE#', 06 #RAND[0,9]##RAND[0,9]# #RAND[0,9]##RAND[0,9]# #RAND[0,9]##RAND[0,9]# #RAND[0,9]##RAND[0,9]#, null,
-#RAND[1,100]##RAND[1,100]##RAND[1,100]##RAND[1,100]#, '#LOGIN#@fakeemail.tld', ' #STR[8]#'),*/
+
 INSERT INTO public.compte
     (nom, prenom, adresse, code_postal, ville, num_portable, num_domicile, num_carte_bibliotheque, mail, mot_de_passe)
 VALUES 
@@ -47,18 +46,19 @@ VALUES
 INSERT INTO public.photo
     (url_photo, nom_photo, ouvrage_id)
 VALUES
-    ('/image/Dune_1.jpg', 'Dune_tome_1', 1),
-    ('/image/Fondation_1.jpg', 'Fondation_tome_1', 2),
-    ('/image/Assassin_royal_1.jpg', 'Assassin_royal_tome_1', 3),
-    ('/image/Le_nom_du_vent_1.jpg', 'Le_nom_du_vent_tome_1', 4)
+    ('Dune_1.jpg', 'Dune_tome_1', 1),
+    ('Fondation_1.jpg', 'Fondation_tome_1', 2),
+    ('Assassin_royal_1.jpg', 'Assassin_royal_tome_1', 3),
+    ('Le_nom_du_vent_1.jpg', 'Le_nom_du_vent_tome_1', 4)
 ;    
     
 INSERT INTO public.emprunt
     (date_debut, date_fin, prolongation, livre_id, compte_id)
 VALUES
-    ('2019-05-20', '2019-06-16', false, 1, 3),
+    ('2019-06-20', '2019-07-17', false, 1, 3),
     ('2019-05-20', '2019-06-16', false, 4, 2),
-    ('2019-05-20', '2019-06-16', false, 7, 1)
+    ('2019-06-20', '2019-07-17', false, 7, 1),
+    ('2019-06-20', '2019-07-17', false, 10, 3)
 ;
     
     

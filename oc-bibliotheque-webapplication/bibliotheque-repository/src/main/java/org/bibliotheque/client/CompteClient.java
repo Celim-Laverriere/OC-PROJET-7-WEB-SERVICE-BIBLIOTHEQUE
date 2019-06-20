@@ -10,6 +10,7 @@ public class CompteClient extends WebServiceGatewaySupport {
 
     private static final Logger logger = LoggerFactory.getLogger(OuvrageClient.class);
 
+
     /**
      * ==== CETTE METHODE RECUPERER UN COMPTE CLIENT PAR SON IDENTIFIANT ====
      * @param id
@@ -31,30 +32,16 @@ public class CompteClient extends WebServiceGatewaySupport {
     }
 
 
-    /* ==== GET ALL COMPTES ==== */
-    public GetAllComptesResponse getAllComptes(){
-        GetAllComptesRequest request = new GetAllComptesRequest();
-        return (GetAllComptesResponse) getWebServiceTemplate().marshalSendAndReceive(request);
-    }
-
-    /* ==== ADD COMPTE ==== */
-    public AddCompteResponse addCompte(CompteType compteType){
-        AddCompteRequest request = new AddCompteRequest();
-        request.setCompteType(compteType);
-        return (AddCompteResponse) getWebServiceTemplate().marshalSendAndReceive(request);
-    }
-
-    /* ==== UPDATE COMPTE ==== */
+    /**
+     * ==== CETTE METHODE MET A JOUR LE COMPTE UTILISATEUR ====
+     * @param compteType
+     * @return UN MESSAGE DE CONFIRMATION
+     */
     public UpdateCompteResponse updateCompte(CompteType compteType){
         UpdateCompteRequest request = new UpdateCompteRequest();
         request.setCompteType(compteType);
         return (UpdateCompteResponse) getWebServiceTemplate().marshalSendAndReceive(request);
     }
 
-    /* ==== DELETE COMPTE ==== */
-    public DeleteCompteResponse deleteCompte(Integer id){
-        DeleteCompteRequest request = new DeleteCompteRequest();
-        request.setCompteId(id);
-        return (DeleteCompteResponse) getWebServiceTemplate().marshalSendAndReceive(request);
-    }
+
 }

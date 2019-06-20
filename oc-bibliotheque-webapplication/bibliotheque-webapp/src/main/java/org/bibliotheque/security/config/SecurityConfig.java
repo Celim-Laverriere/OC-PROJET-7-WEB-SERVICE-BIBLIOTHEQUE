@@ -2,7 +2,6 @@ package org.bibliotheque.security.config;
 
 import org.bibliotheque.security.service.CustomAuthenticationProvider;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -11,8 +10,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.web.access.AccessDeniedHandler;
-import org.springframework.security.web.authentication.Http403ForbiddenEntryPoint;
 
 
 @EnableWebSecurity
@@ -36,7 +33,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf()
                 .disable()
                 .authorizeRequests()
-                .antMatchers("/image/**", "/css/**", "/js/**", "/", "/ouvrages", "/webjars/**", "/login",
+                .antMatchers("static", "/image/**", "/css/**", "/js/**", "/", "/ouvrages", "/webjars/**", "/login",
                         "/accueil", "/ouvrage", "/ouvragesByGenre", "/search")
                 .permitAll()
                 .anyRequest()
